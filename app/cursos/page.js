@@ -1,3 +1,10 @@
+import Navigation from "../_components/Navigation";
+
 export default function Page() {
-  return <h1 className="text-3xl font-bold underline">Cursos Page</h1>;
+  return (
+    <div>
+      <h1 className="text-3xl font-bold underline">Cursos Page</h1>
+      <Navigation />
+    </div>
+  );
 }
