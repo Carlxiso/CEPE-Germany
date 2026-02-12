@@ -6,7 +6,7 @@ export default function Logo() {
       <img
         src="/cepe_logo_black.png"
         alt="CEPE Logo"
-        width="200"
+        width="180"
         height="100"
       />
       <span className="text-xl font-semibold text-primary-100">

@@ -1,4 +1,5 @@
-import Logo from "./_components/Logo";
+import Logo from "@/app/_components/Logo";
+import "@/app/_styles/globals.css";
 
 export const metadata = {
   title: "CEPE - Alemanha",
@@ -7,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen">
         <header>
           <Logo />
         </header>
