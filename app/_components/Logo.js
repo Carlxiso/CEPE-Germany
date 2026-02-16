@@ -9,7 +9,7 @@ export default function Logo() {
         width="180"
         height="100"
       />
-      <span className="text-xl font-semibold text-primary-100">
+      <span className="text-xl font-semibold">
         Coordenação do Ensino Português no Estangeiro
       </span>
     </Link>
