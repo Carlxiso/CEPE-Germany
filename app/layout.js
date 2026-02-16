@@ -1,6 +1,9 @@
 import Logo from "@/app/_components/Logo";
 import "@/app/_styles/globals.css";
 
+/** Importing Fonts */
+import { Roboto } from "next/font/google";
+const roboto = Roboto({ subsets: ["latin"], display: "swap" });
 export const metadata = {
   title: {
     template: "%s | CEPE Alemanha",
@@ -12,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">
+      <body className={`${roboto.className} min-h-screen`}>
         <header>
           <Logo />
         </header>
