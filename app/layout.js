@@ -2,8 +2,12 @@ import Logo from "@/app/_components/Logo";
 import "@/app/_styles/globals.css";
 
 export const metadata = {
-  title: "CEPE - Alemanha",
-  description: "Coordenação no Estrangeiro Portugueses na Alemanha",
+  title: {
+    template: "%s | CEPE Alemanha",
+    default: "Bem Vindo | CEPE Alemanha",
+  },
+  description:
+    "Website de apoio e divulgação da Coordenação no Estrangeiro do Português na Alemanha",
 };
 export default function RootLayout({ children }) {
   return (

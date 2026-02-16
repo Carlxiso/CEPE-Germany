@@ -1,5 +1,8 @@
 import Navigation from "@/app/_components/Navigation";
 
+export const metadata = {
+  title: "Contactos",
+};
 export default function Page() {
   return (
     <div>

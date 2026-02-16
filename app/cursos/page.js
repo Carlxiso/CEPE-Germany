@@ -1,5 +1,8 @@
 import Navigation from "@/app/_components/Navigation";
 
+export const metadata = {
+  title: "Cursos",
+};
 export default function Page() {
   return (
     <div>
