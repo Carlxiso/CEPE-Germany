@@ -3,6 +3,7 @@ import "@/app/_styles/globals.css";
 
 /** Importing Fonts */
 import { Roboto } from "next/font/google";
+import Header from "./_components/Header";
 const roboto = Roboto({ subsets: ["latin"], display: "swap" });
 export const metadata = {
   title: {
@@ -15,11 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} min-h-screen`}>
-        <header>
-          <Logo />
-        </header>
-        <main>{children}</main>
+      <body
+        className={`${roboto.className} antialiased min-h-screen flex flex-col relative`}
+      >
+        <Header />
+        <div className="flex-1 px-8 py-12">
+          <main className="max-w-7xl mx-auto bg-amber-500">{children}</main>
+        </div>
       </body>
     </html>
   );
