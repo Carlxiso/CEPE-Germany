@@ -44,6 +44,14 @@ export default function Navigation() {
             Faq´s
           </Link>
         </li>
+        <li>
+          <button
+            href="/"
+            className="px-4 py-2 border border-gray-400 rounded-md hover:bg-gray-100 hover:text-primary-400 transition-colors"
+          >
+            Professores
+          </button>
+        </li>
       </ul>
     </nav>
   );
