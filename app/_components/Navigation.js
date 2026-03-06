@@ -1,56 +1,34 @@
 import Link from "next/link";
+import styles from "./navigation.module.css";
 
 export default function Navigation() {
   return (
-    <nav className="z-10 text-xl">
-      <ul className="flex gap-16 items-center">
+    <nav aria-label="Main Navigation" className={styles.nav}>
+      <ul className={styles.menu}>
         <li>
-          <Link
-            href="/about"
-            className="hover:text-primary-400 transition-colors"
-          >
-            About
+          <Link href="/about">About</Link>
+        </li>
+        <li>
+          <Link href="/cursos">Cursos</Link>
+        </li>
+        <li>
+          <Link href="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link href="/contactos">Contactos</Link>
+        </li>
+        <li>
+          <Link href="/faq">FAQ,s</Link>
+        </li>
+        <li>
+          <Link href="/login" className="login">
+            Login
           </Link>
         </li>
         <li>
-          <Link
-            href="/cursos"
-            className="hover:text-primary-400 transition-colors"
-          >
-            Cursos
+          <Link href="/signup" className={styles.ctaLink}>
+            Sign Up
           </Link>
-        </li>
-        <li>
-          <Link
-            href="/contactos"
-            className="hover:text-primary-400 transition-colors"
-          >
-            Contactos
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/blog"
-            className="hover:text-primary-400 transition-colors"
-          >
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/faq"
-            className="hover:text-primary-400 transition-colors"
-          >
-            Faq´s
-          </Link>
-        </li>
-        <li>
-          <button
-            href="/"
-            className="px-4 py-2 border border-gray-400 rounded-md hover:bg-gray-100 hover:text-primary-400 transition-colors"
-          >
-            Professores
-          </button>
         </li>
       </ul>
     </nav>

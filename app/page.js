@@ -5,16 +5,16 @@ import image_hero from "@/public/hero_img.png";
 export default function Page() {
   return (
     <main className="mt-24">
-      <Image
+      {/* <Image
         src={image_hero}
         fill
         className="object-cover object-top"
         alt="Letters"
         quality={100}
         placeholder="blur"
-      />
+      /> */}
 
-      <div className="relative z-10 text-center">
+      <div className="relative z-10 text-center bg-amber-400">
         <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
           Abarca a língua portuguesa
         </h1>

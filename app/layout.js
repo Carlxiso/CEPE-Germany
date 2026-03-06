@@ -1,4 +1,3 @@
-import Logo from "@/app/_components/Logo";
 import "@/app/_styles/globals.css";
 
 /** Importing Fonts */
@@ -15,13 +14,13 @@ export const metadata = {
 };
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body
         className={`${roboto.className} antialiased min-h-screen flex flex-col relative`}
       >
         <Header />
-        <div className="flex-1 px-8 py-12">
-          <main className="max-w-7xl mx-auto">{children}</main>
+        <div className="flex-1 ">
+          <main className="container">{children}</main>
         </div>
       </body>
     </html>
