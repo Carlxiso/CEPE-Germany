@@ -2,7 +2,8 @@ import "@/app/_styles/globals.css";
 
 /** Importing Fonts */
 import { Roboto } from "next/font/google";
-import Header from "./_components/Header";
+import Header from "./_components/Layout/Header/Header";
+
 const roboto = Roboto({ subsets: ["latin"], display: "swap" });
 export const metadata = {
   title: {

@@ -1,4 +1,4 @@
-.header {
+/* .header {
   width: 100%;
   border-bottom: 1px solid #eee;
   background-color: #eee;
@@ -12,4 +12,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+} */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1.5rem;
+
+  max-width: 1200px;
+  margin: 0 auto;
 }
