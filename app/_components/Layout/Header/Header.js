@@ -5,8 +5,10 @@ import Navigation from "../Navigation/Navigation";
 function Header() {
   return (
     <header role="banner" className={styles.header}>
-      <Logo />
-      <Navigation />
+      <div className={styles.headerInner}>
+        <Logo />
+        <Navigation />
+      </div>
     </header>
   );
 }

@@ -1,25 +1,27 @@
 /* .header {
-  width: 100%;
-  border-bottom: 1px solid #eee;
-  background-color: #eee;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 } */
+
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 1rem 1.5rem;
-
-  max-width: 1200px;
-  margin: 0 auto;
 }
