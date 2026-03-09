@@ -30,3 +30,25 @@ layout.css
 sections.css
 components.css
 /public
+
+Design System
+│
+├─ Foundations
+│ ├─ Colors
+│ ├─ Typography
+│ └─ Spacing
+│
+├─ UI
+│ ├─ Button
+│ ├─ Input
+│ ├─ Card
+│ └─ Badge
+│
+├─ Navigation
+│ ├─ Navbar
+│ └─ Mobile Menu
+│
+└─ Layout
+├─ Container
+├─ Grid
+└─ Section
