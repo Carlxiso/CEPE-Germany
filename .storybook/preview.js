@@ -3,4 +3,5 @@ export const parameters = {
   viewport: {
     defaultViewport: "mobile1",
   },
+  stories: ["../**/*.stories.@(js|jsx|ts|tsx)"],
 };

@@ -1,8 +1,10 @@
 import Logo from "./Logo";
 
-export default meta = {
+const meta = {
   title: "Layout/Logo",
   component: Logo,
 };
+
+export default meta;
 
 export const Default = () => <Logo />;
