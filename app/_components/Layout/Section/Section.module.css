@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--color-light--2);
+  /* background-color: var(--color-light--2); */
 }
 
 .full {

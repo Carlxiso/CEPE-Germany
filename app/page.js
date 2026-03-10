@@ -1,14 +1,18 @@
 import Hero from "./_components/Layout/Hero/Hero";
 import Section from "./_components/Layout/Section/Section";
-import bgImg from "../public/hero_img.png";
+
 import certificImg from "../public/abc-letters.png";
 import Button from "./_components/UI/Button/Button";
+import NewsSection from "./_components/Layout/NewsSection/NewsSection";
 
 export default function Page() {
   return (
     <>
       <Hero />
-      <Section fullscreen background={bgImg.src} />;
+      <Section fullscreen>
+        <NewsSection />
+      </Section>
+      ;
       <Section fullscreen background={certificImg.src}>
         <div>
           <h3>CERTIFICAÇÃO</h3>
