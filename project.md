@@ -1,3 +1,5 @@
+## First Structure
+
 /src
 /app
 layout.js
@@ -31,7 +33,8 @@ sections.css
 components.css
 /public
 
-Design System
+## Design System
+
 │
 ├─ Foundations
 │ ├─ Colors
@@ -52,3 +55,12 @@ Design System
 ├─ Container
 ├─ Grid
 └─ Section
+
+## Section
+
+components
+├─ layout
+│ ├─ Section
+│ │ ├─ Section.jsx
+│ │ ├─ Section.module.css
+│ │ └─ Section.stories.jsx
