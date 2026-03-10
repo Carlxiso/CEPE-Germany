@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Button from "../../UI/Button/Button";
 import styles from "./NewsSection.module.css";
 
@@ -64,29 +64,39 @@ const news = [
 export default function NewsSection() {
   const [index, setIndex] = useState(0);
   const [pause, setPause] = useState(false);
+  const [direction, setDirection] = useState("");
 
   const visibleCards = news.slice(index, index + 4);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  function next() {
-    if (index + 4 >= news.length) {
-      setIndex(0);
-    } else {
-      setIndex(index + 4);
-    }
-  }
-  function prev() {
-    setIndex(Math.max(index - 4, 0));
-  }
+  //   function nextStep() {
+  //     if (index + 4 >= news.length) {
+  //       setIndex(0);
+  //     } else {
+  //       setIndex(index + 4);
+  //     }
+  //   }
+  //   function prevStep() {
+  //     setIndex(Math.max(index - 4, 0));
+  //   }
+
+  const nextStep = useCallback(() => {
+    setDirection("next");
+    setIndex((prev) => Math.min(prev + 4, news.length - 4));
+  }, []);
+
+  const prevStep = useCallback(() => {
+    setDirection("prev");
+    setIndex((prev) => Math.max(prev - 4, 0));
+  }, []);
 
   /** Auto Animation */
   useEffect(() => {
     if (pause) return;
     const interval = setInterval(() => {
-      next();
+      nextStep();
     }, 5000);
     return () => clearInterval(interval);
-  }, [index, next, pause]);
+  }, [index, nextStep, pause]);
 
   return (
     <>
@@ -97,13 +107,14 @@ export default function NewsSection() {
           qui quam voluptatibus enim autem?
         </p>
       </div>
-      <div
+      {/* <div
         className={styles.cards}
         onMouseEnter={() => setPause(true)}
         onMouseLeave={() => setPause(false)}
-      >
-        {visibleCards.map((item, idx) => (
-          <div className={styles.card} key={idx}>
+      > */}
+      <div className={`${styles.cards} ${styles[direction]}`}>
+        {visibleCards.map((item) => (
+          <div className={styles.card} key={item.titulo}>
             <h3>{item.titulo}</h3>
             <h5>{item.subtitle}</h5>
             <p>{item.intro}</p>
@@ -113,10 +124,10 @@ export default function NewsSection() {
       </div>
 
       <div className={styles.paginationBtns}>
-        <button className={styles.btnPagination} onClick={prev}>
+        <button className={styles.btnPagination} onClick={prevStep}>
           Anterior
         </button>
-        <button className={styles.btnPagination} onClick={next}>
+        <button className={styles.btnPagination} onClick={nextStep}>
           Próximo
         </button>
       </div>
