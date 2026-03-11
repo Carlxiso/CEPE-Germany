@@ -4,6 +4,7 @@ import Section from "./_components/Layout/Section/Section";
 import certificImg from "../public/abc-letters.png";
 import Button from "./_components/UI/Button/Button";
 import NewsSection from "./_components/Layout/NewsSection/NewsSection";
+import SplitSection from "./_components/Layout/SplitSection/SplitSection";
 
 export default function Page() {
   return (
@@ -12,7 +13,8 @@ export default function Page() {
       <Section fullscreen>
         <NewsSection />
       </Section>
-      ;
+      <Section fullscreen></Section>
+      <SplitSection fullscreen></SplitSection>
       <Section fullscreen background={certificImg.src}>
         <div>
           <h3>CERTIFICAÇÃO</h3>
@@ -26,7 +28,6 @@ export default function Page() {
           <Button variant="secondary">Certificação</Button>
         </div>
       </Section>
-      ;
     </>
   );
 }
