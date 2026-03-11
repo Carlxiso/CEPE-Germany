@@ -12,3 +12,15 @@ export const Default = () => (
     <h2>Section Content</h2>
   </SplitSection>
 );
+
+// export const Default = {
+//   args: {
+//     fullscreen: false,
+//   },
+// };
+
+export const FullScreen = {
+  args: {
+    fullscreen: true,
+  },
+};

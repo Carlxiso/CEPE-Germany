@@ -1,25 +1,16 @@
 import Image from "next/image";
-import styles from "./SplitSection.module.css";
-import img from "../../../../public/letters.png";
 import Button from "../../UI/Button/Button";
+import img from "../../../../public/letters-in-group.png";
+import styles from "./SplitSectionGrid.module.css";
 
-export default function SplitSection({ fullscreen = false }) {
+export default function SplitSectionGrid({ fullscreen = false }) {
   return (
-    <div className={`${styles.split} ${fullscreen ? styles.full : ""}`}>
-      <div className={styles.image}>
-        <Image
-          src={img}
-          fill
-          alt="Technology solutions"
-          className={styles.imageElement}
-        />
-      </div>
-
+    <section className={`${styles.split} ${fullscreen ? styles.full : ""}`}>
       <div className={styles.content}>
         <div className={styles.innerContent}>
-          <h2>CURSOS</h2>
+          <h2>ABOUT</h2>
 
-          <h4> Descobre os estados na Alemanha onde Lecionamos.</h4>
+          <h4>Descobra um pouco mais de nós</h4>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
@@ -38,6 +29,14 @@ export default function SplitSection({ fullscreen = false }) {
           <Button>Saber +</Button>
         </div>
       </div>
-    </div>
+      <div className={styles.image}>
+        <Image
+          src={img}
+          fill
+          alt="Technology solutions"
+          className={styles.imageElement}
+        />
+      </div>
+    </section>
   );
 }
