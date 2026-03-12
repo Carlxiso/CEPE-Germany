@@ -1,11 +1,12 @@
 import Hero from "./_components/Layout/Hero/Hero";
 import Section from "./_components/Layout/Section/Section";
-
+import institutionsData from "./_lib/data-institutions";
 import certificImg from "../public/abc-letters.png";
 import Button from "./_components/UI/Button/Button";
 import NewsSection from "./_components/Layout/NewsSection/NewsSection";
 import SplitSection from "./_components/Layout/SplitSection/SplitSection";
 import SplitSectionGrid from "./_components/Layout/SplitSectionGrid/SplitSectionGrid";
+import Institutions from "./_components/Layout/Institutions/Institutions";
 
 export default function Page() {
   return (
@@ -15,7 +16,9 @@ export default function Page() {
         <NewsSection />
       </Section>
       <SplitSectionGrid fullscreen></SplitSectionGrid>
-      <Section fullscreen></Section>
+      <Section fullscreen>
+        <Institutions cards={institutionsData}></Institutions>
+      </Section>
       <SplitSection fullscreen></SplitSection>
       <Section fullscreen></Section>
       <Section fullscreen background={certificImg.src}>
