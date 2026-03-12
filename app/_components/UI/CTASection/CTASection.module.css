@@ -1,0 +1,24 @@
+.ctaContent {
+  max-width: 1200px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.ctaContent h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.ctaContent p {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.ctaButtons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}

@@ -1,6 +1,4 @@
 import Card from "../../UI/Card/Card";
-import Container from "../Container/Container";
-
 import styles from "./Institutions.module.css";
 
 export default function Institutions({ cards }) {

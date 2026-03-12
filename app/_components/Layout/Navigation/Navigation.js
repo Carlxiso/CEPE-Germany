@@ -29,8 +29,8 @@ export default function Navigation() {
       label: "Contactos",
     },
     {
-      href: "/faqs",
-      label: "Faq´s",
+      href: "/suporte",
+      label: "suporte",
     },
   ];
 

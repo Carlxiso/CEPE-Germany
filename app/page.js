@@ -7,6 +7,8 @@ import NewsSection from "./_components/Layout/NewsSection/NewsSection";
 import SplitSection from "./_components/Layout/SplitSection/SplitSection";
 import SplitSectionGrid from "./_components/Layout/SplitSectionGrid/SplitSectionGrid";
 import Institutions from "./_components/Layout/Institutions/Institutions";
+import CTASection from "./_components/UI/CTASection/CTASection";
+import DiagnosticTest from "./_components/Layout/DiagnosticTest/DiagnosticTest";
 
 export default function Page() {
   return (
@@ -20,6 +22,10 @@ export default function Page() {
         <Institutions cards={institutionsData}></Institutions>
       </Section>
       <SplitSection fullscreen></SplitSection>
+      <Section fullscreen></Section>
+      <Section fullscreen bgColor="#005d8d">
+        <DiagnosticTest />
+      </Section>
       <Section fullscreen></Section>
       <Section fullscreen background={certificImg.src}>
         <div>
