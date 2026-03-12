@@ -9,6 +9,7 @@ import SplitSectionGrid from "./_components/Layout/SplitSectionGrid/SplitSection
 import Institutions from "./_components/Layout/Institutions/Institutions";
 import CTASection from "./_components/UI/CTASection/CTASection";
 import DiagnosticTest from "./_components/Layout/DiagnosticTest/DiagnosticTest";
+import Footer from "./_components/Layout/Footer/Footer";
 
 export default function Page() {
   return (
@@ -40,6 +41,8 @@ export default function Page() {
           <Button variant="secondary">Certificação</Button>
         </div>
       </Section>
+      <Section fullscreen></Section>
+      <Footer />
     </>
   );
 }
