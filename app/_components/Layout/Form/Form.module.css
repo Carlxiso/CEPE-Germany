@@ -1,0 +1,15 @@
+.formContainer {
+  min-width: 400px;
+}
+.hidden {
+  display: none;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.error p {
+  color: red;
+  font-size: 0.8rem;
+}

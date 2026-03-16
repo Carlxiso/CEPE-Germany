@@ -7,9 +7,9 @@ import NewsSection from "./_components/Layout/NewsSection/NewsSection";
 import SplitSection from "./_components/Layout/SplitSection/SplitSection";
 import SplitSectionGrid from "./_components/Layout/SplitSectionGrid/SplitSectionGrid";
 import Institutions from "./_components/Layout/Institutions/Institutions";
-import CTASection from "./_components/UI/CTASection/CTASection";
 import DiagnosticTest from "./_components/Layout/DiagnosticTest/DiagnosticTest";
 import Footer from "./_components/Layout/Footer/Footer";
+import Form from "./_components/Layout/Form/Form";
 
 export default function Page() {
   return (
@@ -41,7 +41,9 @@ export default function Page() {
           <Button variant="secondary">Certificação</Button>
         </div>
       </Section>
-      <Section fullscreen></Section>
+      <Section fullscreen>
+        <Form />
+      </Section>
       <Footer />
     </>
   );
