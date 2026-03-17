@@ -11,6 +11,7 @@ import DiagnosticTest from "./_components/Layout/DiagnosticTest/DiagnosticTest";
 import Footer from "./_components/Layout/Footer/Footer";
 import Form from "./_components/Layout/Form/Form";
 import Testimonials from "./_components/Testimonials/Testimonials";
+import StatsSection from "./_components/Layout/StatsSection/StatsSection";
 
 export default function Page() {
   return (
@@ -20,7 +21,9 @@ export default function Page() {
         <NewsSection />
       </Section>
       <SplitSectionGrid fullscreen></SplitSectionGrid>
-      <Section fullscreen></Section>
+      <Section fullscreen>
+        <StatsSection />
+      </Section>
       <SplitSection fullscreen></SplitSection>
       <Section fullscreen>
         <Institutions cards={institutionsData}></Institutions>
