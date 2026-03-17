@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import img_test from "@/public/img-test.png";
 import Footer from "../_components/Layout/Footer/Footer";
+import Section from "../_components/Layout/Section/Section";
+import Heading from "../_components/UI/Heading/Heading";
 
 export const metadata = {
   title: "About",
@@ -9,6 +11,9 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+      <Section fullscreen>
+        <Heading />
+      </Section>
       <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
         <div className="col-span-3">
           <h1 className="text-4xl mb-10 text-secondary-500 font-medium">
