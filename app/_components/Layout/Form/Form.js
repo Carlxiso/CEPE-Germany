@@ -1,17 +1,19 @@
 "use client";
+
+import { useState } from "react";
 import FormField from "./FormField/FormField";
 import Input from "./Input/Input";
 import Textarea from "./Textarea/Textarea";
 import Button from "../../UI/Button/Button";
 import styles from "./Form.module.css";
-import { useState } from "react";
 
 export default function Form() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("idle");
 
   async function submitForm(e) {
     e.preventDefault();
-    setStatus("Sending...");
+
+    setStatus("loading");
 
     const formData = {
       access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
@@ -21,64 +23,99 @@ export default function Form() {
       botcheck: e.target.botcheck.value,
     };
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.success) {
-      setStatus("Mensagem enviada com sucesso!");
-      e.target.reset();
-    } else {
-      setStatus("Erro ao enviar mensagem.");
+      if (result.success) {
+        setStatus("success");
+        e.target.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
     }
   }
 
   return (
-    <form onSubmit={submitForm} className={styles.formContainer}>
-      <input
-        type="text"
-        name="botcheck"
-        className={styles.hidden}
-        tabIndex="-1"
-        autoComplete="off"
-      />
-      <FormField label="Your name" htmlFor="name">
-        <Input id="name" name="name" placeholders="Enter your name" required />
-      </FormField>
-      <FormField label="E-mail" htmlFor="email">
-        <Input
-          id="phone"
-          type="email"
-          name="email"
-          placeholders="Enter your e-mail"
-          required
-        />
-      </FormField>
-      <FormField label="Message" htmlFor="Message">
-        <Textarea
-          id="Message"
-          name="message"
-          rows="6"
-          placeholders="Write your message"
-          required
-        />
-      </FormField>
+    <div className={styles.contact}>
+      {/* LEFT COLUMN */}
 
-      <Button disabled={status === "loading"}>
-        {status === "loading" ? "Sending..." : "Submit"}
-      </Button>
+      <div className={styles.contactCol}>
+        <h3>Como podemos ajudar-te a aprender?</h3>
 
-      {status === "success" && <p>Menssagem foi enviada com sucesso!</p>}
-      {status === "error" && (
-        <p>Alguma coisa não correu bem. Por favor, tente novamente.</p>
-      )}
-    </form>
+        <p>
+          Se tiver algo questão, por favor não hesite em contactar-nos.
+          Envie-nos uma mensagem e entraremos em contacto consigo.
+        </p>
+      </div>
+
+      {/* FORM */}
+
+      <form
+        onSubmit={submitForm}
+        className={styles.formContainer}
+        aria-busy={status === "loading"}
+      >
+        <input
+          type="text"
+          name="botcheck"
+          className={styles.hidden}
+          tabIndex="-1"
+          autoComplete="off"
+        />
+
+        <FormField label="Your name" htmlFor="name">
+          <Input id="name" name="name" placeholder="Enter your name" required />
+        </FormField>
+
+        <FormField label="E-mail" htmlFor="email">
+          <Input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter your e-mail"
+            required
+          />
+        </FormField>
+
+        <FormField label="Message" htmlFor="message">
+          <Textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message"
+            required
+          />
+        </FormField>
+
+        <Button type="submit" disabled={status === "loading"}>
+          {status === "loading" ? "A Enviar Mensagem..." : "Enviar"}
+        </Button>
+
+        <div aria-live="polite">
+          {status === "success" && (
+            <p className={styles.success}>
+              A Mensagem foi enviada com sucesso!
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className={styles.error}>
+              Algo nao correu bem. Por favor, tente novamente.
+            </p>
+          )}
+        </div>
+      </form>
+    </div>
   );
 }

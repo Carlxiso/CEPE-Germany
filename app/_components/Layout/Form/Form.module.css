@@ -1,15 +1,110 @@
-.formContainer {
+/* .formContainer {
   min-width: 400px;
 }
 .hidden {
   display: none;
 }
 
-.spinner {
-  animation: spin 1s linear infinite;
-}
+
 
 .error p {
   color: red;
   font-size: 0.8rem;
+}
+
+.contact {
+  margin: 8rem auto;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactCol {
+  flex-basis: 48%;
+  color: #000;
+} */
+
+.contact {
+  display: grid;
+  gap: 3rem;
+  padding: 2rem 1.5rem;
+}
+
+/* Contact info column */
+
+.contactCol {
+  max-width: 520px;
+}
+
+.contactCol h3 {
+  font-size: 6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.contactCol p {
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #000;
+}
+
+/* Form */
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Honeypot */
+
+.hidden {
+  display: none;
+}
+
+.success {
+  color: #8b8c4a;
+  animation: fadeIn 0.4s ease;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.error {
+  color: #e76868;
+  animation: fadeIn 0.4s ease;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .contactCol {
+    padding-right: 4rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
