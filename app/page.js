@@ -10,6 +10,7 @@ import Institutions from "./_components/Layout/Institutions/Institutions";
 import DiagnosticTest from "./_components/Layout/DiagnosticTest/DiagnosticTest";
 import Footer from "./_components/Layout/Footer/Footer";
 import Form from "./_components/Layout/Form/Form";
+import Testimonials from "./_components/Testimonials/Testimonials";
 
 export default function Page() {
   return (
@@ -19,15 +20,17 @@ export default function Page() {
         <NewsSection />
       </Section>
       <SplitSectionGrid fullscreen></SplitSectionGrid>
+      <Section fullscreen></Section>
+      <SplitSection fullscreen></SplitSection>
       <Section fullscreen>
         <Institutions cards={institutionsData}></Institutions>
       </Section>
-      <SplitSection fullscreen></SplitSection>
-      <Section fullscreen></Section>
       <Section fullscreen bgColor="#005d8d">
         <DiagnosticTest />
       </Section>
-      <Section fullscreen></Section>
+      <Section fullscreen>
+        <Testimonials />
+      </Section>
       <Section fullscreen background={certificImg.src}>
         <div>
           <h3>CERTIFICAÇÃO</h3>

@@ -1,20 +1,20 @@
 ## First Structure
 
-/src
-/app
-layout.js
-page.js
-/components
-/layout
-Navbar.js
-Footer.js
-/sections
-Hero.js
-News.js
-About.js
-Features.js
-SplitSection.js
-Services.js
+--/src
+---/app
+----layout.js
+----page.js
+---/components
+---/layout
+----Navbar.js
+----Footer.js
+---/sections
+----Hero.js
+----News.js
+----About.js
+----Features.js
+----SplitSection.js
+----Services.js
 CTA.js
 Testimonials.js
 Banner.js
