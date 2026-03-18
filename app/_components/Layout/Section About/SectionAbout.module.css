@@ -1,0 +1,13 @@
+.section {
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: var(--color-light--2); */
+}
+
+.full {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
