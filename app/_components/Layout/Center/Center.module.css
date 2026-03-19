@@ -74,13 +74,6 @@
     height: auto;
   }
 
-  /* .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
-
   .content {
     flex: 1;
     padding: 4rem;

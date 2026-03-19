@@ -8,6 +8,8 @@ import SplitLeft from "../_components/Layout/SplitLeft/SplitLeft";
 import SplitRigth from "../_components/SplitRigth/SplitRigth";
 import SectionAbout from "../_components/Layout/Section About/SectionAbout";
 import Center from "../_components/Layout/Center/Center";
+import Team from "../_components/Layout/Team/Team";
+import Apply from "../_components/Apply/Apply";
 
 export const metadata = {
   title: "About",
@@ -119,6 +121,12 @@ export default function Page() {
       </SectionAbout>
       <Section>
         <Center src="/teachers.jpg" alt="Fotografia de grupo de Professores" />
+      </Section>
+      <Section>
+        <Team />
+      </Section>
+      <Section>
+        <Apply />
       </Section>
       <Footer />
     </>
