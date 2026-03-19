@@ -1,0 +1,11 @@
+.section {
+  margin-bottom: 2rem;
+}
+
+.topic {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #009fe3;
+  border-bottom: 1px solid #009fe3;
+  font-weight: 500;
+}
