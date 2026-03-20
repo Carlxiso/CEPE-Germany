@@ -1,0 +1,127 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+/* LEFT */
+.left {
+  max-width: 500px;
+}
+
+.kicker {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  background: #009fe3;
+  padding: 2.2rem 1.4rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 1rem 0 2rem 0;
+  padding-top: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #000;
+  background: #fff;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #009fe3;
+  border: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* RIGHT */
+.right {
+  width: 100%;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.mapCard {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background: #009fe3;
+  padding: 1.5rem;
+  max-width: 260px;
+}
+
+.mapCardTop {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.mapCardTitle {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .mapWrapper {
+    height: 500px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 4rem 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .mapCard {
+    padding: 5rem;
+    top: -180px;
+    left: 200px;
+  }
+}
+
+/* PERFORMANCE */
+.map {
+  will-change: transform;
+}

@@ -1,4 +1,5 @@
 import Contact from "../_components/Layout/Contact/Contact";
+import ContactForm from "../_components/Layout/ContactForm.js/ContactForm";
 import Footer from "../_components/Layout/Footer/Footer";
 import Section from "../_components/Layout/Section/Section";
 
@@ -10,6 +11,9 @@ export default function Page() {
     <>
       <Section fullscreen>
         <Contact />
+      </Section>
+      <Section bgColor="#415364">
+        <ContactForm />
       </Section>
       <Footer />
     </>
