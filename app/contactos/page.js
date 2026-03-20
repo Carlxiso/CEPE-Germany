@@ -1,4 +1,6 @@
+import Contact from "../_components/Layout/Contact/Contact";
 import Footer from "../_components/Layout/Footer/Footer";
+import Section from "../_components/Layout/Section/Section";
 
 export const metadata = {
   title: "Contactos",
@@ -6,9 +8,9 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <div>
-        <h1 className="text-3xl font-bold underline">Contactos Page</h1>
-      </div>
+      <Section fullscreen>
+        <Contact />
+      </Section>
       <Footer />
     </>
   );

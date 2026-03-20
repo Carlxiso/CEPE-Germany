@@ -1,0 +1,85 @@
+.wrapper {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+
+/* HEADER */
+.header {
+  text-align: left;
+  max-width: 900px;
+  /* margin: 0 auto 2rem; */
+  padding: 8rem;
+}
+
+.title {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #009fe3;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* FLOAT BUTTON */
+.floatingBtn {
+  position: absolute;
+  top: 200px;
+  right: 20px;
+  background: #f2dab2;
+  border: none;
+  padding: 0.8rem 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+  color: #415364;
+}
+
+/* IMAGE SECTION */
+.imageSection {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* CARD */
+.card {
+  background: #e76868;
+  width: 90%;
+  max-width: 350px;
+  padding: 2rem 1.5rem;
+  position: absolute;
+  top: -40px;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.cardTop {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  color: #fff;
+}
+
+.cardInfo p {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.email {
+}
