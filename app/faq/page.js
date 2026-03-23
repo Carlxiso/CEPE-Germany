@@ -4,7 +4,10 @@ import faqImage from "../../public/artboard.png";
 import Filter from "../_components/Filter/Filter";
 
 export const metadata = {
-  title: "FAQ - Perguntas Frequentes",
+  title: {
+    template: "%s | CEPE Alemanha",
+    default: "FAQ - Perguntas Frequentes | CEPE Alemanha",
+  },
 
   description:
     "Encontra respostas às perguntas mais frequentes sobre a nossa rede, cursos e suporte.",
