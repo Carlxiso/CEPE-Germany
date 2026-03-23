@@ -9,11 +9,9 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Section fullscreen background={imgCourse.src}>
-        <Container>
-          <h1>TEST</h1>
-        </Container>
-      </Section>
+      <Section fullscreen background={imgCourse.src}></Section>
+      <Section fullscreen></Section>
+
       <Footer />
     </>
   );

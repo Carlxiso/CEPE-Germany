@@ -4,7 +4,31 @@ import faqImage from "../../public/artboard.png";
 import Filter from "../_components/Filter/Filter";
 
 export const metadata = {
-  title: "Faq´s",
+  title: "FAQ - Perguntas Frequentes",
+
+  description:
+    "Encontra respostas às perguntas mais frequentes sobre a nossa rede, cursos e suporte.",
+
+  keywords: [
+    "faq",
+    "perguntas frequentes",
+    "suporte",
+    "ajuda",
+    "cursos",
+    "inscrições",
+    "certificação",
+    "professor",
+  ],
+
+  openGraph: {
+    title: "FAQ - Perguntas Frequentes",
+    description: "Descobre respostas rápidas às dúvidas mais comuns.",
+    url: "https://cepealemanha.de/faq",
+  },
+
+  alternates: {
+    canonical: "https://cepealemanha.de/faq",
+  },
 };
 export default function Page() {
   return (
