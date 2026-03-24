@@ -3,7 +3,6 @@ import Section from "../_components/Layout/Section/Section";
 import Footer from "../_components/Layout/Footer/Footer";
 import States from "../_components/CursosStates/States/States";
 import State from "../_components/CursosStates/State/State";
-import states from "../_lib/data-states";
 
 export const metadata = {
   title: "Cursos",

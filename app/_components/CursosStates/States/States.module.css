@@ -1,17 +1,21 @@
 .section {
   padding: 3rem 1rem;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
+  background-color: #f8f9fa;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
+  padding: 10rem;
 }
 
 /* LEFT */
 .left {
   max-width: 500px;
+  padding: 4rem;
 }
 
 .title {
@@ -26,15 +30,22 @@
   font-size: 1rem;
 }
 
+.left p {
+  font-size: 1rem;
+  color: #666;
+}
 .description {
   color: #666;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 /* RIGHT */
 .right {
   color: #444;
   line-height: 1.7;
+  padding: 4rem;
+  font-size: 1.55rem;
 }
 
 .reverse {
@@ -47,11 +58,11 @@
   }
 
   .left {
-    width: 40%;
+    width: 50%;
   }
 
   .right {
-    width: 60%;
+    width: 50%;
   }
 }
 
