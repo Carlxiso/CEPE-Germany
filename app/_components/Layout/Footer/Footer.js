@@ -30,7 +30,8 @@ export default function Footer() {
         {/* BOTTOM AREA */}
         <div className={styles.bottom}>
           <p className={styles.copy}>
-            © 2026 Coordenação de Ensino do Portugês no Estrangeiro
+            &copy; Copyright {new Date().getFullYear()} by: <br /> Coordenação
+            de Ensino do Portugês no Estrangeiro
           </p>
 
           <ul className={styles.legal}>
