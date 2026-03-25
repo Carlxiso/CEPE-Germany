@@ -45,6 +45,7 @@
 @import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Codystar:wght@300;400&family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Codystar:wght@300;400&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "leaflet/dist/leaflet.css";
 
 /* These CSS variables are global, so they are available in all CSS modules */
 :root {

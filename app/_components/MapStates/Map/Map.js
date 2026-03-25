@@ -1,15 +1,40 @@
+"use client";
+import dynamic from "next/dynamic";
 import CursosNavigation from "../../CursosNavigation/CursosNavigation";
 import styles from "./Map.module.css";
+import { useState } from "react";
+
+const MapLeaflet = dynamic(
+  () => import("../../CursosStates/MapLeaflet/MapLeaflet"),
+  { ssr: false },
+); // SSR OFF → só renderiza no browser
 
 export default function Map({ data, reverse = false }) {
+  const [selectedCoords, setSelectedCoords] = useState(
+    data.center || [51.1657, 10.4515],
+  ); // Alemanha default
+
+  const [zoom, setZoom] = useState(9);
+
+  const handleCityClick = (coords) => {
+    setSelectedCoords(coords);
+    setZoom(7);
+  };
+
   const tabs = [
     {
-      label: "Cursos",
+      label: "Ensino Básico e Secundário",
       content: (
         <ul>
-          {data.courses?.length ? (
-            data.courses.map((course) => (
-              <li key={course.slug}>{course.name}</li>
+          {data.basico?.length ? (
+            data.basico.map((city) => (
+              <li
+                key={city.slug}
+                onClick={() => handleCityClick(city.coords)}
+                style={{ cursor: "pointer" }}
+              >
+                {city.name}
+              </li>
             ))
           ) : (
             <p>Sem cursos disponíveis</p>
@@ -18,12 +43,28 @@ export default function Map({ data, reverse = false }) {
       ),
     },
     {
-      label: "Informação",
-      content: <p>{data.text}</p>,
+      label: "Ensino Superior",
+      content: (
+        <ul>
+          {data.superior?.length ? (
+            data.superior.map((city) => (
+              <li
+                key={city.name}
+                onClick={() => handleCityClick(city.coords)}
+                style={{ cursor: "pointer" }}
+              >
+                {city.name}
+              </li>
+            ))
+          ) : (
+            <p>Sem cursos disponíveis</p>
+          )}
+        </ul>
+      ),
     },
     {
-      label: "Comunidade",
-      content: <p>{data.textComunity}</p>,
+      label: "Test",
+      content: <p>{data.text}</p>,
     },
   ];
 
@@ -40,7 +81,13 @@ export default function Map({ data, reverse = false }) {
         </div>
 
         {/* RIGHT (MAP) */}
-        <div className={styles.map}>{data.map}</div>
+        <div className={styles.map}>
+          <MapLeaflet
+            center={selectedCoords}
+            zoom={zoom}
+            makers={[selectedCoords]}
+          />
+        </div>
       </div>
     </div>
   );
