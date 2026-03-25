@@ -44,6 +44,10 @@
   line-height: 1.6;
 }
 
+.cursosNavigation {
+  background-color: cadetblue;
+}
+
 /* TABLET */
 @media (min-width: 768px) {
   .container {

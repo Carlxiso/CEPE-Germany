@@ -6,10 +6,10 @@ export default function States() {
   return (
     <section>
       {states.map((state, index) => (
-        <>
-          <State key={state.name} data={state} reverse={index % 2 === 1} />
-          <Map key={index} data={state} reverse={index % 2 === 1}></Map>
-        </>
+        <div key={state.name}>
+          <State data={state} reverse={index % 2 === 1} />
+          <Map data={state} reverse={index % 2 === 1} />
+        </div>
       ))}
     </section>
   );
