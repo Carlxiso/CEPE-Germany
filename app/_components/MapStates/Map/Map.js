@@ -10,15 +10,15 @@ const MapLeaflet = dynamic(
 ); // SSR OFF → só renderiza no browser
 
 export default function Map({ data, reverse = false }) {
-  const [selectedCoords, setSelectedCoords] = useState(
-    data.center || [51.1657, 10.4515],
-  ); // Alemanha default
+  const [selectedCoords, setSelectedCoords] = useState(null);
 
   const [zoom, setZoom] = useState(9);
 
+  const allMarkers = [...(data.basico || []), ...(data.superior || [])];
+
   const handleCityClick = (coords) => {
     setSelectedCoords(coords);
-    setZoom(7);
+    setZoom(14);
   };
 
   const tabs = [
@@ -63,8 +63,24 @@ export default function Map({ data, reverse = false }) {
       ),
     },
     {
-      label: "Test",
-      content: <p>{data.text}</p>,
+      label: "Ensino à distância",
+      content: (
+        <ul>
+          {data.distance?.length ? (
+            data.distance.map((city) => (
+              <li
+                key={city.name}
+                onClick={() => handleCityClick(city.coords)}
+                style={{ cursor: "pointer" }}
+              >
+                {city.name}
+              </li>
+            ))
+          ) : (
+            <p>Sem cursos disponíveis</p>
+          )}
+        </ul>
+      ),
     },
   ];
 
@@ -83,9 +99,10 @@ export default function Map({ data, reverse = false }) {
         {/* RIGHT (MAP) */}
         <div className={styles.map}>
           <MapLeaflet
+            markers={allMarkers}
             center={selectedCoords}
             zoom={zoom}
-            makers={[selectedCoords]}
+            // makers={[selectedCoords]}
           />
         </div>
       </div>
