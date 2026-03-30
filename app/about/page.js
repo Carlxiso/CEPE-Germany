@@ -3,7 +3,6 @@ import Section from "../_components/Layout/Section/Section";
 import Heading from "../_components/UI/Heading/Heading";
 import Message from "../_components/Message/Message";
 import SplitSection from "../_components/Layout/SplitLeft/SplitLeft";
-
 import SplitLeft from "../_components/Layout/SplitLeft/SplitLeft";
 import SplitRigth from "../_components/SplitRigth/SplitRigth";
 import SectionAbout from "../_components/Layout/Section About/SectionAbout";
@@ -18,7 +17,10 @@ export default function Page() {
   return (
     <>
       <Section fullscreen>
-        <Heading />
+        <Heading
+          h1="Transformamos aprendizagem em comunicação real"
+          heading="Não ensinamos apenas regras — ajudamos-te a usar o português no mundo real, com confiança e naturalidade."
+        />
       </Section>
       <Section fullscreen>
         <Message>

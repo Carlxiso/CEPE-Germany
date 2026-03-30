@@ -3,6 +3,9 @@ import Section from "../_components/Layout/Section/Section";
 import Footer from "../_components/Layout/Footer/Footer";
 import States from "../_components/CursosStates/States/States";
 import State from "../_components/CursosStates/State/State";
+import Heading from "../_components/UI/Heading/Heading";
+import Button from "../_components/UI/Button/Button";
+import WrapperCenter from "../_components/wrapperCenter/WrapperCenter";
 
 export const metadata = {
   title: "Cursos",
@@ -15,7 +18,9 @@ export default function Page() {
       <States>
         <State></State>
       </States>
-
+      <Section bgColor="#415364">
+        <WrapperCenter />
+      </Section>
       <Footer />
     </>
   );
