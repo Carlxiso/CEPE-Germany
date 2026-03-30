@@ -1,19 +1,10 @@
-import Link from "next/link";
+import Section from "./_components/Layout/Section/Section";
+import PageNotFound from "./_components/PageNotFound/PageNotFound";
 
-function NotFound() {
+export default function NotFound() {
   return (
-    <main className="text-center space-y-6 mt-4">
-      <h1 className="text-3xl font-semibold">
-        This Page could not be found :(
-      </h1>
-      <Link
-        href="/"
-        className="inline-block bg-accent-500 text-primary-800 px-6 py-3 text-lg"
-      >
-        Back to HomePage
-      </Link>
-    </main>
+    <Section fullscreen>
+      <PageNotFound />;
+    </Section>
   );
 }
-
-export default NotFound;
