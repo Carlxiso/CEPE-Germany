@@ -54,6 +54,26 @@
   opacity: 1;
   transform: translateY(0);
   position: relative;
+  color: #1e88c8;
+}
+
+.show ul {
+  list-style-type: none;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+.show li {
+  border: 1px solid #1e88c8;
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  flex-grow: 1;
+  margin: 0.3rem;
+  transition: 0.3s;
+}
+.show li:hover {
+  background-color: #e76868;
+  color: #fff;
 }
 
 /* escondido */

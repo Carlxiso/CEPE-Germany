@@ -37,7 +37,7 @@ export default function Map({ data, reverse = false }) {
               </li>
             ))
           ) : (
-            <p>Sem cursos disponíveis</p>
+            <p className={styles.errorMessage}>Sem cursos disponíveis</p>
           )}
         </ul>
       ),
@@ -57,7 +57,7 @@ export default function Map({ data, reverse = false }) {
               </li>
             ))
           ) : (
-            <p>Sem cursos disponíveis</p>
+            <p className={styles.errorMessage}>Sem cursos disponíveis</p>
           )}
         </ul>
       ),
@@ -77,7 +77,7 @@ export default function Map({ data, reverse = false }) {
               </li>
             ))
           ) : (
-            <p>Sem cursos disponíveis</p>
+            <p className={styles.errorMessage}>Sem cursos disponíveis</p>
           )}
         </ul>
       ),

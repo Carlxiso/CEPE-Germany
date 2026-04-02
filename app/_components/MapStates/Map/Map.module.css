@@ -25,6 +25,10 @@
   /* display: flex;
   flex-direction: column; */
 }
+.info p {
+  padding-bottom: 1.5rem;
+  color: #415364;
+}
 
 /* CONTENT */
 .content {
@@ -45,7 +49,12 @@
 }
 
 .cursosNavigation {
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
+}
+
+.errorMessage {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 /* TABLET */

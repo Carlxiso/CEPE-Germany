@@ -39,27 +39,3 @@ export default function CursosNavigation({ tabs }) {
     </div>
   );
 }
-
-// import Link from "next/link";
-
-// const navlinks = [
-//   { name: "NavLink1", href: "/account" },
-//   { name: "NavLink2", href: "/account" },
-//   { name: "NavLink3", href: "/account" },
-// ];
-
-// export default function CursosNavigation() {
-//   return (
-//     <nav>
-//       <ul>
-//         {navlinks.map((link) => (
-//           <li key={link.name}>
-//             <Link href={link.href}>
-//               <span>{link.name}</span>
-//             </Link>
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   );
-// }
