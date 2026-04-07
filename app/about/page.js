@@ -11,7 +11,71 @@ import Team from "../_components/Layout/Team/Team";
 import Apply from "../_components/Apply/Apply";
 
 export const metadata = {
-  title: "About",
+  metadataBase: new URL("https://cepealemanha.de/about"),
+
+  title: {
+    default: "Sobre o CEPE Alemanha | Ensino de Português na Alemanha",
+    template: "%s | Português na Alemanha - CEPE",
+  },
+
+  description:
+    "Conheça o CEPE Alemanha, responsável pela coordenação do ensino do português na Alemanha, incluindo cursos, apoio educativo e certificação.",
+
+  keywords: [
+    "CEPE Alemanha",
+    "ensino português na Alemanha",
+    "coordenação ensino português estrangeiro",
+    "Camões I.P. Alemanha",
+    "ensino português no estrangeiro Alemanha",
+    "instituição português Alemanha",
+  ],
+
+  authors: [
+    { name: "Coordenação do Ensino do Português no Estrangeiro - Alemanha" },
+  ],
+  creator: "Carl-iso",
+
+  openGraph: {
+    type: "website",
+    locale: "pt_PT",
+    url: "https://cepealemanha.de/about",
+    siteName: "CEPE Alemanha",
+    title: "Sobre o CEPE Alemanha",
+    description:
+      "Saiba mais sobre a missão, estrutura e ensino do português na Alemanha.",
+    images: [
+      {
+        url: "/cepelogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Sobre o CEPE Alemanha",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Sobre o CEPE Alemanha",
+    description:
+      "Conheça a instituição responsável pelo ensino do português na Alemanha.",
+    images: ["/cepelogo.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  icons: {
+    icon: "/icon.png",
+  },
 };
 export default function Page() {
   return (
