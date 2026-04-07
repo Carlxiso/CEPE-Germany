@@ -3,7 +3,6 @@ import { Roboto } from "next/font/google";
 import Header from "./_components/Layout/Header/Header";
 
 const roboto = Roboto({ subsets: ["latin"], display: "swap" });
-
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de"),
 
@@ -78,6 +77,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "CEPE Alemanha",
+              url: "https://cepealemanha.de",
+              description: "Coordenação do Ensino do Português na Alemanha",
+              areaServed: "Alemanha",
+              inLanguage: "pt",
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${roboto.className} antialiased min-h-screen flex flex-col relative`}
       >
