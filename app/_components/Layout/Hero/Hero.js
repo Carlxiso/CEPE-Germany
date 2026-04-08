@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "../../UI/Button/Button";
 import Container from "../Container/Container";
 import styles from "./Hero.module.css";
-import imageBg from "../../../../public/bg-letters.png";
+import imageBg from "../../../../public/DSC_9921-2.png";
 export default function Hero() {
   return (
     <section className={styles.hero}>
