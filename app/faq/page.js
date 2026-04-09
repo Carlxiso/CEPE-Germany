@@ -63,6 +63,9 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
+  alternates: {
+    canonical: "https://cepealemanha.de/faq",
+  },
 
   icons: {
     icon: "/icon.png",

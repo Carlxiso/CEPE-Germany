@@ -72,6 +72,9 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
+  alternates: {
+    canonical: "https://cepealemanha.de/about",
+  },
 
   icons: {
     icon: "/icon.png",
