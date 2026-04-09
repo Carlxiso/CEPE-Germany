@@ -100,12 +100,12 @@ export default function NewsSection() {
 
   return (
     <>
-      <div className={styles.news}>
+      <div className={styles.innerContent}>
         <h2>Últimas Notícias</h2>
-        <p>
+        <h4>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum cumque
           qui quam voluptatibus enim autem?
-        </p>
+        </h4>
       </div>
       {/* <div
         className={styles.cards}

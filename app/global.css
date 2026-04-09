@@ -68,6 +68,39 @@ input:focus {
   padding: 1rem;
 }
 
+/** Global styles for the inner content of sections. This class can be used to apply consistent styling to the content within each section, such as padding, background color, or other layout properties. */
+
+.innerContent {
+  max-width: 600px;
+  width: 100%;
+  /* text-align: left; */
+  margin-inline: auto;
+}
+
+.content h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #009fe3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  /* max-width: 50rem; */
+}
+
+.content h4 {
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  color: rgb(60, 70, 71);
+  margin: 1rem 0 2rem;
+}
+.content p {
+  color: rgb(60, 70, 71);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 550px;
+}
+
 .cta:link,
 .cta:visited {
   display: inline-block;

@@ -6,6 +6,11 @@ import imageBg from "../../../../public/DSC_9921-2.png";
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={styles.lines}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <Image
         src={imageBg}
         alt="Background Image Letters"
@@ -16,7 +21,7 @@ export default function Hero() {
       <Container>
         <div className={styles.heroContent}>
           <h1>
-            Abarca a língua portuguesa <br />
+            Abarca a Língua Portuguesa <br />
           </h1>
           <p>
             Abarcar a língua portuguesa é abraçar a nossa história, a família e

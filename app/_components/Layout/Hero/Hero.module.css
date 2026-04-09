@@ -5,9 +5,7 @@
   overflow: hidden;
   min-height: 100vh;
   padding: 120px 20px;
-  /* background:
-    radial-gradient(circle at 20% 20%, #6e8cff30, transparent 40%),
-    radial-gradient(circle at 80% 0%, #ff6ec430, transparent 40%); */
+  justify-content: flex-end;
 }
 
 .heroImage {
@@ -22,21 +20,24 @@
 }
 
 .heroContent {
-  max-width: 700px;
+  max-width: 600px;
   margin-inline: auto;
   text-align: center;
+  margin-right: -35%;
 }
 
 .hero h1 {
-  font-size: clamp(36px, 6vw, 64px);
-  font-weight: 800;
+  font-size: clamp(36px, 6vw, 120px);
+  font-weight: 600;
   line-height: 1.1;
+  color: #f2dab2;
 }
 
 .hero p {
   margin-top: 20px;
   font-size: 18px;
   opacity: 0.8;
+  color: #aaa;
 }
 
 .heroButtons {
@@ -44,11 +45,58 @@
   display: flex;
   justify-content: center;
   gap: 16px;
+  margin-right: -65%;
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* estilo base */
+.lines span {
+  position: absolute;
+  height: 2px; /*linha fina */
+
+  transform: rotate(116deg);
+  transform-origin: left center;
+}
+
+/* linha 1 */
+.lines span:nth-child(1) {
+  height: 3px;
+  background: #f2dab2;
+  width: 200px;
+  top: -10%;
+  left: 43%;
+}
+
+/* linha 2 */
+.lines span:nth-child(2) {
+  height: 5px;
+  background: #e76868;
+  width: 400px;
+  top: -10%;
+  left: 44%;
+}
+
+/* linha 3 */
+.lines span:nth-child(3) {
+  height: 4px;
+  background: #8b8c4a;
+  width: 150px;
+  top: -10%;
+  left: 42%;
 }
 
 @media (max-width: 768px) {
   .heroImage {
     clip-path: none;
     opacity: 0.2;
+  }
+
+  .heroContent {
+    margin-right: -35%;
   }
 }
