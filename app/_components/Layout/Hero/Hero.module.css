@@ -61,6 +61,7 @@
 
   transform: rotate(116deg);
   transform-origin: left center;
+  z-index: 30;
 }
 
 /* linha 1 */
