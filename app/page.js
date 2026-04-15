@@ -12,6 +12,7 @@ import Footer from "./_components/Layout/Footer/Footer";
 import Form from "./_components/Layout/Form/Form";
 import Testimonials from "./_components/Testimonials/Testimonials";
 import StatsSection from "./_components/Layout/StatsSection/StatsSection";
+import Certification from "./_components/Certification/Certification";
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de"),
 
@@ -107,18 +108,8 @@ export default function Page() {
       <Section fullscreen>
         <Testimonials />
       </Section>
-      <Section fullscreen background={certificImg.src}>
-        <div>
-          <h3>CERTIFICAÇÃO</h3>
-          <h2>O teu futuro começa aqui.</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-            suscipit eaque consequuntur nisi consectetur iure officia quibusdam
-            quod nemo. Ad, eligendi. Quas consectetur dolorum accusantium
-            similique quaerat vitae, iure!
-          </p>
-          <Button variant="secondary">Certificação</Button>
-        </div>
+      <Section fullscreen withContainer={false} background={certificImg.src}>
+        <Certification />
       </Section>
       <Section fullscreen>
         <Form />

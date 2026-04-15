@@ -1,0 +1,40 @@
+.content {
+  padding: 20rem 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* background-color: #f8f9fa; */
+  min-height: 100vh;
+}
+
+.innerContent {
+  max-width: 600px;
+  width: 100%;
+  margin-top: auto;
+  /* margin-inline: auto; */
+  margin-inline: 0;
+}
+
+.content h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #f2dab2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.content h4 {
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  color: rgb(60, 70, 71);
+  margin: 1rem 0 2rem;
+}
+.content p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 550px;
+}

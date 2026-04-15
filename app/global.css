@@ -70,10 +70,10 @@ input:focus {
 
 /** Global styles for the inner content of sections. This class can be used to apply consistent styling to the content within each section, such as padding, background color, or other layout properties. */
 
-.innerContent {
+/* .innerContent {
   max-width: 600px;
   width: 100%;
-  /* text-align: left; */
+
   margin-inline: auto;
 }
 
@@ -83,7 +83,7 @@ input:focus {
   color: #009fe3;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  /* max-width: 50rem; */
+
 }
 
 .content h4 {
@@ -99,7 +99,7 @@ input:focus {
   line-height: 2.5rem;
   padding-bottom: 5rem;
   max-width: 550px;
-}
+} */
 
 .cta:link,
 .cta:visited {
