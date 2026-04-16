@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./SplitSection.module.css";
 import img from "../../../../public/letters.png";
 import Button from "../../UI/Button/Button";
+import DividerSection from "../../DividerSection/DividerSection";
 
 export default function SplitSection({ fullscreen = false }) {
   return (
@@ -17,10 +18,13 @@ export default function SplitSection({ fullscreen = false }) {
 
       <div className={styles.content}>
         <div className={styles.innerContent}>
-          <h2>CURSOS</h2>
+          {/* <h2>CURSOS</h2>
 
-          <h4> Descobre os estados na Alemanha onde Lecionamos.</h4>
-
+          <h4> Descobre os estados na Alemanha onde Lecionamos.</h4> */}
+          <DividerSection
+            title="CURSOS"
+            subtitle="Descobre os estados na Alemanha onde Lecionamos."
+          />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
             suscipit eaque consequuntur nisi consectetur iure officia quibusdam

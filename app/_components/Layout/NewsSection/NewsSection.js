@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Button from "../../UI/Button/Button";
 import styles from "./NewsSection.module.css";
+import DividerSection from "../../DividerSection/DividerSection";
 
 const news = [
   {
@@ -101,11 +102,10 @@ export default function NewsSection() {
   return (
     <>
       <div className={styles.innerContent}>
-        <h2>Últimas Notícias</h2>
-        <h4>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum cumque
-          qui quam voluptatibus enim autem?
-        </h4>
+        <DividerSection
+          title="Últimas Notícias"
+          subtitle="Descobre as últimas notícias sobre os nossos cursos e atividades"
+        />
       </div>
       {/* <div
         className={styles.cards}
