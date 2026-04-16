@@ -17,19 +17,10 @@
 }
 
 .content h2 {
-  font-weight: 600;
-  font-size: 2rem;
   color: #f2dab2;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-weight: 500;
 }
 
-.content h4 {
-  font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
-  color: rgb(60, 70, 71);
-  margin: 1rem 0 2rem;
-}
 .content p {
   color: #fff;
   font-size: 1.5rem;

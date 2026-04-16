@@ -14,7 +14,7 @@ export default function Navigation() {
   const navLinks = [
     {
       href: "/about",
-      label: "About",
+      label: "Sobre Nós",
     },
     {
       href: "/cursos",
@@ -30,7 +30,7 @@ export default function Navigation() {
     },
     {
       href: "/faq",
-      label: "FAQ´S",
+      label: "Suporte",
     },
   ];
 

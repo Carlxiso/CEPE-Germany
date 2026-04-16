@@ -6,6 +6,7 @@ import Input from "./Input/Input";
 import Textarea from "./Textarea/Textarea";
 import Button from "../../UI/Button/Button";
 import styles from "./Form.module.css";
+import DividerSection from "../../DividerSection/DividerSection";
 
 export default function Form() {
   const [status, setStatus] = useState("idle");
@@ -47,75 +48,87 @@ export default function Form() {
   }
 
   return (
-    <div className={styles.contact}>
-      {/* LEFT COLUMN */}
+    <>
+      <DividerSection
+        title="Contactos"
+        subtitle="Tentaremos ser o mais breves possivel"
+      />
+      <div className={styles.contact}>
+        {/* LEFT COLUMN */}
 
-      <div className={styles.contactCol}>
-        <h3>Como podemos ajudar-te a aprender?</h3>
+        <div className={styles.contactCol}>
+          <h3>Como podemos ajudar-te a aprender?</h3>
 
-        <p>
-          Se tiver algo questão, por favor não hesite em contactar-nos.
-          Envie-nos uma mensagem e entraremos em contacto consigo.
-        </p>
-      </div>
-
-      {/* FORM */}
-
-      <form
-        onSubmit={submitForm}
-        className={styles.formContainer}
-        aria-busy={status === "loading"}
-      >
-        <input
-          type="text"
-          name="botcheck"
-          className={styles.hidden}
-          tabIndex="-1"
-          autoComplete="off"
-        />
-
-        <FormField label="Your name" htmlFor="name">
-          <Input id="name" name="name" placeholder="Enter your name" required />
-        </FormField>
-
-        <FormField label="E-mail" htmlFor="email">
-          <Input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter your e-mail"
-            required
-          />
-        </FormField>
-
-        <FormField label="Message" htmlFor="message">
-          <Textarea
-            id="message"
-            name="message"
-            rows="6"
-            placeholder="Write your message"
-            required
-          />
-        </FormField>
-
-        <Button type="submit" disabled={status === "loading"}>
-          {status === "loading" ? "A Enviar Mensagem..." : "Enviar"}
-        </Button>
-
-        <div aria-live="polite">
-          {status === "success" && (
-            <p className={styles.success}>
-              A Mensagem foi enviada com sucesso!
-            </p>
-          )}
-
-          {status === "error" && (
-            <p className={styles.error}>
-              Algo nao correu bem. Por favor, tente novamente.
-            </p>
-          )}
+          <p>
+            Se tiver algo questão, por favor não hesite em contactar-nos.
+            Envie-nos uma mensagem e entraremos em contacto consigo.
+          </p>
+          <Button>Saber +</Button>
         </div>
-      </form>
-    </div>
+
+        {/* FORM */}
+
+        <form
+          onSubmit={submitForm}
+          className={styles.formContainer}
+          aria-busy={status === "loading"}
+        >
+          <input
+            type="text"
+            name="botcheck"
+            className={styles.hidden}
+            tabIndex="-1"
+            autoComplete="off"
+          />
+
+          <FormField label="Your name" htmlFor="name">
+            <Input
+              id="name"
+              name="name"
+              placeholder="Digite o seu nome"
+              required
+            />
+          </FormField>
+
+          <FormField label="E-mail" htmlFor="email">
+            <Input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Digite o seu e-mail"
+              required
+            />
+          </FormField>
+
+          <FormField label="Message" htmlFor="message">
+            <Textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Digite a sua mensagem"
+              required
+            />
+          </FormField>
+
+          <Button type="submit" disabled={status === "loading"}>
+            {status === "loading" ? "A Enviar Mensagem..." : "Enviar"}
+          </Button>
+
+          <div aria-live="polite">
+            {status === "success" && (
+              <p className={styles.success}>
+                A Mensagem foi enviada com sucesso!
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className={styles.error}>
+                Algo nao correu bem. Por favor, tente novamente.
+              </p>
+            )}
+          </div>
+        </form>
+      </div>
+    </>
   );
 }

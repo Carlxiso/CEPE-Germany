@@ -2,16 +2,17 @@ import Image from "next/image";
 import Button from "../../UI/Button/Button";
 import img from "../../../../public/letters-in-group.png";
 import styles from "./SplitSectionGrid.module.css";
+import DividerSection from "../../DividerSection/DividerSection";
 
 export default function SplitSectionGrid({ fullscreen = false }) {
   return (
     <section className={`${styles.split} ${fullscreen ? styles.full : ""}`}>
       <div className={styles.content}>
         <div className={styles.innerContent}>
-          <h2>ABOUT</h2>
-
-          <h4>Descobra um pouco mais de nós</h4>
-
+          <DividerSection
+            title="Sobre Nós"
+            subtitle="Descobra um pouco mais de nós"
+          />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
             suscipit eaque consequuntur nisi consectetur iure officia quibusdam
