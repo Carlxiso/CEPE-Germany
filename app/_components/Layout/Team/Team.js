@@ -1,30 +1,31 @@
 import Image from "next/image";
 import styles from "./Team.module.css";
+import RotatingCircule from "../../UI/RotatingCircule/RotatingCircule";
 
 const team = [
   {
     name: "Ana Silva",
     email: "ana@example.com",
     location: "Lisboa, Portugal",
-    image: "/testicon.png",
+    image: "/girl-avatar.svg",
   },
   {
     name: "João Costa",
     email: "joao@example.com",
     location: "Porto, Portugal",
-    image: "/testicon.png",
+    image: "/man-avatar.svg",
   },
   {
     name: "Maria Santos",
     email: "maria@example.com",
     location: "Coimbra, Portugal",
-    image: "/testicon.png",
+    image: "/woman-avatar.svg",
   },
   {
     name: "Pedro Rocha",
     email: "pedro@example.com",
     location: "Braga, Portugal",
-    image: "/testicon.png",
+    image: "/boy-avatar.svg",
   },
 ];
 
@@ -37,13 +38,19 @@ export default function Team() {
         <div className={styles.teamGrid}>
           {team.map((member, index) => (
             <div key={index} className={styles.card}>
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={150}
-                height={150}
-                className={styles.avatar}
-              />
+              {/* Círculo rotativo atrás do avatar */}
+              <div className={styles.avatarWrapper}>
+                <RotatingCircule />
+
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={150}
+                  height={150}
+                  className={styles.avatar}
+                />
+              </div>
+              {/* Círculo rotativo atrás do avatar */}
               <h3 className={styles.name}>{member.name}</h3>
               <a href={`mailto:${member.email}`} className={styles.email}>
                 {member.email}

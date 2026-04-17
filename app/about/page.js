@@ -194,9 +194,7 @@ export default function Page() {
       <Section>
         <Team />
       </Section>
-      <Section>
-        <Apply />
-      </Section>
+      <Section>{/* <Apply /> */}</Section>
       <Footer />
     </>
   );
