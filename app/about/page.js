@@ -9,6 +9,8 @@ import SectionAbout from "../_components/Layout/Section About/SectionAbout";
 import Center from "../_components/Layout/Center/Center";
 import Team from "../_components/Layout/Team/Team";
 import Apply from "../_components/Apply/Apply";
+import bgTest from "../../public/test_1.png";
+import AnimatedLetterBg from "../_components/UI/AnimatedLetterBg/AnimatedLetterBg";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -83,11 +85,12 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Section fullscreen>
+      <Section fullscreen withContainer={false}>
         <Heading
           h1="Transformamos aprendizagem em comunicação real"
           heading="Não ensinamos apenas regras — ajudamos-te a usar o português no mundo real, com confiança e naturalidade."
         />
+        <AnimatedLetterBg />
       </Section>
       <Section fullscreen>
         <Message>
