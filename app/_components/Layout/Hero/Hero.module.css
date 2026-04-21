@@ -34,10 +34,13 @@
 }
 
 .hero p {
-  margin-top: 20px;
-  font-size: 18px;
-  opacity: 0.8;
-  color: #aaa;
+  margin-top: 2rem;
+  color: rgb(60, 70, 71);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 900px;
 }
 
 .heroButtons {

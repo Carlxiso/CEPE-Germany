@@ -18,11 +18,13 @@
 }
 
 .contactCol p {
-  line-height: 1.6;
-  opacity: 0.8;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #000;
+  margin-top: 2rem;
+  color: rgb(60, 70, 71);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 500px;
 }
 
 /* Form */
