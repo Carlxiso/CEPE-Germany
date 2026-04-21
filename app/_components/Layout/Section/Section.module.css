@@ -4,6 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   /* background-color: var(--color-light--2); */
+  position: relative;
 }
 
 .full {

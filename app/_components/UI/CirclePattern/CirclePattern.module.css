@@ -1,0 +1,56 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 4px;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile img {
+  width: 280px;
+  opacity: 0.5;
+
+  animation: rotateTile linear infinite;
+}
+
+.tile:nth-child(3n) img {
+  animation-duration: 60s;
+  animation-direction: normal;
+}
+
+.tile:nth-child(3n + 1) img {
+  animation-duration: 90s;
+  animation-direction: reverse;
+}
+
+.tile:nth-child(3n + 2) img {
+  animation-duration: 75s;
+}
+
+.tile:nth-child(4n) img {
+  animation-delay: -10s;
+}
+
+.tile:nth-child(5n) img {
+  animation-delay: -25s;
+}
+
+@keyframes rotateTile {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

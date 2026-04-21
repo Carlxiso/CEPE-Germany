@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import CirclePattern from "../CirclePattern/CirclePattern";
 import styles from "./CTASection.module.css";
 
 export default function CTASection({ headline, text }) {

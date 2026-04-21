@@ -13,6 +13,7 @@ import Form from "./_components/Layout/Form/Form";
 import Testimonials from "./_components/Testimonials/Testimonials";
 import StatsSection from "./_components/Layout/StatsSection/StatsSection";
 import Certification from "./_components/Certification/Certification";
+import CirclePattern from "./_components/UI/CirclePattern/CirclePattern";
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de"),
 
@@ -103,6 +104,7 @@ export default function Page() {
         <Institutions cards={institutionsData}></Institutions>
       </Section>
       <Section fullscreen bgColor="#005d8d">
+        <CirclePattern />
         <DiagnosticTest />
       </Section>
       <Section fullscreen>
@@ -114,6 +116,7 @@ export default function Page() {
       <Section fullscreen>
         <Form />
       </Section>
+
       <Footer />
     </>
   );
