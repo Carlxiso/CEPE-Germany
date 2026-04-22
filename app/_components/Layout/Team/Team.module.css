@@ -13,9 +13,6 @@
   z-index: 2;
   border-radius: 50%;
 }
-.teamSection {
-  margin-top: 4rem;
-}
 
 .teamTitle {
   text-align: center;
@@ -28,6 +25,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  padding-top: 5rem;
 }
 
 .card {

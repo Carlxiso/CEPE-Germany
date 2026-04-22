@@ -31,8 +31,8 @@
 }
 
 .content h2 {
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 1rem;
   color: #009fe3;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -44,6 +44,7 @@
   color: rgb(60, 70, 71);
   margin: 1rem 0 2rem;
 }
+
 .content p {
   color: rgb(60, 70, 71);
   font-size: 1.5rem;
@@ -72,13 +73,6 @@
     flex: 1;
     height: auto;
   }
-
-  /* .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
 
   .content {
     flex: 1;

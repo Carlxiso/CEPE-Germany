@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./Team.module.css";
 import RotatingCircule from "../../UI/RotatingCircule/RotatingCircule";
+import DividerSection from "../../DividerSection/DividerSection";
 
 const team = [
   {
@@ -33,7 +34,10 @@ export default function Team() {
   return (
     <>
       <section className={styles.teamSection}>
-        <h2 className={styles.teamTitle}>Equipa da Coordenação</h2>
+        <DividerSection
+          title="Equipa da Coordenação"
+          subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+        />
 
         <div className={styles.teamGrid}>
           {team.map((member, index) => (

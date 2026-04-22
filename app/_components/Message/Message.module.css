@@ -11,14 +11,13 @@
 .aboutLeft {
   width: 100%;
   position: relative;
-
   aspect-ratio: 2 / 3;
 }
 
 /* CONTENT */
 .aboutRigth {
   width: 100%;
-  max-width: 65ch; /* melhor leitura */
+  /* max-width: 65ch;  */
 }
 
 /* IMAGE */
@@ -26,6 +25,7 @@
   width: 100%;
   height: auto;
   border-radius: 12px;
+  object-fit: contain;
 }
 
 /* PLAY ICON */
@@ -52,9 +52,13 @@
 }
 
 .about p {
+  margin-top: 2rem;
   color: rgb(60, 70, 71);
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 900px;
 }
 
 @media (min-width: 768px) {
@@ -70,7 +74,7 @@
     width: 100%;
     position: relative;
     height: 60rem;
-    /*wsws*/
+
     aspect-ratio: 2 / 3;
     object-fit: contain;
   }
@@ -87,7 +91,7 @@
     width: 5rem;
   }
 
-  .about p {
+  /* .about p {
     font-size: 1.12rem;
-  }
+  } */
 }

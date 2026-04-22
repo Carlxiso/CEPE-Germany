@@ -7,6 +7,7 @@ export default function Section({
   bgColor,
   fullscreen = false,
   withContainer = true,
+  variant,
 }) {
   const sectionStyle = {
     backgroundImage: background ? `url(${background})` : undefined,
@@ -14,9 +15,14 @@ export default function Section({
   };
 
   const content = withContainer ? <Container>{children}</Container> : children;
+
   return (
     <section
-      className={`${styles.section} ${fullscreen ? styles.full : ""}`}
+      className={`
+        ${styles.section}
+        ${fullscreen ? styles.full : ""}
+        ${variant ? styles[variant] : ""}
+      `}
       style={sectionStyle}
     >
       {content}

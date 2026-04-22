@@ -9,8 +9,11 @@ import SectionAbout from "../_components/Layout/Section About/SectionAbout";
 import Center from "../_components/Layout/Center/Center";
 import Team from "../_components/Layout/Team/Team";
 import Apply from "../_components/Apply/Apply";
-import bgTest from "../../public/test_1.png";
+
 import AnimatedLetterBg from "../_components/UI/AnimatedLetterBg/AnimatedLetterBg";
+import DividerSection from "../_components/DividerSection/DividerSection";
+import bTile from "../../public/b-tiles.svg";
+import bannerTiles from "../../public/banner-tiles.svg";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -95,14 +98,16 @@ export default function Page() {
       <Section fullscreen>
         <Message>
           <Message.Image
-            src="/director.jpg"
+            src="/directora.jpg"
             alt="Coordenadora do Ensino do Português na Alemanha"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <Message.Content>
-            <h3>Lorem ipsum dolor sit.</h3>
-            <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+            <DividerSection
+              title="Ângela Dias Silvério"
+              subtitle="Coordenadora da Coordenação de Ensino do Português Na Alemanha"
+            />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
               suscipit eaque consequuntur nisi consectetur iure officia
@@ -127,11 +132,13 @@ export default function Page() {
           </Message.Content>
         </Message>
       </Section>
+
       <Section>
         <SplitLeft
           src="/DSC_2786.jpg"
           alt="Ensino do Português"
           title="Coordenação do ensino Portugues no estranhgeiro na Alemanha"
+          subtitle="Pautamos pelo falar nas costas e corte e costura"
           text="A Coordenação do Ensino Português no Estrangeiro na Alemanha é uma
         estrutura do Camões – Instituto da Cooperação e da Língua, I.P.,
         responsável pela promoção e desenvolvimento do ensino da língua
@@ -146,12 +153,14 @@ export default function Page() {
         sociedade alemã e reforçando a ligação às comunidades portuguesas."
         />
       </Section>
+      <Section />
       <SectionAbout>
         <SplitSection
           // style={{ flexDirection: "row-reverse" }}
           src="/DSC_2691.jpg"
           alt="Ensino do Portugês"
           title="Missão"
+          subtitle="Pautamos pelo falar nas costas e corte e costura"
           text="A CEPE Alemanha opera com vista a melhorar o posicionamento da
         língua portuguesa na Alemanha e, consequentemente, à escala
         global, através da coordenação e gestão sistemática da rede do
@@ -170,12 +179,14 @@ export default function Page() {
         globalizado."
         />
       </SectionAbout>
+      <Section background={bannerTiles.src} variant="hero" />
       <SectionAbout>
         <SplitRigth
           // style={{ flexDirection: "row-reverse" }}
           src="/DSC_2806.jpg"
           alt="Ensino do Portugês"
           title="Valores"
+          subtitle="Pautamos pelo falar nas costas e corte e costura"
           text=" O código de conduta do Camões, I.P. assente nos princípios da
         igualdade, imparcialidade, isenção, transparência, integridade e
         criteriosa afetação dos recursos públicos, identifica como valores
@@ -192,10 +203,10 @@ export default function Page() {
         />
       </SectionAbout>
       <Section>
-        <Center src="/teachers.jpg" alt="Fotografia de grupo de Professores" />
+        <Team />
       </Section>
       <Section>
-        <Team />
+        <Center src="/teachers.jpg" alt="Fotografia de grupo de Professores" />
       </Section>
       <Section>{/* <Apply /> */}</Section>
       <Footer />
