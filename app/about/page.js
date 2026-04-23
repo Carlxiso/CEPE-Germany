@@ -14,6 +14,9 @@ import AnimatedLetterBg from "../_components/UI/AnimatedLetterBg/AnimatedLetterB
 import DividerSection from "../_components/DividerSection/DividerSection";
 import bTile from "../../public/b-tiles.svg";
 import bannerTiles from "../../public/banner-tiles.svg";
+import bannerTilesHoles from "../../public/banner-tiles-holes.svg";
+import GridContainer from "../_components/UI/Grid/GridContainer";
+import GridWrapper from "../_components/UI/Grid/GridWrapper";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -132,6 +135,9 @@ export default function Page() {
           </Message.Content>
         </Message>
       </Section>
+      {/* <Section background={bannerTilesHoles.src} variant="hero" /> */}
+
+      <GridWrapper />
 
       <Section>
         <SplitLeft
@@ -154,6 +160,7 @@ export default function Page() {
         />
       </Section>
       <Section />
+      <Section background={bannerTilesHoles.src} variant="hero" />
       <SectionAbout>
         <SplitSection
           // style={{ flexDirection: "row-reverse" }}

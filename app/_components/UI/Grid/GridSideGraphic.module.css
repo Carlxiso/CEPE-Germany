@@ -1,0 +1,66 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.2;
+}
+
+.st0v {
+  stroke: #169bd8;
+  stroke-dasharray: 2;
+  stroke-width: 0.5px;
+}
+
+.st0v,
+.st1v {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+
+.st2v {
+  fill: #189cd9;
+}
+
+.st1v {
+  stroke: #189cd9;
+}
+
+.svg {
+  height: 130%;
+  width: auto;
+}
+
+.path {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: line 35s ease-in-out infinite;
+}
+
+@keyframes line {
+  /* começa escondido */
+  0% {
+    stroke-dashoffset: 4000;
+  }
+
+  /* desenha */
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  /* pausa desenhado */
+  40% {
+    stroke-dashoffset: 0;
+  }
+
+  /* apaga */
+  65% {
+    stroke-dashoffset: 4000;
+  }
+
+  /* pausa apagado */
+  100% {
+    stroke-dashoffset: 4000;
+  }
+}
