@@ -14,20 +14,21 @@ export default function SplitSectionGrid({ fullscreen = false }) {
             subtitle="Descobra um pouco mais de nós"
           />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-            suscipit eaque consequuntur nisi consectetur iure officia quibusdam
-            quod nemo. Ad, eligendi. Quas consectetur dolorum accusantium
-            similique quaerat vitae, iure a, excepturi nihil alias obcaecati
-            iste itaque dolores maiores voluptatem tempora quam. Impedit illo
-            accusamus architecto neque minima, autem quae modi dolor rerum at
-            quo nisi aut ea tempore eligendi obcaecati corrupti esse magnam!
-            Exercitationem, ullam ducimus id sint quod expedita cum ab. Incidunt
-            exercitationem veritatis doloribus libero esse quisquam alias
-            consectetur modi voluptate eligendi illum ipsum, nemo nostrum vero
-            nesciunt, quidem perferendis!
+            A Coordenação do Ensino Português no Estrangeiro na Alemanha é uma
+            estrutura do Camões – Instituto da Cooperação e da Língua, I.P.,
+            responsável pela promoção e desenvolvimento do ensino da língua
+            portuguesa no ensino básico e secundário e ensino superior no
+            contexto alemão. Atua em 9 dos 16 estados federais junto de escolas,
+            docentes, alunos e parceiros institucionais, promovendo o português
+            como língua de herança, língua estrangeira e língua de cultura. Em
+            articulação com a Embaixada de Portugal e entidades locais,
+            desenvolve iniciativas educativas e culturais que reforçam a
+            visibilidade, a qualidade e o prestígio da língua portuguesa,
+            contribuindo para a sua afirmação no sistema educativo e na
+            sociedade alemã e reforçando a ligação às comunidades portuguesas.
           </p>
 
-          <Button>Saber +</Button>
+          <Button href="/about">Saber +</Button>
         </div>
       </div>
       <div className={styles.image}>

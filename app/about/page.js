@@ -144,30 +144,20 @@ export default function Page() {
           src="/DSC_2786.jpg"
           alt="Ensino do Português"
           title="Coordenação do ensino Portugues no estranhgeiro na Alemanha"
-          subtitle="Pautamos pelo falar nas costas e corte e costura"
-          text="A Coordenação do Ensino Português no Estrangeiro na Alemanha é uma
-        estrutura do Camões – Instituto da Cooperação e da Língua, I.P.,
-        responsável pela promoção e desenvolvimento do ensino da língua
-        portuguesa no ensino básico e secundário e ensino superior no
-        contexto alemão. Atua em 9 dos 16 estados federais junto de
-        escolas, docentes, alunos e parceiros institucionais, promovendo o
-        português como língua de herança, língua estrangeira e língua de
-        cultura. Em articulação com a Embaixada de Portugal e entidades
-        locais, desenvolve iniciativas educativas e culturais que reforçam
-        a visibilidade, a qualidade e o prestígio da língua portuguesa,
-        contribuindo para a sua afirmação no sistema educativo e na
-        sociedade alemã e reforçando a ligação às comunidades portuguesas."
+          subtitle="A ligação às comunidades portuguesas"
+          text="A Coordenação do Ensino Português no Estrangeiro na Alemanha, estrutura do Camões – Instituto da Cooperação e da Língua, I.P., com sede na Embaixada de Portugal em Berlim, é, sob orientação do Camões, I.P. e em articulação com a Embaixada de Portugal, a principal entidade pública que tutela o ensino do Português na Alemanha.
+Assente na sua sólida existência, e num contexto atual de globalização, o Camões, I.P., através da CEPE Alemanha, reforça assim a imagem institucional de qualidade e prestígio na área do ensino e o seu posicionamento local como estrutura de coordenação de referência, global, experiente, líder, apta a disponibilizar aos lusodescendentes, bem como a outros provenientes da CPLP e aficionados pela língua portuguesa um ensino de qualidade, inovador e com práticas pedagógicas de excelência com vista à promoção e internacionalização do Português e o seu reconhecimento/ integração nos sistemas de ensino local."
         />
       </Section>
       <Section />
-      <Section background={bannerTilesHoles.src} variant="hero" />
+      {/* <Section background={bannerTilesHoles.src} variant="hero" /> */}
       <SectionAbout>
         <SplitSection
           // style={{ flexDirection: "row-reverse" }}
           src="/DSC_2691.jpg"
           alt="Ensino do Portugês"
           title="Missão"
-          subtitle="Pautamos pelo falar nas costas e corte e costura"
+          subtitle="Gestão sistemática da rede do ensino "
           text="A CEPE Alemanha opera com vista a melhorar o posicionamento da
         língua portuguesa na Alemanha e, consequentemente, à escala
         global, através da coordenação e gestão sistemática da rede do
@@ -186,14 +176,14 @@ export default function Page() {
         globalizado."
         />
       </SectionAbout>
-      <Section background={bannerTiles.src} variant="hero" />
+      {/* <Section background={bannerTiles.src} variant="hero" /> */}
       <SectionAbout>
         <SplitRigth
           // style={{ flexDirection: "row-reverse" }}
           src="/DSC_2806.jpg"
           alt="Ensino do Portugês"
           title="Valores"
-          subtitle="Pautamos pelo falar nas costas e corte e costura"
+          subtitle="Identidade e diversidade cultural"
           text=" O código de conduta do Camões, I.P. assente nos princípios da
         igualdade, imparcialidade, isenção, transparência, integridade e
         criteriosa afetação dos recursos públicos, identifica como valores
@@ -209,6 +199,7 @@ export default function Page() {
         pessoal, profissional e cultural numa sociedade pluralista;"
         />
       </SectionAbout>
+      <Section background={bannerTiles.src} variant="hero" />
       <Section>
         <Team />
       </Section>

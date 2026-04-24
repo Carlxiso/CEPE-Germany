@@ -57,13 +57,16 @@ export default function Form() {
         {/* LEFT COLUMN */}
 
         <div className={styles.contactCol}>
-          <h3>Como podemos ajudar-te a aprender?</h3>
+          <h3>Contacte-nos e abarque a língua portuguesa hoje!</h3>
 
           <p>
-            Se tiver algo questão, por favor não hesite em contactar-nos.
-            Envie-nos uma mensagem e entraremos em contacto consigo.
+            Se tiver dúvidas ou precisar de mais informações, estamos à sua
+            disposição. Entre em contacto connosco e descubra como a nossa
+            equipa pode ajudá-lo a abarcar a língua portuguesa de forma
+            completa, valorizando o seu percurso de aprendizagem e experiências
+            com o português.
           </p>
-          <Button>Saber +</Button>
+          <Button href="/contactos">Saber +</Button>
         </div>
 
         {/* FORM */}

@@ -7,7 +7,7 @@ export default function Center({ src, alt, title, text, fullscreen = false }) {
     <>
       <DividerSection
         title="Equipa de Professores"
-        subtitle="Pautamos pelo falar nas costas e corte e costura"
+        subtitle="A valorização da língua portuguesa"
       />
       <div className={`${styles.split} ${fullscreen ? styles.full : ""}`}>
         <div className={styles.image}>
