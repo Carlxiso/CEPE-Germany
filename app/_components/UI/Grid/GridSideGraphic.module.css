@@ -1,10 +1,12 @@
 .wrapper {
   position: relative;
   height: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0.2;
+  /* overflow: hidden; */
 }
 
 .st0v {
@@ -28,8 +30,9 @@
 }
 
 .svg {
-  height: 130%;
+  height: 200%;
   width: auto;
+  position: absolute;
 }
 
 .path {

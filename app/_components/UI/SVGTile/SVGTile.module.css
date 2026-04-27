@@ -12,6 +12,28 @@
 .st0Twelve,
 .st0Thirteen,
 .st0Fourteen,
-.st0Fifteen {
+.st0Fifteen,
+.st0SixTeen,
+.st1SixTeen,
+.st0SevenTeen,
+.st0EightTeen,
+.st0NineTeen,
+.st0Tweenty,
+.st0TweentyOne,
+.st0TweentyTwo,
+.st0TweentyThree,
+.st0TweentyFour,
+.st0TweentyFive,
+.st0TweentySix,
+.st0TweentySeven,
+.st0TweentyEight,
+.st0TweentyNine,
+.st0Thirty {
   fill: #189cd9;
+}
+
+.st0SevenTeen {
+  fill: none;
+  stroke: #069dd9;
+  stroke-miterlimit: 10;
 }

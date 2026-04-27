@@ -1,7 +1,7 @@
 import Grid from "./Grid";
 import GridItem from "./GridItem";
 import styles from "./GridContainer.module.css";
-import SVGLetterT from "../SVGLetter/SVGLetterT";
+
 import SVGTileOne from "../SVGTile/SVGTileOne";
 import SVGLetterA from "../SVGLetter/SVGLetterA";
 import SVGTileTwo from "../SVGTile/SVGTileTwo";

@@ -17,6 +17,12 @@ import bannerTiles from "../../public/banner-tiles.svg";
 import bannerTilesHoles from "../../public/banner-tiles-holes.svg";
 import GridContainer from "../_components/UI/Grid/GridContainer";
 import GridWrapper from "../_components/UI/Grid/GridWrapper";
+import GridContainerRight from "../_components/UI/Grid/GridContainerRight";
+import GridContainerLeft from "../_components/UI/Grid/GridContainerLeft";
+import GridContainerFull from "../_components/UI/Grid/GridContainerFull";
+import GridSideGraphic from "../_components/UI/Grid/GridSideGraphic";
+import GridContainerReverse from "../_components/UI/Grid/GridContainerReverse";
+import SVGLetterV from "../_components/UI/SVGLetter/SVGLetteV";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -135,10 +141,12 @@ export default function Page() {
           </Message.Content>
         </Message>
       </Section>
-      {/* <Section background={bannerTilesHoles.src} variant="hero" /> */}
-
-      <GridWrapper />
-
+      <GridWrapper>
+        <GridContainer />
+        <GridSideGraphic>
+          <SVGLetterV />
+        </GridSideGraphic>
+      </GridWrapper>
       <Section>
         <SplitLeft
           src="/DSC_2786.jpg"
@@ -149,8 +157,8 @@ export default function Page() {
 Assente na sua sólida existência, e num contexto atual de globalização, o Camões, I.P., através da CEPE Alemanha, reforça assim a imagem institucional de qualidade e prestígio na área do ensino e o seu posicionamento local como estrutura de coordenação de referência, global, experiente, líder, apta a disponibilizar aos lusodescendentes, bem como a outros provenientes da CPLP e aficionados pela língua portuguesa um ensino de qualidade, inovador e com práticas pedagógicas de excelência com vista à promoção e internacionalização do Português e o seu reconhecimento/ integração nos sistemas de ensino local."
         />
       </Section>
-      <Section />
-      {/* <Section background={bannerTilesHoles.src} variant="hero" /> */}
+
+      <GridContainerRight />
       <SectionAbout>
         <SplitSection
           // style={{ flexDirection: "row-reverse" }}
@@ -176,7 +184,7 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
         globalizado."
         />
       </SectionAbout>
-      {/* <Section background={bannerTiles.src} variant="hero" /> */}
+      <GridContainerLeft />
       <SectionAbout>
         <SplitRigth
           // style={{ flexDirection: "row-reverse" }}
@@ -199,10 +207,17 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
         pessoal, profissional e cultural numa sociedade pluralista;"
         />
       </SectionAbout>
-      <Section background={bannerTiles.src} variant="hero" />
+
+      <GridWrapper reverse>
+        <GridSideGraphic>
+          <SVGLetterV />
+        </GridSideGraphic>
+        <GridContainerReverse />
+      </GridWrapper>
       <Section>
         <Team />
       </Section>
+      <Section background={bannerTiles.src} variant="hero" />
       <Section>
         <Center src="/teachers.jpg" alt="Fotografia de grupo de Professores" />
       </Section>

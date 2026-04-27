@@ -1,12 +1,11 @@
-import GridContainer from "./GridContainer";
-import GridSideGraphic from "./GridSideGraphic";
 import styles from "./GridWrapper.module.css";
 
-export default function GridWrapper() {
+export default function GridWrapper({ reverse = false, children }) {
   return (
-    <div className={styles.layout}>
-      <GridContainer />
-      <GridSideGraphic />
+    <div
+      className={`${styles.layout} ${reverse ? styles.reverse : styles.normal}`}
+    >
+      {children}
     </div>
   );
 }

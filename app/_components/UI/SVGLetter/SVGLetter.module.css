@@ -1,4 +1,5 @@
-.st0t {
+.st0t,
+.st0E {
   fill: #169bd8;
 }
 
@@ -20,4 +21,33 @@
   stroke: #149ad7;
   stroke-miterlimit: 10;
   stroke-width: 2px;
+}
+
+.st1E {
+  fill: none;
+  stroke: #199cd8;
+  stroke-dasharray: 2;
+  stroke-miterlimit: 10;
+}
+
+.st0F {
+  font-family: Roboto-Medium, Roboto;
+  font-size: 486.8px;
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+
+.st0F,
+.st1F {
+  fill: none;
+  stroke: #199cd8;
+  stroke-miterlimit: 10;
+}
+
+.st2F {
+  fill: #199cd8;
+}
+
+.st1F {
+  stroke-dasharray: 2;
 }
