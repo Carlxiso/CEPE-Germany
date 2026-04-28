@@ -2,7 +2,6 @@ import Hero from "./_components/Layout/Hero/Hero";
 import Section from "./_components/Layout/Section/Section";
 import institutionsData from "./_lib/data-institutions";
 import certificImg from "../public/abc-letters.png";
-import Button from "./_components/UI/Button/Button";
 import NewsSection from "./_components/Layout/NewsSection/NewsSection";
 import SplitSection from "./_components/Layout/SplitSection/SplitSection";
 import SplitSectionGrid from "./_components/Layout/SplitSectionGrid/SplitSectionGrid";

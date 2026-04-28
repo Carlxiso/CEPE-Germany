@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "../States/States.module.css";
 
 export default function LeftContent({
@@ -7,6 +8,7 @@ export default function LeftContent({
   textPop,
   comunity,
   textComunity,
+  svg,
 }) {
   return (
     <div className={styles.left}>
@@ -18,6 +20,7 @@ export default function LeftContent({
 
       <h3 className={styles.subtitle}>{comunity}</h3>
       <p>{textComunity}</p>
+      {/* <Image src={svg} alt={name} width={400} height={400} /> */}
     </div>
   );
 }

@@ -15,7 +15,7 @@
 /* LEFT */
 .left {
   max-width: 500px;
-  padding: 4rem;
+  /* padding: 4rem; */
 }
 
 .title {
@@ -31,9 +31,22 @@
 }
 
 .left p {
-  font-size: 1rem;
-  color: #666;
+  color: #415364;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  /* padding-bottom: 5rem; */
+  max-width: 550px;
 }
+
+/* .content p {
+  color: rgb(60, 70, 71);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 550px;
+} */
 .description {
   color: #666;
   margin-bottom: 1rem;
@@ -42,10 +55,18 @@
 
 /* RIGHT */
 .right {
-  color: #444;
+  /* color: #444;
   line-height: 1.7;
   padding: 4rem;
-  font-size: 1.55rem;
+  font-size: 1.55rem; */
+}
+.right p {
+  color: rgb(60, 70, 71);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 550px;
 }
 
 .reverse {
@@ -55,14 +76,17 @@
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
+    justify-content: space-around;
   }
 
   .left {
-    width: 50%;
+    /* width: 50%; */
+    padding: 4px;
   }
 
   .right {
-    width: 50%;
+    /* width: 50%; */
+    padding: 4px;
   }
 }
 

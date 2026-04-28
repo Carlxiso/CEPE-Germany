@@ -1,6 +1,7 @@
 const states = [
   {
     name: "Baden-Württemberg",
+    svg: "/baden-w.svg",
     textName:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Numquam suscipit eaque consequuntur nisi consectetur iure officia quibusdam quod nemo. Ad, eligendi.",
     population: "População",
