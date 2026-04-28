@@ -7,11 +7,7 @@
 .reverse {
   grid-template-columns: 20% 80%;
 }
+
 /* .normal {
   grid-template-columns: 80% 20%;
-}
-
-.svg {
-  height: 130%;
-  width: auto;
 } */

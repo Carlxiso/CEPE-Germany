@@ -36,7 +36,8 @@ export default function Team() {
       <section className={styles.teamSection}>
         <DividerSection
           title="Equipa da Coordenação"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+          subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          variant="center"
         />
 
         <div className={styles.teamGrid}>

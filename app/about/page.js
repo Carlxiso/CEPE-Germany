@@ -23,6 +23,7 @@ import GridContainerFull from "../_components/UI/Grid/GridContainerFull";
 import GridSideGraphic from "../_components/UI/Grid/GridSideGraphic";
 import GridContainerReverse from "../_components/UI/Grid/GridContainerReverse";
 import SVGLetterV from "../_components/UI/SVGLetter/SVGLetteV";
+import SVGLetterN from "../_components/UI/SVGLetter/SVGLetteN";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -143,9 +144,7 @@ export default function Page() {
       </Section>
       <GridWrapper>
         <GridContainer />
-        <GridSideGraphic>
-          <SVGLetterV />
-        </GridSideGraphic>
+        <GridSideGraphic></GridSideGraphic>
       </GridWrapper>
       <Section>
         <SplitLeft

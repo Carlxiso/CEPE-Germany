@@ -27,3 +27,9 @@
   color: rgb(60, 70, 71);
   margin: 1rem 0 2rem;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

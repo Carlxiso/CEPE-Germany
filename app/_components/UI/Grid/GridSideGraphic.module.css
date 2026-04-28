@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* overflow: visible; */
   opacity: 0.2;
-  /* overflow: hidden; */
 }
 
 .st0v {
@@ -29,8 +29,29 @@
   stroke: #189cd9;
 }
 
-.svg {
-  height: 200%;
+.st0N {
+  fill: #199cd8;
+}
+
+.st1N {
+  fill: #189cd9;
+}
+
+.st2N {
+  fill: none;
+  stroke: #199cd8;
+  stroke-dasharray: 2;
+  stroke-miterlimit: 10;
+}
+
+.svgV {
+  height: 250%;
+  width: auto;
+  position: absolute;
+}
+
+.svgN {
+  height: 100%;
   width: auto;
   position: absolute;
 }
@@ -67,3 +88,10 @@
     stroke-dashoffset: 4000;
   }
 }
+
+/* @media (max-width: 768px) {
+  .svg {
+    height: 80%;
+    width: auto;
+  }
+} */

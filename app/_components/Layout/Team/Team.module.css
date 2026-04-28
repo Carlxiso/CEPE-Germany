@@ -44,16 +44,17 @@
 
 .name {
   font-weight: bold;
-  color: black;
+  color: #e76868;
 }
 
 .email {
-  color: blue;
+  color: #8b8c4a;
   display: block;
+  text-decoration: none;
 }
 
 .location {
-  color: #666;
+  color: #415364;
 }
 
 .applyCard {
