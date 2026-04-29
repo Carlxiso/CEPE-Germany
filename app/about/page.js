@@ -8,22 +8,16 @@ import SplitRigth from "../_components/SplitRigth/SplitRigth";
 import SectionAbout from "../_components/Layout/Section About/SectionAbout";
 import Center from "../_components/Layout/Center/Center";
 import Team from "../_components/Layout/Team/Team";
-import Apply from "../_components/Apply/Apply";
-
 import AnimatedLetterBg from "../_components/UI/AnimatedLetterBg/AnimatedLetterBg";
 import DividerSection from "../_components/DividerSection/DividerSection";
-import bTile from "../../public/b-tiles.svg";
 import bannerTiles from "../../public/banner-tiles.svg";
-import bannerTilesHoles from "../../public/banner-tiles-holes.svg";
 import GridContainer from "../_components/UI/Grid/GridContainer";
 import GridWrapper from "../_components/UI/Grid/GridWrapper";
 import GridContainerRight from "../_components/UI/Grid/GridContainerRight";
 import GridContainerLeft from "../_components/UI/Grid/GridContainerLeft";
-import GridContainerFull from "../_components/UI/Grid/GridContainerFull";
 import GridSideGraphic from "../_components/UI/Grid/GridSideGraphic";
 import GridContainerReverse from "../_components/UI/Grid/GridContainerReverse";
 import SVGLetterV from "../_components/UI/SVGLetter/SVGLetteV";
-import SVGLetterN from "../_components/UI/SVGLetter/SVGLetteN";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -186,7 +180,6 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
       <GridContainerLeft />
       <SectionAbout>
         <SplitRigth
-          // style={{ flexDirection: "row-reverse" }}
           src="/DSC_2806.jpg"
           alt="Ensino do Portugês"
           title="Valores"
