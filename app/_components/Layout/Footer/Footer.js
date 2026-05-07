@@ -5,7 +5,13 @@ import Logo from "../Logo/Logo";
 export default function Footer() {
   const links = ["Sobre Nós", "Cursos", "Blog", "Suporte", "Carreiras"];
 
-  const legal = ["Privacy Statement", "Terms of Use", "Security"];
+  const legal = [
+    "Privacy Statement",
+    "Terms of Use",
+    "Security",
+    "Sitemap",
+    "Press & Media",
+  ];
 
   return (
     <footer className={styles.footer}>
