@@ -1,5 +1,6 @@
 import Footer from "../_components/Layout/Footer/Footer";
 import Maintenance from "../_components/Maintenance/Maintenance";
+import BlogCard from "../features/blog/components/BlogCard/BlogCard";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/blog"),
@@ -76,8 +77,8 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Maintenance section="Blog" />
-
+      {/* <Maintenance section="Blog" /> */}
+      <BlogCard />
       <Footer />
     </>
   );
