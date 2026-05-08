@@ -1,17 +1,15 @@
+/*BIG CARD*/
 .heroBlog {
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
-
   padding: 20px;
   margin: 80px 0;
 }
 
-/* lg:grid-cols-2 */
 @media (min-width: 1024px) {
   .heroBlog {
     grid-template-columns: repeat(2, 1fr);
-
     padding-left: 132px;
     padding-right: 132px;
   }
@@ -19,7 +17,7 @@
 
 .heroContainer {
   position: relative;
-  height: 40rem;
+  /* height: 40rem; */
 }
 
 .heroImage {
@@ -85,4 +83,77 @@
 
   object-fit: cover;
   border-radius: 50%;
+}
+
+/* GROUP CARDS */
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.articleCard {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #5245c647;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.articleImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.articleGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(to top, #0b0a20, transparent);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.articleContent {
+  position: absolute;
+  bottom: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.articleCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px;
+  background: #f59e0b;
+  color: white;
+  font-size: 12px;
+  border-radius: 9999px;
+}
+
+.articleTitle {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.articleMeta {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-weight: 300;
 }
