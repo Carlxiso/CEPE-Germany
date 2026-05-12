@@ -3,6 +3,24 @@ import styles from "./BlogCard.module.css";
 import { defaultArticle, defaultAvatar } from "../images";
 import Link from "next/link";
 
+/*********************************/
+/** Estrutura ideal do Post */
+// type BlogPost = {
+//   title: string
+
+//   category: Category
+
+//   audience: Audience[]
+
+//   tags: string[]
+
+//   author: string
+
+//   publishedAt: Date
+
+//   featured: boolean
+// }
+/*********************************/
 export default function BlogCard() {
   return (
     <section className={styles.heroBlog}>

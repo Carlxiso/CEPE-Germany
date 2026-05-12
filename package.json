@@ -11,6 +11,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@lineiconshq/free-icons": "^1.0.6",
+    "@lineiconshq/react-lineicons": "^1.0.5",
     "@storybook/addon-viewport": "^9.0.8",
     "@storybook/nextjs": "^10.2.16",
     "leaflet": "^1.9.4",
