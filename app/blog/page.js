@@ -79,7 +79,7 @@ export default function Page() {
   return (
     <>
       {/* <Maintenance section="Blog" /> */}
-      <Section withContainer={false} className="blogSection">
+      <Section withContainer={false}>
         <BlogCard />
       </Section>
       <Footer />
