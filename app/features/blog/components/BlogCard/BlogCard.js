@@ -27,21 +27,20 @@ export default function BlogCard() {
       {/** BIG CARD */}
       <div className={styles.heroContainer}>
         <Image
-          width={100}
-          height={100}
-          src={defaultArticle}
+          width={400}
+          height={400}
+          src="/girl-reading.jpg"
           alt="Hero Image"
           className={styles.heroImage}
         />
 
         <div className={styles.heroOverlay}>
           <div className={styles.category}>
-            <i className="fas fa-umbrella"></i>
-            <p>Lifestyle</p>
+            <p>Leitura</p>
           </div>
 
           <h1 className={styles.heroTitle}>Example Article Title</h1>
-          <p>
+          <p className={styles.heroText}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
             suscipit eaque consequuntur nisi consectetur iure officia quibusdam
             quod nemo.
@@ -73,9 +72,9 @@ export default function BlogCard() {
           <Link href="/">
             <div className={styles.articleCard}>
               <Image
-                width={100}
-                height={100}
-                src={defaultArticle}
+                width={400}
+                height={400}
+                src="/pastel-de-nata.jpg"
                 alt="Article Image"
                 className={styles.articleImage}
               />
@@ -84,8 +83,7 @@ export default function BlogCard() {
 
               <div className={styles.articleContent}>
                 <div className={styles.articleCategory}>
-                  <i className="fas fa-umbrella"></i>
-                  <p>Lifestyle</p>
+                  <p>Turtulias Portuguesas</p>
                 </div>
 
                 <h1 className={styles.articleTitle}>Example Article Title</h1>
@@ -107,9 +105,9 @@ export default function BlogCard() {
           <Link href="/">
             <div className={styles.articleCard}>
               <Image
-                width={100}
-                height={100}
-                src={defaultArticle}
+                width={400}
+                height={400}
+                src="/boy-writing.jpg"
                 alt="Article Image"
                 className={styles.articleImage}
               />
@@ -118,8 +116,7 @@ export default function BlogCard() {
 
               <div className={styles.articleContent}>
                 <div className={styles.articleCategory}>
-                  <i className="fas fa-umbrella"></i>
-                  <p>Lifestyle</p>
+                  <p>Vida Escolar</p>
                 </div>
 
                 <h1 className={styles.articleTitle}>Example Article Title</h1>
@@ -141,9 +138,9 @@ export default function BlogCard() {
           <Link href="/">
             <div className={styles.articleCard}>
               <Image
-                width={100}
-                height={100}
-                src={defaultArticle}
+                width={400}
+                height={400}
+                src="/classroom.jpg"
                 alt="Article Image"
                 className={styles.articleImage}
               />
@@ -152,8 +149,7 @@ export default function BlogCard() {
 
               <div className={styles.articleContent}>
                 <div className={styles.articleCategory}>
-                  <i className="fas fa-umbrella"></i>
-                  <p>Lifestyle</p>
+                  <p>Vida Escolar</p>
                 </div>
 
                 <h1 className={styles.articleTitle}>Example Article Title</h1>
@@ -175,9 +171,9 @@ export default function BlogCard() {
           <Link href="/">
             <div className={styles.articleCard}>
               <Image
-                width={100}
-                height={100}
-                src={defaultArticle}
+                width={400}
+                height={400}
+                src="/teacher-reading.jpg"
                 alt="Article Image"
                 className={styles.articleImage}
               />
@@ -186,8 +182,7 @@ export default function BlogCard() {
 
               <div className={styles.articleContent}>
                 <div className={styles.articleCategory}>
-                  <i className="fas fa-umbrella"></i>
-                  <p>Lifestyle</p>
+                  <p>Actividades Pedagógicas</p>
                 </div>
 
                 <h1 className={styles.articleTitle}>Example Article Title</h1>

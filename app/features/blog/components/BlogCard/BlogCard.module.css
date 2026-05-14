@@ -18,29 +18,25 @@
 .heroContainer {
   position: relative;
   /* height: 40rem; */
+  /* border: 1px solid #009fe3; */
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .heroImage {
   position: absolute;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 .heroOverlay {
   position: absolute;
   bottom: 0;
-
   width: 100%;
   padding: 12px;
-  border-radius: 12px;
-
-  background: #0b021bdb;
-  backdrop-filter: blur(12px);
-
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -50,37 +46,36 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   width: fit-content;
-
-  background: #f59e0b;
   color: white;
-
   padding: 8px;
-  border-radius: 9999px;
-
+  border-radius: 0.5rem;
+  background: #e76868;
   font-size: 12px;
 }
 
 .heroTitle {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
+  color: #aaa;
+  /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); */
+}
 
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+.heroText {
+  color: #415364;
 }
 
 .authorInfo {
   display: flex;
   align-items: center;
   gap: 16px;
-
+  color: #d6dee0;
   font-weight: 600;
 }
 
 .authorAvatar {
   width: 32px;
   height: 32px;
-
   object-fit: cover;
   border-radius: 50%;
 }
@@ -96,8 +91,9 @@
   position: relative;
   width: 100%;
   height: 300px;
-  border: 1px solid #5245c647;
-  border-radius: 12px;
+  /* border: 1px solid #009fe3; */
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -105,7 +101,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 .articleGradient {
@@ -114,9 +110,10 @@
   left: 0;
   width: 100%;
   height: 10rem;
-  background: linear-gradient(to top, #0b0a20, transparent);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  background: #ffffff;
+  /* background: linear-gradient(to top, #415364, transparent); */
+  /* border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; */
 }
 
 .articleContent {
@@ -126,8 +123,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  /* border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; */
 }
 
 .articleCategory {
@@ -136,24 +133,23 @@
   gap: 8px;
   width: fit-content;
   padding: 8px;
-  background: #f59e0b;
+  background: #8b8c4a;
   color: white;
   font-size: 12px;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
 }
 
 .articleTitle {
-  color: white;
+  color: #aaa;
   font-size: 20px;
-  font-weight: 700;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+  /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); */
 }
 
 .articleMeta {
-  color: white;
+  color: #415364;
   display: flex;
   align-items: center;
   gap: 16px;
-
   font-weight: 300;
 }
