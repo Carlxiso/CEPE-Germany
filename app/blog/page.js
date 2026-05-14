@@ -1,6 +1,7 @@
 import Footer from "../_components/Layout/Footer/Footer";
 import Maintenance from "../_components/Maintenance/Maintenance";
 import BlogCard from "../features/blog/components/BlogCard/BlogCard";
+import BlogHighlights from "../features/blog/components/BlogHighlights/BlogHighlights";
 import Section from "./../_components/Layout/Section/Section";
 
 export const metadata = {
@@ -81,6 +82,9 @@ export default function Page() {
       {/* <Maintenance section="Blog" /> */}
       <Section withContainer={false}>
         <BlogCard />
+      </Section>
+      <Section withContainer={false}>
+        <BlogHighlights />
       </Section>
       <Footer />
     </>
