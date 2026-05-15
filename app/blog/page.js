@@ -1,6 +1,7 @@
 import Footer from "../_components/Layout/Footer/Footer";
 import Maintenance from "../_components/Maintenance/Maintenance";
 import BlogCard from "../features/blog/components/BlogCard/BlogCard";
+import BlogCardPopular from "../features/blog/components/BlogCardPopular/BlogCardPopular";
 import BlogHighlights from "../features/blog/components/BlogHighlights/BlogHighlights";
 import Section from "./../_components/Layout/Section/Section";
 
@@ -85,6 +86,9 @@ export default function Page() {
       </Section>
       <Section withContainer={false}>
         <BlogHighlights />
+      </Section>
+      <Section withContainer={false}>
+        <BlogCardPopular />
       </Section>
       <Footer />
     </>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import styles from "./BlogHighlights.module.css";
 import Link from "next/link";
 import articles from "@/app/_lib/data-popularArticles";
+import BlogCardPopular from "../BlogCardPopular/BlogCardPopular";
+import Category from "../Category/Category";
 export default function BlogHighlights() {
   return (
     <div className={styles.HighlightsSection}>
@@ -68,7 +70,39 @@ export default function BlogHighlights() {
           ))}
         </div>
 
-        <div>{/* <Category /> */}</div>
+        <div>
+          <Category />
+
+          {/* <div className={styles.recentPosts}>
+            <div className={styles.recentHeader}>
+              <h1 className={styles.recentTitle}>Recent Posts</h1>
+
+              <p className={styles.recentSubtitle}>
+                All recent posts to keep you updated
+              </p>
+            </div>
+
+            {articles?.slice(0, 3).map((article) => (
+              <div key={article.id} className={styles.recentPostItem}>
+                <Image
+                  width={100}
+                  height={100}
+                  src={article?.thumbnail}
+                  alt="Article Image"
+                  className={styles.recentPostImage}
+                />
+
+                <div className={styles.recentPostContent}>
+                  <h1 className={styles.recentPostTitle}>{article?.title}</h1>
+
+                  <p className={styles.recentPostMeta}>
+                    {article?.views} views · {article?.readTime}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div> */}
+        </div>
       </div>
     </div>
   );
