@@ -61,11 +61,11 @@ export default function Navigation() {
         ))}
 
         <li className={styles.login}>
-          <Link href="/login">Login</Link>
+          <Link href="/auth/login">Login</Link>
         </li>
 
         <li className={styles.signup}>
-          <Link href="/signup" className={styles.cta}>
+          <Link href="/auth/signup" className={styles.cta}>
             Sign Up
           </Link>
         </li>
