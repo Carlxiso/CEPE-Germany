@@ -48,7 +48,7 @@
 .input {
   width: 100%;
   padding: 0.95rem 1rem;
-  border: 2px solid rgba(225, 209, 255, 0.45);
+  border: 2px solid rgba(182, 231, 255, 0.45);
   border-radius: 0.85rem;
   background: rgba(255, 255, 255, 0.03);
   color: #009fe3;
@@ -67,37 +67,7 @@
 .input:focus {
   border-color: #009fe3;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
-}
-
-.loginButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 0.95rem 1.5rem;
-  border: none;
-  border-radius: 999px;
-  background: #009fe3;
-  color: white;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.loginButton:hover {
-  background: #4f46e5;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
-}
-
-.loginButton:active {
-  transform: scale(0.98);
+  box-shadow: 0 0 0 4px rgba(117, 212, 255, 0.15);
 }
 
 .registerText {
@@ -119,8 +89,8 @@
 }
 
 .registerLink:hover {
-  color: #a5b4fc;
-  border-color: #a5b4fc;
+  color: #75d4ff;
+  /* border-color: #a5b4fc; */
 }
 
 .passwordWrapper {
@@ -151,7 +121,7 @@
 }
 
 .togglePassword:hover {
-  color: #c7d2fe;
+  color: #75d4ff;
 }
 
 .togglePassword:active {

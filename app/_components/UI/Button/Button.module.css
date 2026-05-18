@@ -7,10 +7,28 @@
   text-decoration: none;
 }
 
+/******** - PRIMARY - ********/
+
 .primary {
   background: var(--color-sky-blue);
   color: white;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+.primary:hover {
+  background: #75d4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 159, 227, 0.35);
+}
+
+.primary:active {
+  transform: scale(0.98);
+}
+
+/******** - SECONDARY - ********/
 
 .secondary {
   background: var(--color-white-cloud);
@@ -26,6 +44,7 @@
   background: transparent;
   color: var(--color-sky-blue);
 }
+
 .link {
 }
 .danger {

@@ -4,7 +4,7 @@ import Footer from "../../_components/Layout/Footer/Footer";
 import Button from "../../_components/UI/Button/Button";
 import styles from "../auth.module.css";
 import { useState } from "react";
-export default function page() {
+export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
@@ -42,7 +42,7 @@ export default function page() {
           </form>
 
           <p className={styles.registerText}>
-            Don&apos;t you have an account yet?
+            Ainda não têm conta?
             <Link className={styles.registerLink} href="/auth/signup">
               Criar uma Conta
             </Link>
