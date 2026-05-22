@@ -1,18 +1,18 @@
-import Hero from "./_components/Layout/Hero/Hero";
-import Section from "./_components/Layout/Section/Section";
-import institutionsData from "./_lib/data-institutions";
-import certificImg from "../public/abc-letters.png";
-import NewsSection from "./_components/Layout/NewsSection/NewsSection";
-import SplitSection from "./_components/Layout/SplitSection/SplitSection";
-import SplitSectionGrid from "./_components/Layout/SplitSectionGrid/SplitSectionGrid";
-import Institutions from "./_components/Layout/Institutions/Institutions";
-import DiagnosticTest from "./_components/Layout/DiagnosticTest/DiagnosticTest";
-import Footer from "./_components/Layout/Footer/Footer";
-import Form from "./_components/Layout/Form/Form";
-import Testimonials from "./_components/Testimonials/Testimonials";
-import StatsSection from "./_components/Layout/StatsSection/StatsSection";
-import Certification from "./_components/Certification/Certification";
-import CirclePattern from "./_components/UI/CirclePattern/CirclePattern";
+import Hero from "@/app/_components/Layout/Hero/Hero";
+import Section from "@/app/_components/Layout/Section/Section";
+import institutionsData from "@/app/_lib/data-institutions";
+import certificImg from "@/public/abc-letters.png";
+import NewsSection from "@/app/_components/Layout/NewsSection/NewsSection";
+import SplitSection from "@/app/_components/Layout/SplitSection/SplitSection";
+import SplitSectionGrid from "@/app/_components/Layout/SplitSectionGrid/SplitSectionGrid";
+import Institutions from "@/app/_components/Layout/Institutions/Institutions";
+import DiagnosticTest from "@/app/_components/Layout/DiagnosticTest/DiagnosticTest";
+import Footer from "@/app/_components/Layout/Footer/Footer";
+import Form from "@/app/_components/Layout/Form/Form";
+import Testimonials from "@/app/_components/Testimonials/Testimonials";
+import StatsSection from "@/app/_components/Layout/StatsSection/StatsSection";
+import Certification from "@/app/_components/Certification/Certification";
+import CirclePattern from "@/app/_components/UI/CirclePattern/CirclePattern";
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de"),
 

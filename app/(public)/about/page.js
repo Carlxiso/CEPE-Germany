@@ -1,23 +1,22 @@
-import Footer from "../_components/Layout/Footer/Footer";
-import Section from "../_components/Layout/Section/Section";
-import Heading from "../_components/UI/Heading/Heading";
-import Message from "../_components/Message/Message";
-import SplitSection from "../_components/Layout/SplitLeft/SplitLeft";
-import SplitLeft from "../_components/Layout/SplitLeft/SplitLeft";
-import SplitRigth from "../_components/SplitRigth/SplitRigth";
-import SectionAbout from "../_components/Layout/Section About/SectionAbout";
-import Center from "../_components/Layout/Center/Center";
-import Team from "../_components/Layout/Team/Team";
-import AnimatedLetterBg from "../_components/UI/AnimatedLetterBg/AnimatedLetterBg";
-import DividerSection from "../_components/DividerSection/DividerSection";
-import bannerTiles from "../../public/banner-tiles.svg";
-import GridContainer from "../_components/UI/Grid/GridContainer";
-import GridWrapper from "../_components/UI/Grid/GridWrapper";
-import GridContainerRight from "../_components/UI/Grid/GridContainerRight";
-import GridContainerLeft from "../_components/UI/Grid/GridContainerLeft";
-import GridSideGraphic from "../_components/UI/Grid/GridSideGraphic";
-import GridContainerReverse from "../_components/UI/Grid/GridContainerReverse";
-import SVGLetterV from "../_components/UI/SVGLetter/SVGLetteV";
+import Footer from "@/app/_components/Layout/Footer/Footer";
+import Section from "@/app/_components/Layout/Section/Section";
+import Heading from "@/app/_components/UI/Heading/Heading";
+import Message from "@/app/_components/Message/Message";
+import SplitLeft from "@/app/_components/Layout/SplitLeft/SplitLeft";
+import SplitRigth from "@/app/_components/SplitRigth/SplitRigth";
+import SectionAbout from "@/app/_components/Layout/Section About/SectionAbout";
+import Center from "@/app/_components/Layout/Center/Center";
+import Team from "@/app/_components/Layout/Team/Team";
+import AnimatedLetterBg from "@/app/_components/UI/AnimatedLetterBg/AnimatedLetterBg";
+import DividerSection from "@/app/_components/DividerSection/DividerSection";
+import bannerTiles from "@/public/banner-tiles.svg";
+import GridContainer from "@/app/_components/UI/Grid/GridContainer";
+import GridWrapper from "@/app/_components/UI/Grid/GridWrapper";
+import GridContainerRight from "@/app/_components/UI/Grid/GridContainerRight";
+import GridContainerLeft from "@/app/_components/UI/Grid/GridContainerLeft";
+import GridSideGraphic from "@/app/_components/UI/Grid/GridSideGraphic";
+import GridContainerReverse from "@/app/_components/UI/Grid/GridContainerReverse";
+import SVGLetterV from "@/app/_components/UI/SVGLetter/SVGLetteV";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/about"),
@@ -153,8 +152,7 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
 
       <GridContainerRight />
       <SectionAbout>
-        <SplitSection
-          // style={{ flexDirection: "row-reverse" }}
+        <SplitLeft
           src="/DSC_2691.jpg"
           alt="Ensino do Portugês"
           title="Missão"

@@ -1,9 +1,8 @@
-import Footer from "../_components/Layout/Footer/Footer";
-import Maintenance from "../_components/Maintenance/Maintenance";
-import BlogCard from "../features/blog/components/BlogCard/BlogCard";
-import BlogCardPopular from "../features/blog/components/BlogCardPopular/BlogCardPopular";
-import BlogHighlights from "../features/blog/components/BlogHighlights/BlogHighlights";
-import Section from "./../_components/Layout/Section/Section";
+import Footer from "@/app/_components/Layout/Footer/Footer";
+import BlogCard from "@/app/features/blog/components/BlogCard/BlogCard";
+import BlogCardPopular from "@/app/features/blog/components/BlogCardPopular/BlogCardPopular";
+import BlogHighlights from "@/app/features/blog/components/BlogHighlights/BlogHighlights";
+import Section from "@/app/_components/Layout/Section/Section";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/blog"),

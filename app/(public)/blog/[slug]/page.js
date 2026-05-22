@@ -1,10 +1,10 @@
 import Image from "next/image";
 import stampLettersCepe from "../../../public/stamp-letters-cepe.png";
-import Section from "../../_components/Layout/Section/Section";
+import Section from "../../../_components/Layout/Section/Section";
 import {
   defaultArticle,
   defaultAvatar,
-} from "../../features/blog/components/images";
+} from "../../../features/blog/components/images";
 import styles from "./page.module.css";
 import { Lineicons } from "@lineiconshq/react-lineicons";
 import {
@@ -27,8 +27,8 @@ import {
   CloudBolt1Duotone,
   CloudBolt1Solid,
 } from "@lineiconshq/free-icons";
-import BlogCardPopular from "../../features/blog/components/BlogCardPopular/BlogCardPopular";
-import Footer from "../../_components/Layout/Footer/Footer";
+import BlogCardPopular from "../../../features/blog/components/BlogCardPopular/BlogCardPopular";
+import Footer from "../../../_components/Layout/Footer/Footer";
 
 const comments = [
   {

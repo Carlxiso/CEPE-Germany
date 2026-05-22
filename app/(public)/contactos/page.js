@@ -1,8 +1,8 @@
-import Contact from "../_components/Layout/Contact/Contact";
-import ContactForm from "../_components/Layout/ContactForm.js/ContactForm";
-import Footer from "../_components/Layout/Footer/Footer";
-import Section from "../_components/Layout/Section/Section";
-import Slider from "../_components/Slider/Slider";
+import Contact from "@/app/_components/Layout/Contact/Contact";
+import ContactForm from "@/app/_components/Layout/ContactForm.js/ContactForm";
+import Footer from "@/app/_components/Layout/Footer/Footer";
+import Section from "@/app/_components/Layout/Section/Section";
+import Slider from "@/app/_components/Slider/Slider";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/contactos"),

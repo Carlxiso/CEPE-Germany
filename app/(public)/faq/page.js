@@ -1,7 +1,7 @@
-import Section from "../_components/Layout/Section/Section";
-import Footer from "../_components/Layout/Footer/Footer";
-import faqImage from "../../public/artboard.png";
-import Filter from "../_components/Filter/Filter";
+import Section from "@/app/_components/Layout/Section/Section";
+import Footer from "@/app/_components/Layout/Footer/Footer";
+import faqImage from "@/public/artboard.png";
+import Filter from "@/app/_components/Filter/Filter";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/faq"),
