@@ -1,9 +1,9 @@
 "use client";
-import Link from "next/link";
-import Footer from "../../_components/Layout/Footer/Footer";
-import Button from "../../_components/UI/Button/Button";
-import styles from "../auth.module.css";
 import { useState } from "react";
+import Link from "next/link";
+import Footer from "@/app/_components/Layout/Footer/Footer";
+import Button from "@/app/_components/UI/Button/Button";
+import styles from "../auth.module.css";
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
@@ -21,23 +21,35 @@ export default function Login() {
           <form action="" className={styles.loginForm}>
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder="Email"
               className={styles.input}
+              required
+              autoComplete="email"
             />
             <div className={styles.passwordWrapper}>
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 className={styles.input}
+                required
+                autoComplete="current-password"
               />
               <button
                 type="button"
+                aria-label={
+                  showPassword
+                    ? "Ocultar palavra-passe"
+                    : "Mostrar palavra-passe"
+                }
                 className={styles.togglePassword}
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? "Ocultar" : "Mostrar"}
               </button>
             </div>
+            <Link href="/auth/reset-password" className={styles.forgotLink}>
+              Esqueceu a palavra-passe?
+            </Link>
             <Button className={styles.loginButton}>Login</Button>
           </form>
 
