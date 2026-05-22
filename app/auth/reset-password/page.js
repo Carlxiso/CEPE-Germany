@@ -2,9 +2,11 @@ import Link from "next/link";
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "@/app/auth/auth.module.css";
+import Header from "@/app/_components/Layout/Header/Header";
 export default function ResetPassword() {
   return (
     <>
+      <Header />
       <div className={styles.loginSection}>
         <div className={styles.loginCard}>
           <div className={styles.loginHeader}>

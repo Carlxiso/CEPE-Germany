@@ -4,10 +4,12 @@ import Link from "next/link";
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "../auth.module.css";
+import Header from "@/app/_components/Layout/Header/Header";
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
+      <Header />
       <div className={styles.loginSection}>
         <div className={styles.loginCard}>
           <div className={styles.loginHeader}>

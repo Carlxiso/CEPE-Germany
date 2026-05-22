@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../auth.module.css";
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import Button from "@/app/_components/UI/Button/Button";
+import Header from "@/app/_components/Layout/Header/Header";
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,6 +12,7 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
   return (
     <>
+      <Header />
       <div className={styles.registerSection}>
         <div className={styles.registerCard}>
           <div className={styles.registerHeader}>
