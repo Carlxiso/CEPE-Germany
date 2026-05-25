@@ -16,11 +16,76 @@
   border-bottom: 1px solid #b6e7ff;
 }
 
-/*DASHBOARD SIDER*/
+/*DASHBOARD SIDEBAR*/
 .sidebar {
   background-color: #ececec;
   padding: 3.2rem 2.4rem;
   border-right: 1px solid #b6e7ff;
 
   grid-row: 1 / -1;
+}
+
+/*DASHNAVLINK*/
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  padding: 3rem;
+}
+
+.navLink {
+  display: block;
+  padding: 0.6rem 0.875rem;
+  border-radius: 0.5rem;
+  color: #415364;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.icon {
+  padding: 1rem;
+}
+
+.navLink:hover {
+  background: #334155;
+  color: #f1f5f9;
+  transition: all 0.3s;
+}
+
+/*DASHFOOTER*/
+.sidebarFooter {
+  border-top: 1px solid #334155;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.userName {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: 0.5rem;
+  background: #e76868;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.logoutBtn:hover {
+  background: #b91c1c;
 }

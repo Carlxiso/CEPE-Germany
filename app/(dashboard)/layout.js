@@ -4,9 +4,9 @@ import styles from "./dashboard.module.css";
 export default function DashboardLayout({ children }) {
   return (
     <div className={styles.gridContainer}>
-      <DashboardHeader />
       <DashboardSidebar />
-      <main className={styles.main}>DASHBOARD</main>
+      <DashboardHeader />
+      <main className={styles.main}>{children}</main>
     </div>
   );
 }
