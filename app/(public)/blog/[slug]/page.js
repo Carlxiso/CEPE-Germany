@@ -1,31 +1,14 @@
 import Image from "next/image";
-import stampLettersCepe from "../../../public/stamp-letters-cepe.png";
+import stampLettersCepe from "../../../../public/stamp-letters-cepe.png";
 import Section from "../../../_components/Layout/Section/Section";
-import {
-  defaultArticle,
-  defaultAvatar,
-} from "../../../features/blog/components/images";
+import { defaultAvatar } from "../../../features/blog/components/images";
 import styles from "./page.module.css";
 import { Lineicons } from "@lineiconshq/react-lineicons";
 import {
   WatchBeat1Solid,
-  Bookmark1Bulk,
-  Bookmark1Outlined,
-  Bookmark1Duotone,
   Bookmark1Solid,
-  EyeBulk,
-  EyeOutlined,
-  EyeDuotone,
   EyeSolid,
   ThumbsUp3Bulk,
-  ThumbsUp3Outlined,
-  ThumbsUp3Duotone,
-  ThumbsUp3Solid,
-  Home2Outlined,
-  CloudBolt1Bulk,
-  CloudBolt1Outlined,
-  CloudBolt1Duotone,
-  CloudBolt1Solid,
 } from "@lineiconshq/free-icons";
 import BlogCardPopular from "../../../features/blog/components/BlogCardPopular/BlogCardPopular";
 import Footer from "../../../_components/Layout/Footer/Footer";
