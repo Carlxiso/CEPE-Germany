@@ -5,6 +5,8 @@ import Footer from "@/app/_components/Layout/Footer/Footer";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "../auth.module.css";
 import Header from "@/app/_components/Layout/Header/Header";
+import supabase from "@/app/_lib/supabase";
+
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
