@@ -13,27 +13,27 @@ import {
 const navItems = [
   { href: "/admin/painel", label: "Painel", icon: HiOutlineHome },
   {
-    href: "/dashboard/admin/utilizadores",
+    href: "/admin/utilizadores",
     label: "Utilizadores",
     icon: HiOutlineCalendarDays,
   },
   {
-    href: "/dashboard/admin/artigos",
+    href: "/admin/artigos",
     label: "Artigos",
     icon: HiOutlineHomeModern,
   },
   {
-    href: "/dashboard/admin/comentarios",
+    href: "/admin/comentarios",
     label: "Comentários",
     icon: HiOutlineUsers,
   },
   {
-    href: "/dashboard/admin/analytics",
+    href: "/admin/analytics",
     label: "Analytics",
     icon: HiOutlineCog6Tooth,
   },
   {
-    href: "/dashboard/admin/aprovacoes",
+    href: "/admin/aprovacoes",
     label: "Aprovações",
     icon: HiMiniChartBar,
   },

@@ -1,3 +1,4 @@
+import styles from "../dashboard.module.css";
 export default function TeacherDashboard() {
-  return <div>Teacher Dashboard</div>;
+  return <div className={styles.temporary}>Teacher Dashboard</div>;
 }

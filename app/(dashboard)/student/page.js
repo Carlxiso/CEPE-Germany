@@ -1,3 +1,4 @@
+import styles from "../dashboard.module.css";
 export default function StudentDashboard() {
-  return <div>StudentDashboard</div>;
+  return <div className={styles.temporary}>StudentDashboard</div>;
 }
