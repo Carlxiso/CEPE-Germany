@@ -1,4 +1,4 @@
-import styles from "../dashboard.module.css";
+import styles from "../../dashboard.module.css";
 export const metadata = { title: "Documentos | CEPE" };
 
 export default function DocumentosPage() {
