@@ -115,7 +115,6 @@ export default function Page() {
       <Section fullscreen>
         <Form />
       </Section>
-
       <Footer />
     </>
   );

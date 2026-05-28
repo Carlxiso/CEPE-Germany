@@ -1,30 +1,22 @@
 import Image from "next/image";
-import Button from "../../UI/Button/Button";
-import Container from "../Container/Container";
+import Button from "@/app/_components/UI/Button/Button";
 import styles from "./Hero.module.css";
-// import imageBg from "../../../../public/DSC_9921-2.png";
-import imageBg from "../../../../public/DSC_9384-2.png";
+import imageBg from "@/public/DSC_9384-2.png";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
-      {/* <div className={styles.lines}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> */}
+    <div className={styles.hero} aria-labelledby="hero-heading">
       <Image
         src={imageBg}
-        alt="Background Image Letters"
+        alt=""
         fill
         priority
+        // sizes="(max-width: 768px) 100vw, 45vw"
         className={styles.heroImage}
       />
-      <Container>
+      <div className={styles.heroRight}>
         <div className={styles.heroContent}>
-          <h1>
-            Abarca a Língua Portuguesa <br />
-          </h1>
+          <h1 id="hero-heading">Abarca a Língua Portuguesa</h1>
           <p>
             Abarcar a língua portuguesa é abraçar a nossa história, a família e
             as raízes que nos definem. É manter viva uma herança cultural única
@@ -33,10 +25,12 @@ export default function Hero() {
           </p>
         </div>
         <div className={styles.heroButtons}>
-          <Button>Pré-Inscrição</Button>
-          <Button variant="outline">Saber Mais</Button>
+          <Button type="button">Pré-Inscrição</Button>
+          <Button type="button" variant="outline">
+            Saber Mais
+          </Button>
         </div>
-      </Container>
-    </section>
+      </div>
+    </div>
   );
 }
