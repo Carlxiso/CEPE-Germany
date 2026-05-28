@@ -1,28 +1,10 @@
-/* .box-logo {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-  z-index: 10;
-  text-decoration: none;
-  font-size: 0.7rem;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
-
-.logo {
-  width: 18rem;
-  height: 10rem;
-}
-.box-title {
-  padding: 0.9rem;
-} */
-
 .logoWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0; /* não comprime quando a nav precisa de espaço */
+  min-width: 80px;
+  max-width: 160px;
 
   text-decoration: none;
   color: black;
@@ -35,11 +17,28 @@
 }
 
 .logo {
-  width: 140px;
+  width: 120px;
+  max-width: 100%;
   height: auto;
 }
 
 .title {
-  margin-top: 0.4rem;
+  margin-top: 0.7rem;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 90px;
+  }
+
+  .title {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 75px;
+  }
 }

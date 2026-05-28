@@ -4,10 +4,12 @@ import Navigation from "../Navigation/Navigation";
 
 function Header() {
   return (
-    <header role="banner" className={styles.header}>
+    <header role="banner" className={styles.headerContainer}>
       <div className={styles.headerInner}>
-        <Logo />
-        <Navigation />
+        <div className={styles.header}>
+          <Logo />
+          <Navigation />
+        </div>
       </div>
     </header>
   );
