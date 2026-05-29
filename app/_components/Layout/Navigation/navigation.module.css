@@ -156,3 +156,9 @@
     font-size: 0.85rem;
   }
 }
+
+/* @media (min-width: 1024px) and (max-width: 1440px) {
+  .menu a {
+    font-size: 0.95rem;
+  }
+} */

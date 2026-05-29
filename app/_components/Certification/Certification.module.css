@@ -14,7 +14,6 @@
 }
 
 .content h2 {
-  color: #f2dab2;
   font-weight: 500;
 }
 
@@ -39,7 +38,7 @@
     padding: 4rem 2.5rem;
   }
 
-  .content p {
+  .contentText {
     font-size: 1.25rem;
     line-height: 2rem;
     padding-bottom: 2rem;
@@ -51,7 +50,7 @@
     padding: 3rem 1.5rem;
   }
 
-  .content p {
+  .contentText {
     font-size: 1rem;
     line-height: 1.75rem;
     padding-bottom: 1.5rem;

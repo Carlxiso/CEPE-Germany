@@ -64,10 +64,13 @@
   .hero {
     padding: 100px 20px 60px;
   }
+  .hero h1 {
+    font-size: clamp(28px, 10vw, 65px);
+  }
 
   .heroImage {
     clip-path: none;
-    opacity: 0.2;
+    /* opacity: 0.2; */
   }
 
   .heroRight {
@@ -78,9 +81,10 @@
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.75rem;
     padding-bottom: 1rem;
+    color: #fff;
   }
 }
 
