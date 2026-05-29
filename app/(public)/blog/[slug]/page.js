@@ -1,5 +1,5 @@
 import Image from "next/image";
-import stampLettersCepe from "../../../../public/stamp-letters-cepe.png";
+import stampLettersCepe from "../../../../public/stamp-letters-cepe.jpg";
 import Section from "../../../_components/Layout/Section/Section";
 import { defaultAvatar } from "../../../features/blog/components/images";
 import styles from "./page.module.css";

@@ -13,7 +13,7 @@ export default function SplitSectionGrid({ fullscreen = false }) {
             title="Sobre Nós"
             subtitle="Descobra um pouco mais de nós"
           />
-          <p>
+          <p className={styles.contentText}>
             A Coordenação do Ensino Português no Estrangeiro na Alemanha é uma
             estrutura do Camões – Instituto da Cooperação e da Língua, I.P.,
             responsável pela promoção e desenvolvimento do ensino da língua

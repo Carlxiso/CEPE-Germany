@@ -1,16 +1,8 @@
 .divider {
-  /* padding: 3rem 1.5rem; */
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  align-items: right;
-}
-
-.innerContent {
-  max-width: 600px;
-  width: 100%;
-
-  margin-inline: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .divider h2 {
@@ -21,9 +13,9 @@
   letter-spacing: 0.08em;
 }
 
-.divider h4 {
+.subtitle {
   font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 1.3rem);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   color: rgb(60, 70, 71);
   margin: 1rem 0 2rem;
 }

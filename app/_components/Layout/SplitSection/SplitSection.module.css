@@ -29,7 +29,7 @@
   margin-inline: auto;
 }
 
-.content p {
+.contentText {
   color: rgb(60, 70, 71);
   font-size: 1.5rem;
   font-weight: 300;
@@ -58,13 +58,6 @@
     height: auto;
   }
 
-  /* .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
-
   .content {
     flex: 1;
     padding: 4rem;
@@ -72,18 +65,3 @@
     align-items: center;
   }
 }
-
-/* IMPORTANT NOTE */
-/* - - - - - - - - - - - - - - - - - - - - - - - */
-/* You can make a layout Reverse with these CSS lines - SplitSection and SplitSection are basicaççy the same */
-
-/* .splitReverse {
-  direction: rtl;
-} */
-
-/* OR */
-
-/* .splitReverse > * {
-  direction: ltr;
-} */
-/* - - - - - - - - - - - - - - - - - - - - - - - */

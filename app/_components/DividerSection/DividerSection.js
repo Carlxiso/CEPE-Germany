@@ -4,7 +4,7 @@ export default function DividerSection({ title, subtitle, variant }) {
     <div className={`${styles.divider}  ${variant ? styles[variant] : ""}`}>
       <h2>{title}</h2>
 
-      <h4>{subtitle} </h4>
+      <p className={styles.subtitle}>{subtitle}</p>
     </div>
   );
 }

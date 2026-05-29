@@ -1,18 +1,15 @@
 .content {
-  padding: 20rem 20rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  /* background-color: #f8f9fa; */
-  min-height: 100vh;
+  padding: 6rem 8rem;
 }
 
 .innerContent {
   max-width: 600px;
   width: 100%;
-  margin-top: auto;
-  /* margin-inline: auto; */
+  margin-top: 20rem;
   margin-inline: 0;
 }
 
@@ -21,11 +18,42 @@
   font-weight: 500;
 }
 
-.content p {
+.contentText {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 2.5rem;
-  padding-bottom: 5rem;
-  max-width: 550px;
+  padding-bottom: 3rem;
+}
+
+/* ── breakpoints ──────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 4rem 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 3rem 1.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
 }

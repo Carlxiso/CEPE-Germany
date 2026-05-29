@@ -8,6 +8,7 @@ export default function Section({
   fullscreen = false,
   withContainer = true,
   variant,
+  ariaLabelledBy,
 }) {
   const sectionStyle = {
     backgroundImage: background ? `url(${background})` : undefined,
@@ -24,6 +25,7 @@ export default function Section({
         ${variant ? styles[variant] : ""}
       `}
       style={sectionStyle}
+      aria-labelledby={ariaLabelledBy || undefined}
     >
       {content}
     </section>
