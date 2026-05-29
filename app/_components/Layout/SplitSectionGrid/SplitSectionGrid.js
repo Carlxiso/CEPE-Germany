@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "../../UI/Button/Button";
-import img from "../../../../public/letters-in-group.png";
+import img from "../../../../public/letters-in-group.jpg";
 import styles from "./SplitSectionGrid.module.css";
 import DividerSection from "../../DividerSection/DividerSection";
 

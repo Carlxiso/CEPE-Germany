@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "./Hero.module.css";
-import imageBg from "@/public/DSC_9384-2.png";
+import imageBg from "@/public/DSC_9384-2.jpg";
 
 export default function Hero() {
   return (

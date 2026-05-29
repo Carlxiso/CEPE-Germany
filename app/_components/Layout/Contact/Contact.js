@@ -14,7 +14,7 @@ export default function ContactHero() {
 
       <div className={styles.imageSection}>
         <img
-          src="/DSC_2795.png"
+          src="/DSC_2795.jpg"
           alt="Embaixada Portuguesa em Berlin"
           className={styles.image}
         />

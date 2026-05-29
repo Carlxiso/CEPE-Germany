@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./SplitSection.module.css";
-import img from "../../../../public/letters.png";
+import img from "../../../../public/letters.jpg";
 import Button from "../../UI/Button/Button";
 import DividerSection from "../../DividerSection/DividerSection";
 

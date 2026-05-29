@@ -1,4 +1,4 @@
-import imgCourse from "@/public/cursos-gps-abc.png";
+import imgCourse from "@/public/cursos-gps-abc.jpg";
 import Section from "@/app/_components/Layout/Section/Section";
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import States from "@/app/_components/CursosStates/States/States";

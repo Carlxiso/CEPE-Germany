@@ -5,10 +5,10 @@ const popularArticles = [
     category: {
       name: "Língua Portuguesa",
       title: "Writing about lifestyle",
-      thumbnail: "/stamp-letters-A.png",
+      thumbnail: "/stamp-letters-A.jpg",
       slug: "lifestyle",
     },
-    thumbnail: "/stamp-letters-A.png",
+    thumbnail: "/stamp-letters-A.jpg",
     slug: "example-article-title",
     views: 9,
     readTime: "2 Mins Read",
@@ -24,7 +24,7 @@ const popularArticles = [
     category: {
       name: "Gramática",
       title: "Writing about lifestyle",
-      thumbnail: "/stamp-letters-B.png",
+      thumbnail: "/stamp-letters-B.jpg",
       slug: "gramatic",
     },
     thumbnail: "/girl-storytelling.jpg",
@@ -43,7 +43,7 @@ const popularArticles = [
     category: {
       name: "Atividades Pedagógicas",
       title: "Writing about lifestyle",
-      thumbnail: "/stamp-letters-C.png",
+      thumbnail: "/stamp-letters-C.jpg",
       slug: "lifestyle",
     },
     thumbnail: "/audio-book.jpg",
@@ -62,7 +62,7 @@ const popularArticles = [
     category: {
       name: "Literatura & Autores",
       title: "Writing about lifestyle",
-      thumbnail: "/stamp-letters-D.png",
+      thumbnail: "/stamp-letters-D.jpg",
       slug: "lifestyle",
     },
     thumbnail: "/teacher-in-kindergarten.jpg",

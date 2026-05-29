@@ -1,5 +1,5 @@
 import Section from "./Section";
-import bgImg from "../public/hero_img.png";
+import bgImg from "../public/hero_img.jpg";
 
 const meta = {
   title: "Layout/Section",

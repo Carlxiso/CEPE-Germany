@@ -5,36 +5,36 @@ import styles from "./Slider.module.css";
 const projects = [
   {
     title: "Baden-Württemberg",
-    image: "/cities1.png",
+    image: "/cities1.jpg",
   },
   {
     title: "Baviera",
-    image: "/cities2.png",
+    image: "/cities2.jpg",
   },
   {
     title: "Berlim",
-    image: "/cities3.png",
+    image: "/cities3.jpg",
   },
 
   {
     title: "Bremen",
-    image: "/cities4.png",
+    image: "/cities4.jpg",
   },
   {
     title: "Hamburgo",
-    image: "/cities5.png",
+    image: "/cities5.jpg",
   },
   {
     title: "Hesse",
-    image: "/cities6.png",
+    image: "/cities6.jpg",
   },
   {
     title: "Schwerin",
-    image: "/cities7.png",
+    image: "/cities7.jpg",
   },
   {
     title: "Baixa Saxônia",
-    image: "/cities8.png",
+    image: "/cities8.jpg",
   },
 ];
 

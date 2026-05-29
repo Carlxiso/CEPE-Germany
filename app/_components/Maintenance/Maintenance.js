@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Maintenance.module.css";
-import imageMantainence from "../../../public/DSC_9809-2.png";
+import imageMantainence from "../../../public/DSC_9809-2.jpg";
 
 export default function Maintenance({ section }) {
   return (
