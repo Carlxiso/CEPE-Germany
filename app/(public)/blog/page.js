@@ -89,7 +89,7 @@ export default function Page() {
       <Section withContainer={false}>
         <BlogCardPopular />
       </Section>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

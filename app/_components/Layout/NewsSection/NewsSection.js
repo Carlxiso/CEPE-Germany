@@ -112,7 +112,7 @@ export default function NewsSection() {
         onMouseEnter={() => setPause(true)}
         onMouseLeave={() => setPause(false)}
       > */}
-      <div className={`${styles.cards} ${styles[direction]}`}>
+      <div className={`${styles.cards}${direction ? ` ${styles[direction]}` : ""}`}>
         {visibleCards.map((item) => (
           <div className={styles.card} key={item.titulo}>
             <h3>{item.titulo}</h3>

@@ -212,7 +212,7 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
         <Center src="/teachers.jpg" alt="Fotografia de grupo de Professores" />
       </Section>
       <Section>{/* <Apply /> */}</Section>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

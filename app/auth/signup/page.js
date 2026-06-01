@@ -131,7 +131,7 @@ export default function SignUp() {
             </Link>
           </div>
         </div>
-        <Footer />
+        <Footer footerLogoWhite={true} />
       </>
     );
   }
@@ -240,7 +240,7 @@ export default function SignUp() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

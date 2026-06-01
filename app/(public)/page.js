@@ -115,7 +115,7 @@ export default function Page() {
       <Section fullscreen>
         <Form />
       </Section>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

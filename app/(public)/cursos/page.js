@@ -89,7 +89,7 @@ export default function Page() {
       <Section bgColor="#415364">
         <WrapperCenter />
       </Section>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

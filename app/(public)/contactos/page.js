@@ -85,7 +85,7 @@ export default function Page() {
       <Section>
         <Slider />
       </Section>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

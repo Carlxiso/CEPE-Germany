@@ -120,7 +120,7 @@ export default function ResetPasswordPage() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

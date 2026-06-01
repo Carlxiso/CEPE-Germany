@@ -175,7 +175,7 @@ export default function Login() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

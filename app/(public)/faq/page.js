@@ -79,7 +79,7 @@ export default function Page() {
       <Section>
         <Filter />
       </Section>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }

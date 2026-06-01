@@ -99,7 +99,7 @@ export default function UpdatePasswordPage() {
             </p>
           </div>
         </div>
-        <Footer />
+        <Footer footerLogoWhite={true} />
       </>
     );
   }
@@ -208,7 +208,7 @@ export default function UpdatePasswordPage() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer footerLogoWhite={true} />
     </>
   );
 }
