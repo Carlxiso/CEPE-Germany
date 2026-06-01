@@ -1,11 +1,25 @@
 .input {
-  padding: 0.8rem 1rem;
+  width: 100%;
+  min-height: 44px; /* WCAG touch target */
+  padding: 1rem 1.2rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: inherit;
+  background-color: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .input:focus {
   outline: none;
   border-color: #009fe3;
+  box-shadow: 0 0 0 3px rgba(0, 159, 227, 0.15);
+}
+
+.input::placeholder {
+  color: #aaa;
+  font-weight: 300;
 }

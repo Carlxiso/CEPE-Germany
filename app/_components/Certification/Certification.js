@@ -10,6 +10,7 @@ export default function Certification({ h2Color = "#f2dab2" }) {
           title="CERTIFICAÇÃO"
           subtitle="A língua que abraça a sua história, agora certificada."
           h2Color={h2Color}
+          subtitleColor="#f2dab2"
         />
         <p className={styles.contentText}>
           Obter uma certificação oficial é mais do que um reconhecimento: é a

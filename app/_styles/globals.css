@@ -49,7 +49,7 @@ main {
   flex: 1;
 }
 
-.cta:link,
+/* .cta:link,
 .cta:visited {
   display: inline-block;
   background-color: var(--color-sky-blue);
@@ -64,9 +64,9 @@ main {
   animation-name: moveInBottom;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-}
+} */
 
-@keyframes moveInBottom {
+/* @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(10rem);
@@ -76,4 +76,4 @@ main {
     opacity: 1;
     transform: translate(0);
   }
-}
+} */

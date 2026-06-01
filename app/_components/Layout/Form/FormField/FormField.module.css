@@ -1,18 +1,16 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-  /* background-color: bisque; */
+  gap: 0.6rem;
 }
 
 .label {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #009fe3;
 }
 
 .error {
-  color: red;
-  font-size: 0.8rem;
+  color: #e76868;
+  font-size: 1.2rem;
 }

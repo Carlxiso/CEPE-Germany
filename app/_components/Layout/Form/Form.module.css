@@ -1,18 +1,19 @@
 .contact {
   display: grid;
-  gap: 3rem;
-  padding: 2rem 1.5rem;
+  gap: 4rem;
+  padding: 3rem 2rem;
 }
 
-/* Contact info column */
+/* ── coluna informativa ───────────────────────────────────── */
 
 .contactCol {
   max-width: 520px;
 }
 
 .contactCol h3 {
-  font-size: 6rem;
+  font-size: clamp(2.4rem, 4vw, 4.8rem);
   font-weight: 600;
+  line-height: 1.2;
   margin-bottom: 1rem;
   color: #f2dab2;
 }
@@ -20,57 +21,61 @@
 .contactCol p {
   margin-top: 2rem;
   color: rgb(60, 70, 71);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
-  line-height: 2.5rem;
-  padding-bottom: 5rem;
+  line-height: 2.8rem;
+  margin-bottom: 3rem;
   max-width: 500px;
 }
 
-/* Form */
+/* ── formulário ───────────────────────────────────────────── */
 
 .formContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.6rem;
   width: 100%;
   max-width: 520px;
 }
 
-/* Honeypot */
+/* ── honeypot ─────────────────────────────────────────────── */
 
 .hidden {
   display: none;
 }
 
+/* ── feedback de envio ────────────────────────────────────── */
+
 .success {
   color: #8b8c4a;
-  animation: fadeIn 0.4s ease;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
+  margin-top: 0.8rem;
+  animation: fadeIn 0.4s ease;
 }
 
 .error {
   color: #e76868;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
   animation: fadeIn 0.4s ease;
 }
 
-.spinner {
-  animation: spin 1s linear infinite;
-}
-
-/* Desktop */
+/* ── desktop ──────────────────────────────────────────────── */
 
 @media (min-width: 768px) {
   .contact {
     grid-template-columns: 1fr 1fr;
     align-items: start;
+    padding: 4rem;
   }
 
   .contactCol {
     padding-right: 4rem;
   }
 }
+
+/* ── animações ────────────────────────────────────────────── */
 
 @keyframes fadeIn {
   from {

@@ -1,4 +1,3 @@
-"use client";
 import styles from "./FormField.module.css";
 
 export default function FormField({ label, htmlFor, error, children }) {

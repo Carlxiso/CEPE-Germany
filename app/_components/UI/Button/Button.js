@@ -7,11 +7,13 @@ export default function Button({
   href,
   type = "button",
   size,
+  disabled = false,
 }) {
   const className = [
     styles.btn,
     styles[variant],
     size ? styles[size] : "",
+    disabled ? styles.disabled : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -25,7 +27,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={className}>
+    <button type={type} className={className} disabled={disabled}>
       {children}
     </button>
   );

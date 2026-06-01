@@ -4,9 +4,9 @@ import { useState } from "react";
 import FormField from "./FormField/FormField";
 import Input from "./Input/Input";
 import Textarea from "./Textarea/Textarea";
-import Button from "../../UI/Button/Button";
+import Button from "@/app/_components/UI/Button/Button";
 import styles from "./Form.module.css";
-import DividerSection from "../../DividerSection/DividerSection";
+import DividerSection from "@/app/_components/DividerSection/DividerSection";
 
 export default function Form() {
   const [status, setStatus] = useState("idle");
@@ -84,7 +84,7 @@ export default function Form() {
             autoComplete="off"
           />
 
-          <FormField label="Your name" htmlFor="name">
+          <FormField label="Nome" htmlFor="name">
             <Input
               id="name"
               name="name"
@@ -103,7 +103,7 @@ export default function Form() {
             />
           </FormField>
 
-          <FormField label="Message" htmlFor="message">
+          <FormField label="Mensagem" htmlFor="message">
             <Textarea
               id="message"
               name="message"

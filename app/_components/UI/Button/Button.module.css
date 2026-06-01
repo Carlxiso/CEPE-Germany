@@ -2,12 +2,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;        /* WCAG touch target mínimo */
-  padding: 1.2rem 2.4rem;  /* 12px 24px na convenção 62.5% */
+  min-height: 44px; /* WCAG touch target mínimo */
+  padding: 1.2rem 2.4rem;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  font-size: 1.6rem;       /* 16px na convenção 62.5% */
+  font-size: 1.6rem;
   font-weight: 600;
   text-decoration: none;
   line-height: 1;
@@ -57,22 +57,31 @@
   color: var(--color-sky-blue);
 }
 
+/* ── estado desativado ──────────────────────────────────────── */
+
+.disabled,
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* ── tamanhos ───────────────────────────────────────────────── */
 
 .sm {
   min-height: 36px;
-  padding: 0.8rem 1.6rem;  /* 8px 16px */
-  font-size: 1.4rem;        /* 14px */
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
 }
 
 .md {
   min-height: 44px;
-  padding: 1.2rem 2.4rem;  /* 12px 24px — igual ao default */
-  font-size: 1.6rem;        /* 16px */
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
 }
 
 .lg {
   min-height: 52px;
-  padding: 1.6rem 3.2rem;  /* 16px 32px */
-  font-size: 1.8rem;        /* 18px */
+  padding: 1.6rem 3.2rem;
+  font-size: 1.8rem;
 }
