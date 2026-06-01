@@ -162,7 +162,7 @@ export default function Login() {
               Esqueceu a palavra-passe?
             </Link>
 
-            <Button className={styles.loginButton} disabled={loading}>
+            <Button type="submit" disabled={loading}>
               {loading ? "A entrar…" : "Entrar"}
             </Button>
           </form>

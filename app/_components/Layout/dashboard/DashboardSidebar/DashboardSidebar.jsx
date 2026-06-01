@@ -7,7 +7,7 @@ export default function DashboardSidebar() {
     <aside className={styles.sidebar}>
       <Logo />
       <DashNavLink />
-      <DashFooter footerLogoWhite={footerLogoWhite} />
+      <DashFooter />
     </aside>
   );
 }
