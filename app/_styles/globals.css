@@ -28,6 +28,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -44,7 +45,7 @@ body {
 }
 
 main {
-  flex: 1; /* ocupa o espaço restante — mantém o footer no fundo */
+  flex: 1;
 }
 
 .cta:link,
