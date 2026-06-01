@@ -13,13 +13,20 @@
   border: none;
   cursor: pointer;
   padding: 10px;
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger span {
   width: 25px;
   height: 2px;
   background: #222;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  display: block;
 }
 
 /* animação hamburger → X */
@@ -46,14 +53,17 @@
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.6rem;
+  z-index: 200;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
-  transition: all 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 /* menu aberto */
@@ -67,7 +77,7 @@
 
 .menu a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -77,7 +87,7 @@
 }
 
 .login a {
-  padding-left: 2rem;
+  padding-left: 0;
   font-weight: 300;
 }
 
@@ -121,8 +131,9 @@
 .cta {
   background: var(--color-sky-blue);
   color: white !important;
-  padding: 8px 14px;
+  padding: 0.8rem 1.4rem;
   border-radius: 6px;
+  font-size: 1.4rem;
 }
 
 /* ── DESKTOP ──────────────────────────────────────────────── */
@@ -144,8 +155,12 @@
     align-items: center;
     gap: 2rem;
     box-shadow: none;
+    z-index: auto;
+    transition: none;
   }
 }
+
+/* ── TABLET ── */
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .menu {
@@ -153,12 +168,6 @@
   }
 
   .menu a {
-    font-size: 0.85rem;
+    font-size: 1.4rem;
   }
 }
-
-/* @media (min-width: 1024px) and (max-width: 1440px) {
-  .menu a {
-    font-size: 0.95rem;
-  }
-} */
