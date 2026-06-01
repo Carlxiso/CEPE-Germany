@@ -1,79 +1,15 @@
 /*@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"; */
 /* Taken from getting started guide at: https://leafletjs.com/examples/quick-start/ */
-@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+/* @import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Codystar:wght@300;400&family=Outfit:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Codystar:wght@300;400&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Codystar:wght@300;400&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
 
-/* These CSS variables are global, so they are available in all CSS modules */
-:root {
-  --color-dark--0: #242a2e;
-  --color-dark--1: #2d3439;
-  --color-dark--2: #42484d;
-  --color-light--1: #aaa;
-  --color-light--2: #ececec;
-  --color-light--3: #d6dee0;
-  --color-sky-blue: #009fe3;
-  --color-white-cloud: #ffffff;
-
-  /* - - - CEPE COLORS  - - - */
-  --color-sand: #f2dab2;
-  --color-ocean: #415364;
-  --color-red-wine: #e76868;
-  --color-olive-green: #8b8c4a;
-}
-
-/* .curious-blue {
-  '50': '#eff9ff',
-  '100': '#def2ff',
-  '200': '#b6e7ff',
-  '300': '#75d4ff',
-  '400': '#2cc0ff',
-  '500': '#009fe3',
-  '600': '#008ed4',
-  '700': '#0070ab',
-  '800': '#005d8d',
-  '900': '#064d74',
-  '950': '#04314d',
-} */
-
-/* .wheat {
-  '50': '#fdf8ef',
-  '100': '#f9efdb',
-  '200': '#f2dab2',
-  '300': '#eac287',
-  '400': '#e1a156',
-  '500': '#da8735',
-  '600': '#cc702a',
-  '700': '#a95725',
-  '800': '#884624',
-  '900': '#6e3b20',
-  '950': '#3b1c0f',
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: var(--color-light--2);
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-label {
+/* label {
   font-size: 1.6rem;
   font-weight: 600;
-}
+} */
 
-input,
+/* input,
 textarea {
   width: 100%;
   padding: 0.8rem 1.2rem;
@@ -83,75 +19,25 @@ textarea {
   border-radius: 5px;
   background-color: var(--color-light--3);
   transition: all 0.2s;
-}
+} */
 
-input:focus {
+/* input:focus {
   outline: none;
   background-color: #fff;
-}
+} */
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-}
-
-/** Global styles for the inner content of sections. This class can be used to apply consistent styling to the content within each section, such as padding, background color, or other layout properties. */
-
-/* .innerContent {
-  max-width: 600px;
-  width: 100%;
-
-  margin-inline: auto;
-}
-
-.content h2 {
-  font-weight: 600;
-  font-size: 2rem;
-  color: #009fe3;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-
-}
-
-.content h4 {
-  font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
-  color: rgb(60, 70, 71);
-  margin: 1rem 0 2rem;
-}
-.content p {
-  color: rgb(60, 70, 71);
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 2.5rem;
-  padding-bottom: 5rem;
-  max-width: 550px;
 } */
 
-.cta:link,
-.cta:visited {
-  display: inline-block;
-  background-color: var(--color-sky-blue);
-  color: var(--color-light--2);
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 1rem 3rem;
-  border-radius: 5px;
-
-  animation-name: moveInBottom;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-.section-container {
+/* .section-container {
   height: 95vh;
   z-index: 1;
-}
+} */
 
-.section-box {
+/* .section-box {
   display: flex;
   flex-direction: column;
   height: 85%;
@@ -159,21 +45,9 @@ input:focus {
   justify-content: center;
   gap: 2.5rem;
   text-align: center;
-}
+} */
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -182,9 +56,9 @@ input:focus {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
-@keyframes slideInRight {
+/* @keyframes slideInRight {
   0% {
     transform: translateX(100%);
     opacity: 0;
@@ -193,9 +67,9 @@ input:focus {
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */
 
-@keyframes slideInLeft {
+/* @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
     opacity: 0;
@@ -204,4 +78,4 @@ input:focus {
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */

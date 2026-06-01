@@ -7,7 +7,7 @@
 
 .divider h2 {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #009fe3;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -15,7 +15,7 @@
 
 .subtitle {
   font-weight: 600;
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   color: rgb(60, 70, 71);
   margin: 1rem 0 2rem;
 }

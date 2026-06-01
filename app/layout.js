@@ -93,12 +93,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body
-        className={`${roboto.className} antialiased min-h-screen flex flex-col relative`}
-      >
+      <body className={roboto.className}>
         {/* <Header /> */}
 
-        <main className="container">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

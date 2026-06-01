@@ -1,21 +1,27 @@
 .btn {
-  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;        /* WCAG touch target mínimo */
+  padding: 1.2rem 2.4rem;  /* 12px 24px na convenção 62.5% */
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  font-size: 1.6rem;       /* 16px na convenção 62.5% */
   font-weight: 600;
   text-decoration: none;
-}
-
-/******** - PRIMARY - ********/
-
-.primary {
-  background: var(--color-sky-blue);
-  color: white;
+  line-height: 1;
   transition:
     background 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+/* ── variantes ──────────────────────────────────────────────── */
+
+.primary {
+  background: var(--color-sky-blue);
+  color: white;
   z-index: 1;
 }
 
@@ -29,11 +35,10 @@
   transform: scale(0.98);
 }
 
-/******** - SECONDARY - ********/
-
 .secondary {
   background: var(--color-white-cloud);
   border: 1px solid var(--color-light--2);
+  color: var(--color-dark--0);
 }
 
 .outline {
@@ -41,29 +46,33 @@
   background: transparent;
   color: var(--color-sky-blue);
 }
+
+.outline:hover {
+  background: var(--color-sky-blue);
+  color: white;
+}
+
 .ghost {
   background: transparent;
   color: var(--color-sky-blue);
 }
 
-.link {
-}
-.danger {
-}
-.sucess {
+/* ── tamanhos ───────────────────────────────────────────────── */
+
+.sm {
+  min-height: 36px;
+  padding: 0.8rem 1.6rem;  /* 8px 16px */
+  font-size: 1.4rem;        /* 14px */
 }
 
-.btn-sm {
-  padding: 6px 12px;
-  font-size: 0.8rem;
+.md {
+  min-height: 44px;
+  padding: 1.2rem 2.4rem;  /* 12px 24px — igual ao default */
+  font-size: 1.6rem;        /* 16px */
 }
 
-.btn-md {
-  padding: 10px 18px;
-  font-size: 0.9rem;
-}
-
-.btn-lg {
-  padding: 14px 24px;
-  font-size: 1rem;
+.lg {
+  min-height: 52px;
+  padding: 1.6rem 3.2rem;  /* 16px 32px */
+  font-size: 1.8rem;        /* 18px */
 }
