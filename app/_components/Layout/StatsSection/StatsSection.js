@@ -5,79 +5,99 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
+    id: "alunos",
     value: 55,
-    suffix: "+",
+    prefix: "+",
+    suffix: "",
     label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
   },
   {
+    id: "satisfacao",
     value: 98,
+    prefix: "",
     suffix: "%",
     label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
   },
   {
+    id: "cursos",
     value: 150,
-    suffix: "+",
+    prefix: "+",
+    suffix: "",
     label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
   },
 ];
 
-export default function Stats() {
+export default function StatsSection() {
   const [visible, setVisible] = useState(false);
-  const ref = useRef();
+  const ref = useRef(null);
 
-  // trigger animation on scroll
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(node);
+        }
       },
       { threshold: 0.3 },
     );
 
-    if (ref.current) observer.observe(ref.current);
-
+    observer.observe(node);
     return () => observer.disconnect();
   }, []);
 
   return (
     <section ref={ref} className={styles.stats}>
       {stats.map((item, i) => (
-        <StatItem key={i} item={item} visible={visible} />
+        <StatItem key={item.id} item={item} visible={visible} index={i} />
       ))}
     </section>
   );
 }
 
-function StatItem({ item, visible }) {
+function StatItem({ item, visible, index }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!visible) return;
 
-    let start = 0;
+    // respeitar prefers-reduced-motion — salta para o valor final imediatamente
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(item.value);
+      return;
+    }
+
+    const startTime = performance.now();
     const duration = 1500;
-    const increment = item.value / (duration / 16);
+    let frameId;
 
-    const counter = setInterval(() => {
-      start += increment;
-      if (start >= item.value) {
-        setCount(item.value);
-        clearInterval(counter);
+    function tick(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = progress * (2 - progress);
+
+      setCount(Math.floor(eased * item.value));
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(tick);
       } else {
-        setCount(Math.floor(start));
+        setCount(item.value);
       }
-    }, 16);
+    }
 
-    return () => clearInterval(counter);
+    frameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId);
   }, [visible, item.value]);
 
   return (
-    <div className={styles.card}>
-      <h2 className={styles.value}>
-        {item.suffix === "+" && "+"}
-        {count}
-        {item.suffix === "%" && "%"}
-      </h2>
+    <div
+      className={`${styles.card} ${visible ? styles.visible : ""}`}
+      style={{ transitionDelay: `${index * 0.15}s` }}
+    >
+      <h2 className={styles.value}>{`${item.prefix}${count}${item.suffix}`}</h2>
 
       <div className={styles.line} />
 
