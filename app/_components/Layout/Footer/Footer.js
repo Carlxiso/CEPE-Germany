@@ -40,21 +40,8 @@ export default function Footer({ footerLogoWhite = false }) {
           </nav>
         </div>
 
-        {/* BOTTOM AREA */}
+        {/* BOTTOM AREA — ordem mobile: social → legal → copyright */}
         <div className={styles.bottom}>
-          <p className={styles.copy} suppressHydrationWarning>
-            &copy; {new Date().getFullYear()} Coordenação de Ensino do Português
-            no Estrangeiro
-          </p>
-
-          <ul className={styles.legal}>
-            {legal.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
-
           <div className={styles.social}>
             <a href="#" aria-label="X (Twitter)">
               <FaXTwitter />
@@ -66,6 +53,19 @@ export default function Footer({ footerLogoWhite = false }) {
               <FaFacebook />
             </a>
           </div>
+
+          <ul className={styles.legal}>
+            {legal.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+
+          <p className={styles.copy} suppressHydrationWarning>
+            &copy; {new Date().getFullYear()} Coordenação de Ensino do Português
+            no Estrangeiro
+          </p>
         </div>
       </div>
     </footer>

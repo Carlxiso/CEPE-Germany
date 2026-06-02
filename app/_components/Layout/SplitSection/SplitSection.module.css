@@ -37,8 +37,6 @@
   max-width: 550px;
 }
 
-/* fullscreen option */
-
 /* Desktop */
 @media (min-width: 768px) {
   .split {
