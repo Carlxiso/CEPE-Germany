@@ -52,12 +52,24 @@
   color: white;
 }
 
+.outlineSand {
+  border: 1px solid var(--color-sand);
+  background: transparent;
+  color: var(--color-sand);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.outlineSand:hover {
+  border: 1px solid var(--color-ocean);
+  background: var(--color-ocean);
+  color: var(--color-sand);
+}
+
 .ghost {
   background: transparent;
   color: var(--color-sky-blue);
 }
-
-/* ── estado desativado ──────────────────────────────────────── */
 
 .disabled,
 .btn:disabled {

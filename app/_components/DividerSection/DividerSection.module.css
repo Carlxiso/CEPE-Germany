@@ -16,7 +16,7 @@
 .subtitle {
   font-weight: 600;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
-  color: rgb(60, 70, 71);
+  color: var(--color-ocean);
   margin: 1rem 0 2rem;
 }
 

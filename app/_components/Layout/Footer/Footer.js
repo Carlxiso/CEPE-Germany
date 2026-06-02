@@ -40,7 +40,6 @@ export default function Footer({ footerLogoWhite = false }) {
           </nav>
         </div>
 
-        {/* BOTTOM AREA — ordem mobile: social → legal → copyright */}
         <div className={styles.bottom}>
           <div className={styles.social}>
             <a href="#" aria-label="X (Twitter)">

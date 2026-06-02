@@ -26,8 +26,8 @@ export default function Hero() {
         </div>
         <div className={styles.heroButtons}>
           <Button type="button">Pré-Inscrição</Button>
-          <Button type="button" variant="outline">
-            Saber Mais
+          <Button type="button" variant="outlineSand">
+            Saber +
           </Button>
         </div>
       </div>
