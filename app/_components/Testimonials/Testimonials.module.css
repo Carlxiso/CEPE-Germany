@@ -1,8 +1,7 @@
 .testimonials {
-  padding: 2rem 1.5rem;
-  max-width: 600px;
+  padding: 2rem 1.6rem 4rem;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .slider {
@@ -11,46 +10,36 @@
 
 .track {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.45s ease;
+  will-change: transform;
 }
 
 .slide {
   min-width: 100%;
 }
 
-/* card */
-
 .card {
-  border: 1px solid #009fe3;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 159, 227, 0.25);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   color: #111;
-  padding: 2rem;
-  border-radius: 0.4rem;
-  min-height: 220px;
-  margin: 1rem;
-  animation: fade 0.4s ease;
+  padding: 2.4rem 2rem;
+  border-radius: 8px;
+  margin: 0 0.4rem;
 }
-
-/* text */
 
 .text {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  color: #333;
 }
-
-/* user */
 
 .user {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  justify-content: center;
+  gap: 1.2rem;
   flex-direction: column;
-}
-
-.user h4 {
-  font-size: 1.25rem;
+  text-align: center;
 }
 
 .avatar {
@@ -58,52 +47,131 @@
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: #009fe3;
+  flex-shrink: 0;
 }
 
-/* controls */
+.userName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.userLocation {
+  font-size: 1.2rem;
+  color: #777;
+  margin: 0.2rem 0 0;
+}
 
 .controls {
-  margin-top: 1.5rem;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
 
-.controls button {
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   background: transparent;
-  border: 1px solid #009fe3;
-  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--color-sky-blue, #009fe3);
   border-radius: 8px;
+  color: var(--color-sky-blue, #009fe3);
+  font-size: 1.6rem;
+  line-height: 1;
   cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-.active {
-  background: white;
-  transform: scale(1.2);
+.btn:hover {
+  background: var(--color-sky-blue, #009fe3);
+  color: #fff;
 }
 
-/* animation */
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.btn:focus-visible {
+  outline: 3px solid var(--color-sky-blue, #009fe3);
+  outline-offset: 2px;
 }
 
-/* desktop */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.dot {
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dotActive::after {
+  background: var(--color-sky-blue, #009fe3);
+  transform: scale(1.4);
+}
+
+.dot:focus-visible {
+  outline: none;
+}
+
+.dot:focus-visible::after {
+  box-shadow: 0 0 0 3px var(--color-sky-blue, #009fe3);
+}
+
+/* ── tablet ──────────────────────────────────────────────── */
 
 @media (min-width: 768px) {
-  .testimonials {
-    max-width: 800px;
+  .card {
+    padding: 3.2rem 2.8rem;
   }
 
-  .text {
-    font-size: 2.5rem;
+  .user {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* ── desktop ─────────────────────────────────────────────── */
+
+@media (min-width: 1024px) {
+  .testimonials {
+    padding: 2rem 0 4rem;
+  }
+}
+
+/* ── Acessibilidade: prefers-reduced-motion ──────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    transition: none;
+  }
+
+  .dot::after {
+    transition: none;
   }
 }
