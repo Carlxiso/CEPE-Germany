@@ -43,18 +43,30 @@
 }
 
 .name {
-  font-weight: bold;
-  color: #e76868;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(60, 70, 71);
+  margin: 0.4rem 0 0.2rem;
 }
 
 .email {
-  color: #8b8c4a;
-  display: block;
+  font-size: 1.4rem;
+  color: var(--color-sky-blue, #009fe3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px; /* WCAG touch target mínimo */
+  padding: 0 0.4rem;
   text-decoration: none;
 }
 
+.email:hover {
+  text-decoration: underline;
+}
+
 .location {
-  color: #415364;
+  font-size: 1.3rem;
+  color: rgb(100, 110, 120);
 }
 
 .applyCard {

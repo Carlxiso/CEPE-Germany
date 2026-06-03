@@ -1,17 +1,15 @@
-"use client";
 import styles from "./AnimatedLetterBg.module.css";
 
 export default function AnimatedLetterBg() {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.grid}>
-        <div className={`${styles.cell} ${styles.a}`}>
-          <svg
-            id="n"
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            viewBox="0 0 662 789.9"
-          >
+    <div className={styles.grid}>
+      <div className={`${styles.cell} ${styles.a}`}>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 662 789.9"
+        >
             <path
               className={`${styles.st1a} ${styles.path}`}
               d="M478.2,768.5c-7.3-14.1-13.7-37.2-19.2-69.1-52.9,55.2-117.7,82.8-194.3,82.8s-135-21.2-182-63.6c-47-42.4-70.5-94.9-70.5-157.3s29.3-139.4,87.9-181.6c58.6-42.2,142.4-63.3,251.4-63.3h101.9v-48.6c0-38.3-10.7-69-32.2-92-21.4-23-54-34.5-97.8-34.5s-68.9,9.5-93,28.4c-24.2,18.9-36.3,43-36.3,72.2H28.1c0-40.6,13.4-78.6,40.4-113.9,26.9-35.3,63.5-63,109.8-83.1,46.3-20.1,97.9-30.1,154.9-30.1,86.6,0,155.7,21.8,207.3,65.3,51.5,43.6,78,104.8,79.4,183.7v333.8c0,66.6,9.3,119.7,28,159.4v11.6h-169.7ZM295.5,648.8c32.8,0,63.7-8,92.7-23.9,29-16,50.7-37.4,65.3-64.3v-139.6h-89.6c-61.6,0-107.9,10.7-138.9,32.2-31,21.4-46.5,51.8-46.5,91s10.6,57.4,31.8,76.3c21.2,18.9,49.6,28.4,85.2,28.4Z"
@@ -30,9 +28,9 @@ export default function AnimatedLetterBg() {
         </div>
         <div className={`${styles.cell} ${styles.e}`}>
           <svg
-            id="n"
+            aria-hidden="true"
+            focusable="false"
             xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
             viewBox="0 0 250.7 294.8"
           >
             <path
@@ -56,9 +54,9 @@ export default function AnimatedLetterBg() {
 
         <div className={`${styles.cell} ${styles.k}`}>
           <svg
-            id="n"
+            aria-hidden="true"
+            focusable="false"
             xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
             viewBox="0 0 312.6 392.5"
           >
             <path
@@ -74,6 +72,5 @@ export default function AnimatedLetterBg() {
           </svg>
         </div>
       </div>
-    </div>
   );
 }

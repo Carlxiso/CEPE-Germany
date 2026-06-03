@@ -26,34 +26,35 @@
 
   text-align: left;
 }
-.content h2 {
-  font-size: 1rem;
+
+.label {
+  font-size: 1.2rem;
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #009fe3;
+  margin: 0;
 }
 
-.content h4 {
+.heading {
   font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   color: rgb(60, 70, 71);
   margin: 1rem 0 2rem;
 }
 
 .content p {
   color: rgb(60, 70, 71);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
-  line-height: 2.5rem;
-  padding-bottom: 5rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
   max-width: 550px;
 }
 .full {
   min-height: 100vh;
 }
 
-/* Desktop */
 @media (min-width: 768px) {
   .split {
     grid-template-columns: 1fr 1fr;

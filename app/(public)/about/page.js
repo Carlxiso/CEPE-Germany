@@ -19,7 +19,7 @@ import GridContainerReverse from "@/app/_components/UI/Grid/GridContainerReverse
 import SVGLetterV from "@/app/_components/UI/SVGLetter/SVGLetteV";
 
 export const metadata = {
-  metadataBase: new URL("https://cepealemanha.de/about"),
+  metadataBase: new URL("https://cepealemanha.de"),
 
   title: {
     default: "Sobre o CEPE Alemanha | Ensino de Português na Alemanha",
@@ -146,7 +146,7 @@ export default function Page() {
           title="Coordenação do ensino Portugues no estranhgeiro na Alemanha"
           subtitle="A ligação às comunidades portuguesas"
           text="A Coordenação do Ensino Português no Estrangeiro na Alemanha, estrutura do Camões – Instituto da Cooperação e da Língua, I.P., com sede na Embaixada de Portugal em Berlim, é, sob orientação do Camões, I.P. e em articulação com a Embaixada de Portugal, a principal entidade pública que tutela o ensino do Português na Alemanha.
-Assente na sua sólida existência, e num contexto atual de globalização, o Camões, I.P., através da CEPE Alemanha, reforça assim a imagem institucional de qualidade e prestígio na área do ensino e o seu posicionamento local como estrutura de coordenação de referência, global, experiente, líder, apta a disponibilizar aos lusodescendentes, bem como a outros provenientes da CPLP e aficionados pela língua portuguesa um ensino de qualidade, inovador e com práticas pedagógicas de excelência com vista à promoção e internacionalização do Português e o seu reconhecimento/ integração nos sistemas de ensino local."
+          Assente na sua sólida existência, e num contexto atual de globalização, o Camões, I.P., através da CEPE Alemanha, reforça assim a imagem institucional de qualidade e prestígio na área do ensino e o seu posicionamento local como estrutura de coordenação de referência, global, experiente, líder, apta a disponibilizar aos lusodescendentes, bem como a outros provenientes da CPLP e aficionados pela língua portuguesa um ensino de qualidade, inovador e com práticas pedagógicas de excelência com vista à promoção e internacionalização do Português e o seu reconhecimento/ integração nos sistemas de ensino local."
         />
       </Section>
 
@@ -158,21 +158,21 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
           title="Missão"
           subtitle="Gestão sistemática da rede do ensino "
           text="A CEPE Alemanha opera com vista a melhorar o posicionamento da
-        língua portuguesa na Alemanha e, consequentemente, à escala
-        global, através da coordenação e gestão sistemática da rede do
-        ensino básico e secundário e da rede do ensino superior no âmbito
-        da língua Portuguesa. Assim, a CEPE Alemanha tem por missão: i.
-        fomentar o ensino do Português e colocar a Língua Portuguesa na
-        rota do sistema educativo alemão; ii. apontar caminhos para o
-        desenvolvimento pessoal, profissional e cultural dos aprendentes,
-        em particular de lusodescendentes, tendo por base a aprendizagem
-        do Português; iii. promover percursos de ensino/ aprendizagem
-        significativos e inspiradores; iv. nortear as trajetos didáticos e
-        jornadas de formação dos professores e leitores de Português na
-        Alemanha. Em suma, contribuir de forma ativa para a valorização da
-        língua portuguesa como recurso comunicativo fundamental dinâmico e
-        como ferramenta de colaboração para os desafios do mundo
-        globalizado."
+          língua portuguesa na Alemanha e, consequentemente, à escala
+          global, através da coordenação e gestão sistemática da rede do
+          ensino básico e secundário e da rede do ensino superior no âmbito
+          da língua Portuguesa. Assim, a CEPE Alemanha tem por missão: i.
+          fomentar o ensino do Português e colocar a Língua Portuguesa na
+          rota do sistema educativo alemão; ii. apontar caminhos para o
+          desenvolvimento pessoal, profissional e cultural dos aprendentes,
+          em particular de lusodescendentes, tendo por base a aprendizagem
+          do Português; iii. promover percursos de ensino/ aprendizagem
+          significativos e inspiradores; iv. nortear as trajetos didáticos e
+          jornadas de formação dos professores e leitores de Português na
+          Alemanha. Em suma, contribuir de forma ativa para a valorização da
+          língua portuguesa como recurso comunicativo fundamental dinâmico e
+          como ferramenta de colaboração para os desafios do mundo
+          globalizado."
         />
       </SectionAbout>
       <GridContainerLeft />
@@ -183,18 +183,18 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
           title="Valores"
           subtitle="Identidade e diversidade cultural"
           text=" O código de conduta do Camões, I.P. assente nos princípios da
-        igualdade, imparcialidade, isenção, transparência, integridade e
-        criteriosa afetação dos recursos públicos, identifica como valores
-        fundamentais: i. A excelência, assente no rigor, na qualidade, na
-        eficiência do ensino e da gestão sistemática; ii. A verdade,
-        integridade e transparência; iii. A equidade, imparcialidade,
-        isenção e justiça; iv. A qualidade e a produtividade do trabalho,
-        a igualdade de oportunidades e de tratamento de pessoas e a
-        não-discriminação. Além dos valores fundamentais do Camões, I.P., e no âmbito do
-        ensino, a CEPE Alemanha identifica ainda: V. O saber, saber-fazer, saber-estar, saber-ser, saber-aprender
-        vi. A abertura e respeito pela identidade e diversidade cultural;
-        vii. A cidadania ativa e contribuição para o desenvolvimento
-        pessoal, profissional e cultural numa sociedade pluralista;"
+          igualdade, imparcialidade, isenção, transparência, integridade e
+          criteriosa afetação dos recursos públicos, identifica como valores
+          fundamentais: i. A excelência, assente no rigor, na qualidade, na
+          eficiência do ensino e da gestão sistemática; ii. A verdade,
+          integridade e transparência; iii. A equidade, imparcialidade,
+          isenção e justiça; iv. A qualidade e a produtividade do trabalho,
+          a igualdade de oportunidades e de tratamento de pessoas e a
+          não-discriminação. Além dos valores fundamentais do Camões, I.P., e no âmbito do
+          ensino, a CEPE Alemanha identifica ainda: V. O saber, saber-fazer, saber-estar, saber-ser, saber-aprender
+          vi. A abertura e respeito pela identidade e diversidade cultural;
+          vii. A cidadania ativa e contribuição para o desenvolvimento
+          pessoal, profissional e cultural numa sociedade pluralista;"
         />
       </SectionAbout>
 
@@ -211,7 +211,6 @@ Assente na sua sólida existência, e num contexto atual de globalização, o Ca
       <Section>
         <Center src="/teachers.jpg" alt="Fotografia de grupo de Professores" />
       </Section>
-      <Section>{/* <Apply /> */}</Section>
       <Footer footerLogoWhite={true} />
     </>
   );

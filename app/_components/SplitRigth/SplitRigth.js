@@ -13,8 +13,8 @@ export default function SplitRigth({
     <div className={`${styles.split} ${fullscreen ? styles.full : ""}`}>
       <div className={styles.content}>
         <div className={styles.innerContent}>
-          <h2>{title}</h2>
-          <h4>{subtitle}</h4>
+          <p className={styles.label}>{title}</p>
+          <h2 className={styles.heading}>{subtitle}</h2>
           <p>{text}</p>
         </div>
       </div>

@@ -41,8 +41,8 @@ export default function Team() {
         />
 
         <div className={styles.teamGrid}>
-          {team.map((member, index) => (
-            <div key={index} className={styles.card}>
+          {team.map((member) => (
+            <div key={member.email} className={styles.card}>
               {/* Círculo rotativo atrás do avatar */}
               <div className={styles.avatarWrapper}>
                 <RotatingCircule />
