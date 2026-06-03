@@ -61,7 +61,6 @@
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
   animation: draw 40s ease-in-out infinite;
-  animation-delay: -10s;
 }
 
 @keyframes draw {
@@ -103,7 +102,7 @@
   width: 100%;
   height: auto;
   display: block;
-  opacity: 0.12;
+  opacity: 0.2;
 }
 
 .cell.a {
@@ -113,6 +112,10 @@
 .cell.e,
 .cell.k {
   display: none;
+}
+
+.cell.e svg {
+  width: 80%;
 }
 
 /* ── tablet ── */
@@ -130,6 +133,9 @@
   .cell.e,
   .cell.k {
     display: block;
+  }
+  .cell svg {
+    opacity: 0.12;
   }
 }
 
