@@ -116,9 +116,11 @@
 
 .cell.e svg {
   width: 80%;
+  margin-inline: auto;
+  opacity: 0.12;
 }
 
-/* ── tablet ── */
+/* ── tablet ────────────────────────────────────────── */
 
 @media (min-width: 640px) {
   .grid {
@@ -134,9 +136,9 @@
   .cell.k {
     display: block;
   }
-  .cell svg {
+  /* .cell svg {
     opacity: 0.12;
-  }
+  } */
 }
 
 /* ── Acessibilidade: prefers-reduced-motion ─────────── */

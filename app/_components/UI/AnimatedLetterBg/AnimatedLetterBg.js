@@ -60,7 +60,7 @@ export default function AnimatedLetterBg() {
           viewBox="0 0 312.6 392.5"
         >
           <path
-            className={`${styles.st0k} ${styles.pathk}`}
+            className={`${styles.st0k} ${styles.path}`}
             d="M113.7,222.6l-43.1,45.7v118.5H4.7V6.8h66v178.2l36.5-45.1L218.4,6.8h79.9l-141.2,168.3,149.3,211.6h-78.3l-114.3-164.1Z"
           />
           <path className={styles.st1k} d="M37.2,385.4V13.1" />
