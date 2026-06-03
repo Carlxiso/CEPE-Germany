@@ -103,15 +103,14 @@ export default function Page() {
           <Message.Image
             src="/directora.jpg"
             alt="Coordenadora do Ensino do Português na Alemanha"
-            fill
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <Message.Content>
             <DividerSection
-              title="Ângela Dias Silvério"
+              title="Mensagem ano letivo 2025/2026"
               subtitle="Coordenadora da Coordenação de Ensino do Português Na Alemanha"
             />
-            <p>
+            <Message.Text>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
               suscipit eaque consequuntur nisi consectetur iure officia
               quibusdam quod nemo. Ad, eligendi. Quas consectetur dolorum
@@ -123,15 +122,14 @@ export default function Page() {
               cum ab. Incidunt exercitationem veritatis doloribus libero esse
               quisquam alias consectetur modi voluptate eligendi illum ipsum,
               nemo nostrum vero nesciunt, quidem perferendis! Reiciendis
-              consectetur doloribus ipsa, deleniti officiis ducimus et! Impedit
-              illo accusamus architecto neque minima, autem quae modi dolor
-              rerum at quo nisi aut ea tempore eligendi obcaecati corrupti esse
-              magnam! Exercitationem, ullam ducimus id sint quod expedita cum
-              ab. Incidunt exercitationem veritatis doloribus libero esse
-              quisquam alias consectetur modi voluptate eligendi illum ipsum,
-              nemo nostrum vero nesciunt, quidem perferendis! Reiciendis
               consectetur doloribus ipsa, deleniti officiis ducimus et!
-            </p>
+            </Message.Text>
+            <Message.Signature
+              src="/signature.webp"
+              alt="Assinatura da Diretora"
+              name="Maria Silva"
+              role="Coordenadora da CEPE Alemanha"
+            />
           </Message.Content>
         </Message>
       </Section>

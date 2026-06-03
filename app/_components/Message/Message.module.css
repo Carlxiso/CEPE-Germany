@@ -1,82 +1,90 @@
+/* ── layout ─────────────────────────────────────────── */
+
 .about {
   margin: 4rem auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(2rem, 4vw, 4rem);
   width: 90%;
 }
 
+/* ── imagem ──────────────────────────────────────────── */
+
 .aboutLeft {
   width: 100%;
-  position: relative;
   aspect-ratio: 2 / 3;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.aboutRigth {
-  width: 100%;
-}
-
-.aboutImg {
+.aboutImage {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  object-fit: contain;
+  display: block;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center top;
 }
 
-.playIcon {
-  width: 4rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* ── conteúdo ────────────────────────────────────────── */
+
+.aboutRight {
+  width: 100%;
 }
 
-.about h3 {
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: #009fe3;
-}
-
-.about h2 {
-  font-weight: 600;
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+.text {
+  margin-top: clamp(1.2rem, 2vw, 2rem);
   color: rgb(60, 70, 71);
-  margin: 0.5rem 0 1rem;
-}
-
-.about p {
-  margin-top: 2rem;
-  color: rgb(60, 70, 71);
-  font-size: 1.6rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
   font-weight: 300;
   line-height: 1.75;
-  margin-bottom: 3rem;
-  max-width: 900px;
+  margin-bottom: clamp(1.5rem, 3vw, 3rem);
+  max-width: 72rem;
+  text-wrap: pretty;
 }
+
+.signature {
+  margin-top: clamp(2rem, 3vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.signatureImage {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.signatureName {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(60, 70, 71);
+  margin: 0;
+}
+
+.signatureRole {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: rgb(100, 110, 120);
+  margin: 0;
+}
+
+/* ── tablet (≥ 768px) ────────────────────────────────── */
 
 @media (min-width: 768px) {
   .about {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     margin: 6rem auto;
   }
 
   .aboutLeft {
     flex: 1;
-    width: 100%;
-    position: relative;
-    height: 60rem;
-
-    aspect-ratio: 2 / 3;
-    object-fit: contain;
   }
 
-  .aboutRigth {
+  .aboutRight {
     flex: 1;
-  }
-
-  .playIcon {
-    width: 5rem;
   }
 }

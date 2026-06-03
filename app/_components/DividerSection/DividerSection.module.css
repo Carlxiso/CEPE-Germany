@@ -5,23 +5,23 @@
   align-items: flex-start;
 }
 
-.divider h2 {
+.label {
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #009fe3;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  margin: 0;
 }
 
-.subtitle {
+.heading {
   font-weight: 600;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  color: var(--color-ocean);
-  margin: 1rem 0 2rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-ocean, rgb(60, 70, 71));
+  margin: 0.8rem 0 1.6rem;
 }
 
 .center {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
 }
