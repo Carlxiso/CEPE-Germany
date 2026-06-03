@@ -1,27 +1,28 @@
 .heading {
+  position: relative;
+  z-index: 1;
   width: 90%;
   max-width: 120rem;
   margin-inline: auto;
   text-align: center;
-  padding: 5rem 2rem;
-  z-index: 20;
+  padding: clamp(3rem, 6vw, 7rem) 2rem;
 }
 
 .heading h1 {
-  /* color: #009fe3; */
   color: #f2dab2;
-  font-size: clamp(3.4rem, 6vw, 8rem);
+  font-size: clamp(4.4rem, 6vw, 8rem);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
 .heading p {
-  /* color: var(--color-sky-blue); */
   color: rgb(60, 70, 71);
-  font-size: clamp(2rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   font-weight: 200;
-  line-height: 1.5;
-  margin-top: 1.2rem;
+  line-height: 1.6;
+  margin-top: clamp(1rem, 2vw, 1.6rem);
   max-width: 70rem;
   margin-inline: auto;
+  text-wrap: pretty;
 }
