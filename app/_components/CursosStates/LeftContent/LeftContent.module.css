@@ -1,0 +1,35 @@
+.left {
+  max-width: 500px;
+}
+
+.title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: #1e88c8;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  margin-top: 1.5rem;
+  color: #1e88c8;
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+}
+
+.description {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+}
+
+.text {
+  color: #415364;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-weight: 300;
+  line-height: 1.75;
+  max-width: 550px;
+}
+
+@media (min-width: 768px) {
+  .left {
+    padding: 4px;
+  }
+}

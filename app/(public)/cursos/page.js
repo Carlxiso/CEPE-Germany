@@ -2,11 +2,10 @@ import imgCourse from "@/public/cursos-gps-abc.jpg";
 import Section from "@/app/_components/Layout/Section/Section";
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import States from "@/app/_components/CursosStates/States/States";
-import State from "@/app/_components/CursosStates/State/State";
 import WrapperCenter from "@/app/_components/wrapperCenter/WrapperCenter";
 
 export const metadata = {
-  metadataBase: new URL("https://cepealemanha.de/contactos"),
+  metadataBase: new URL("https://cepealemanha.de"),
 
   title: {
     default: "Cursos de Português na Alemanha | CEPE Alemanha",
@@ -82,10 +81,7 @@ export default function Page() {
   return (
     <>
       <Section fullscreen background={imgCourse.src}></Section>
-
-      <States>
-        <State></State>
-      </States>
+      <States />
       <Section bgColor="#415364">
         <WrapperCenter />
       </Section>

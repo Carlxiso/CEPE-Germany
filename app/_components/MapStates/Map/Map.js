@@ -2,87 +2,92 @@
 import dynamic from "next/dynamic";
 import CursosNavigation from "../../CursosNavigation/CursosNavigation";
 import styles from "./Map.module.css";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 const MapLeaflet = dynamic(
   () => import("../../CursosStates/MapLeaflet/MapLeaflet"),
   { ssr: false },
-); // SSR OFF → só renderiza no browser
+);
 
 export default function Map({ data, reverse = false }) {
   const [selectedCoords, setSelectedCoords] = useState(null);
-
   const [zoom, setZoom] = useState(9);
 
-  const allMarkers = [...(data.basico || []), ...(data.superior || [])];
+  const allMarkers = useMemo(
+    () => [...(data.basico || []), ...(data.superior || [])],
+    [data.basico, data.superior],
+  );
 
-  const handleCityClick = (coords) => {
+  const handleCityClick = useCallback((coords) => {
     setSelectedCoords(coords);
     setZoom(14);
-  };
+  }, []);
 
-  const tabs = [
-    {
-      label: "Ensino Básico e Secundário",
-      content: (
-        <ul>
-          {data.basico?.length ? (
-            data.basico.map((city) => (
-              <li
-                key={city.slug}
-                onClick={() => handleCityClick(city.coords)}
-                style={{ cursor: "pointer" }}
-              >
-                {city.name}
-              </li>
-            ))
-          ) : (
-            <p className={styles.errorMessage}>Sem cursos disponíveis</p>
-          )}
-        </ul>
-      ),
-    },
-    {
-      label: "Ensino Superior",
-      content: (
-        <ul>
-          {data.superior?.length ? (
-            data.superior.map((city) => (
-              <li
-                key={city.name}
-                onClick={() => handleCityClick(city.coords)}
-                style={{ cursor: "pointer" }}
-              >
-                {city.name}
-              </li>
-            ))
-          ) : (
-            <p className={styles.errorMessage}>Sem cursos disponíveis</p>
-          )}
-        </ul>
-      ),
-    },
-    {
-      label: "Ensino à distância",
-      content: (
-        <ul>
-          {data.distance?.length ? (
-            data.distance.map((city) => (
-              <li
-                key={city.name}
-                onClick={() => handleCityClick(city.coords)}
-                style={{ cursor: "pointer" }}
-              >
-                {city.name}
-              </li>
-            ))
-          ) : (
-            <p className={styles.errorMessage}>Sem cursos disponíveis</p>
-          )}
-        </ul>
-      ),
-    },
-  ];
+  const tabs = useMemo(
+    () => [
+      {
+        label: "Ensino Básico e Secundário",
+        content: (
+          <ul>
+            {data.basico?.length ? (
+              data.basico.map((city) => (
+                <li
+                  key={city.slug}
+                  onClick={() => handleCityClick(city.coords)}
+                  style={{ cursor: "pointer" }}
+                >
+                  {city.name}
+                </li>
+              ))
+            ) : (
+              <p className={styles.errorMessage}>Sem cursos disponíveis</p>
+            )}
+          </ul>
+        ),
+      },
+      {
+        label: "Ensino Superior",
+        content: (
+          <ul>
+            {data.superior?.length ? (
+              data.superior.map((city) => (
+                <li
+                  key={city.name}
+                  onClick={() => handleCityClick(city.coords)}
+                  style={{ cursor: "pointer" }}
+                >
+                  {city.name}
+                </li>
+              ))
+            ) : (
+              <p className={styles.errorMessage}>Sem cursos disponíveis</p>
+            )}
+          </ul>
+        ),
+      },
+      {
+        label: "Ensino à distância",
+        content: (
+          <ul>
+            {data.distance?.length ? (
+              data.distance.map((city) => (
+                <li
+                  key={city.name}
+                  onClick={() => handleCityClick(city.coords)}
+                  style={{ cursor: "pointer" }}
+                >
+                  {city.name}
+                </li>
+              ))
+            ) : (
+              <p className={styles.errorMessage}>Sem cursos disponíveis</p>
+            )}
+          </ul>
+        ),
+      },
+    ],
+    [data, handleCityClick],
+  );
 
   return (
     <div className={styles.mapSection}>
@@ -102,7 +107,6 @@ export default function Map({ data, reverse = false }) {
             markers={allMarkers}
             center={selectedCoords}
             zoom={zoom}
-            // makers={[selectedCoords]}
           />
         </div>
       </div>

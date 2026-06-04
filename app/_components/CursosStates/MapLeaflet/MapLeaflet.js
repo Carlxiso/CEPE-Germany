@@ -13,6 +13,8 @@ const customIcon = L.icon({
   shadowSize: [50, 40],
 });
 
+const GERMANY_CENTER = [51.1657, 10.4515];
+
 function ChangeView({ center, zoom }) {
   const map = useMap();
 
@@ -39,7 +41,6 @@ function FitBounds({ markers, activeCoords }) {
     if (!validMarkers.length) return;
 
     const bounds = validMarkers.map((m) => m.coords);
-
     map.fitBounds(bounds, { padding: [60, 60], maxZoom: 8 });
   }, [markers, activeCoords, map]);
 
@@ -49,7 +50,7 @@ function FitBounds({ markers, activeCoords }) {
 export default function MapLeaflet({ markers, center, zoom }) {
   return (
     <MapContainer
-      center={center}
+      center={center ?? GERMANY_CENTER}
       zoom={zoom}
       minZoom={5}
       maxZoom={12}
@@ -57,10 +58,9 @@ export default function MapLeaflet({ markers, center, zoom }) {
       style={{ width: "100%", height: "100%" }}
     >
       <TileLayer
-        url="https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
       />
-      {/*  Ajusta automaticamente */}
       <FitBounds markers={markers} activeCoords={center} />
       <ChangeView center={center} zoom={zoom} />
       {markers?.map((marker, index) =>

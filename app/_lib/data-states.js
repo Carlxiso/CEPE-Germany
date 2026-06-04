@@ -33,7 +33,6 @@ const states = [
       { name: "Göppingen", slug: "göppingen", coords: [48.7054, 9.6512] },
       { name: "Heidelberg", slug: "heidelberg", coords: [49.3988, 8.6724] },
       { name: "Heilbronn", slug: "heilbronn", coords: [49.1427, 9.2109] },
-      { name: "Ingolstadt", slug: "ingolstadt", coords: [48.7667, 11.4226] },
       { name: "Ittlingen", slug: "ittlingen", coords: [49.1924, 8.9321] },
       { name: "Karlsruhe", slug: "karlsruhe", coords: [49.0069, 8.4037] },
       {

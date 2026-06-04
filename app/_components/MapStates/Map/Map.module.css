@@ -1,8 +1,4 @@
-.section {
-  padding: 3rem 1rem;
-}
 .mapSection {
-  /* padding: 3rem 1rem; */
   background-color: #fff;
 }
 
@@ -12,47 +8,31 @@
   gap: 2rem;
 }
 
-/* MAP */
 .map {
   width: 100%;
-  /* height: 300px; */
-  /* background: #ddd;  */
-  height: 100vh;
+  height: clamp(300px, 50vh, 500px);
 }
+
 .info {
   width: 100%;
-  padding: 10rem;
-  /* display: flex;
-  flex-direction: column; */
+  padding: clamp(2rem, 5vw, 5rem);
 }
+
 .info p {
   padding-bottom: 2rem;
   color: #415364;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
   font-weight: 300;
-  line-height: 2.5rem;
-}
-
-/* CONTENT */
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  line-height: 1.75;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   color: #1e88c8;
   margin-bottom: 1rem;
 }
 
-.text {
-  color: #666;
-  line-height: 1.6;
-}
-
 .cursosNavigation {
-  /* background-color: cadetblue; */
 }
 
 .errorMessage {
@@ -60,35 +40,24 @@
   font-weight: 300;
 }
 
-/* TABLET */
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
-    align-items: center;
-  }
-
-  .map {
-    /* width: 50%; */
-    height: 100vh;
-    z-index: 0;
-  }
-
-  .content {
-    width: 50%;
+    align-items: stretch;
   }
 
   .reverse {
     flex-direction: row-reverse;
   }
+
+  .map {
+    height: 70vh;
+    z-index: 0;
+  }
 }
 
-/* DESKTOP */
 @media (min-width: 1024px) {
-  .section {
-    padding: 5rem 3rem;
-  }
-
-  .title {
-    font-size: 3rem;
+  .map {
+    height: 100vh;
   }
 }

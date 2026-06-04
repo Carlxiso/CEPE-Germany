@@ -1,0 +1,29 @@
+.section {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: clamp(2rem, 5vw, 5rem);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .reverseContainer {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 5rem 3rem;
+  }
+}

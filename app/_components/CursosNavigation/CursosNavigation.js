@@ -8,7 +8,6 @@ export default function CursosNavigation({ tabs }) {
 
   return (
     <div className={styles.tabs}>
-      {/* NAV */}
       <div className={styles.nav}>
         {tabs.map((tab, index) => (
           <button
@@ -17,13 +16,12 @@ export default function CursosNavigation({ tabs }) {
               activeIndex === index ? styles.active : ""
             }`}
             onClick={() => setActiveIndex(index)}
+            aria-selected={activeIndex === index}
           >
             {tab.label}
           </button>
         ))}
       </div>
-
-      {/* CONTENT */}
       <div className={styles.contentWrapper}>
         {tabs.map((tab, index) => (
           <div
@@ -31,6 +29,7 @@ export default function CursosNavigation({ tabs }) {
             className={`${styles.content} ${
               activeIndex === index ? styles.show : styles.hide
             }`}
+            aria-hidden={activeIndex !== index}
           >
             {tab.content}
           </div>
