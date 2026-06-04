@@ -1,0 +1,81 @@
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.imageElement {
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  padding: clamp(2.5rem, 5vw, 5rem);
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContent {
+  max-width: 60rem;
+  width: 100%;
+}
+
+.label {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #009fe3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: rgb(60, 70, 71);
+  margin: 1rem 0 2rem;
+}
+
+.text {
+  color: rgb(60, 70, 71);
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-weight: 300;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 55rem;
+  text-wrap: pretty;
+}
+
+.full {
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    min-height: clamp(500px, 60vh, 700px);
+  }
+
+  .full {
+    min-height: 100vh;
+  }
+
+  .image {
+    aspect-ratio: auto;
+  }
+
+  .reverse .image {
+    order: 2;
+  }
+
+  .reverse .content {
+    order: 1;
+  }
+}

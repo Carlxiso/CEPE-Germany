@@ -2,8 +2,7 @@ import Footer from "@/app/_components/Layout/Footer/Footer";
 import Section from "@/app/_components/Layout/Section/Section";
 import Heading from "@/app/_components/UI/Heading/Heading";
 import Message from "@/app/_components/Message/Message";
-import SplitLeft from "@/app/_components/Layout/SplitLeft/SplitLeft";
-import SplitRigth from "@/app/_components/SplitRigth/SplitRigth";
+import Split from "@/app/_components/Layout/Split/Split";
 import SectionAbout from "@/app/_components/Layout/Section About/SectionAbout";
 import Center from "@/app/_components/Layout/Center/Center";
 import Team from "@/app/_components/Layout/Team/Team";
@@ -138,11 +137,12 @@ export default function Page() {
         <GridSideGraphic></GridSideGraphic>
       </GridWrapper>
       <Section>
-        <SplitLeft
+        <Split
           src="/DSC_2786.jpg"
-          alt="Ensino do Português"
-          title="Coordenação do ensino Portugues no estranhgeiro na Alemanha"
+          alt="Fotografia do edifício da Embaixada de Portugal em Berlim"
+          title="Coordenação do Ensino Português no Estrangeiro na Alemanha"
           subtitle="A ligação às comunidades portuguesas"
+          sizes="(max-width: 768px) 100vw, 50vw"
           text="A Coordenação do Ensino Português no Estrangeiro na Alemanha, estrutura do Camões – Instituto da Cooperação e da Língua, I.P., com sede na Embaixada de Portugal em Berlim, é, sob orientação do Camões, I.P. e em articulação com a Embaixada de Portugal, a principal entidade pública que tutela o ensino do Português na Alemanha.
           Assente na sua sólida existência, e num contexto atual de globalização, o Camões, I.P., através da CEPE Alemanha, reforça assim a imagem institucional de qualidade e prestígio na área do ensino e o seu posicionamento local como estrutura de coordenação de referência, global, experiente, líder, apta a disponibilizar aos lusodescendentes, bem como a outros provenientes da CPLP e aficionados pela língua portuguesa um ensino de qualidade, inovador e com práticas pedagógicas de excelência com vista à promoção e internacionalização do Português e o seu reconhecimento/ integração nos sistemas de ensino local."
         />
@@ -150,11 +150,12 @@ export default function Page() {
 
       <GridContainerRight />
       <SectionAbout>
-        <SplitLeft
+        <Split
           src="/DSC_2691.jpg"
-          alt="Ensino do Portugês"
+          alt="Sala de aula com alunos a aprender português"
           title="Missão"
-          subtitle="Gestão sistemática da rede do ensino "
+          subtitle="Gestão sistemática da rede do ensino"
+          sizes="(max-width: 768px) 100vw, 50vw"
           text="A CEPE Alemanha opera com vista a melhorar o posicionamento da
           língua portuguesa na Alemanha e, consequentemente, à escala
           global, através da coordenação e gestão sistemática da rede do
@@ -175,12 +176,14 @@ export default function Page() {
       </SectionAbout>
       <GridContainerLeft />
       <SectionAbout>
-        <SplitRigth
+        <Split
+          reverse
           src="/DSC_2806.jpg"
-          alt="Ensino do Portugês"
+          alt="Grupo de professores e alunos em contexto de ensino do português"
           title="Valores"
           subtitle="Identidade e diversidade cultural"
-          text=" O código de conduta do Camões, I.P. assente nos princípios da
+          sizes="(max-width: 768px) 100vw, 50vw"
+          text="O código de conduta do Camões, I.P. assente nos princípios da
           igualdade, imparcialidade, isenção, transparência, integridade e
           criteriosa afetação dos recursos públicos, identifica como valores
           fundamentais: i. A excelência, assente no rigor, na qualidade, na
@@ -189,10 +192,10 @@ export default function Page() {
           isenção e justiça; iv. A qualidade e a produtividade do trabalho,
           a igualdade de oportunidades e de tratamento de pessoas e a
           não-discriminação. Além dos valores fundamentais do Camões, I.P., e no âmbito do
-          ensino, a CEPE Alemanha identifica ainda: V. O saber, saber-fazer, saber-estar, saber-ser, saber-aprender
+          ensino, a CEPE Alemanha identifica ainda: v. O saber, saber-fazer, saber-estar, saber-ser, saber-aprender;
           vi. A abertura e respeito pela identidade e diversidade cultural;
           vii. A cidadania ativa e contribuição para o desenvolvimento
-          pessoal, profissional e cultural numa sociedade pluralista;"
+          pessoal, profissional e cultural numa sociedade pluralista."
         />
       </SectionAbout>
 

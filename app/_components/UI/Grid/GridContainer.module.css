@@ -1,7 +1,7 @@
 .bottomGrid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  opacity: 0.12;
+  opacity: 0.18;
 }
 
 .topGrid {
