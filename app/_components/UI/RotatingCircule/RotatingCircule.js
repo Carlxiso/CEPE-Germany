@@ -2,7 +2,6 @@ import styles from "./RotatingCircule.module.css";
 export default function RotatingCircule() {
   return (
     <svg
-      id="Shipwindow"
       viewBox="0 0 343.6 343.6"
       className={styles.rotatingCircule}
       aria-hidden="true"

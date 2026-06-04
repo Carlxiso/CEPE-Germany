@@ -1,7 +1,7 @@
 .avatarWrapper {
   position: relative;
-  /* width: 250px; */
-  height: 210px;
+  width: min(210px, 70%);
+  aspect-ratio: 1 / 1;
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
@@ -14,32 +14,17 @@
   border-radius: 50%;
 }
 
-.teamTitle {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 5rem;
-  color: #009fe3;
-}
-
 .teamGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 .card {
   text-align: center;
-}
-
-.avatar {
-  /* border-radius: 10px; */
-  /* background-color: #009fe3; */
-  /* border-radius: 50%;
-  border: 1px solid #009fe3; */
-  /* object-fit: cover;
-  width: 48px;
-  height: 48px; */
+  /* padding-bottom: 10%; */
 }
 
 .name {
@@ -55,8 +40,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px; /* WCAG touch target mínimo */
-  padding: 0 0.4rem;
+  min-height: 44px;
+  padding: 0 0.8rem;
   text-decoration: none;
 }
 
@@ -67,27 +52,15 @@
 .location {
   font-size: 1.3rem;
   color: rgb(100, 110, 120);
+  padding-bottom: 10%;
 }
 
-.applyCard {
-  border: 2px dashed #ccc;
-  text-align: center;
-  padding: 2rem;
-  cursor: pointer;
-}
-
-.plus {
-  font-size: 2rem;
-}
-
-/* Tablet */
 @media (min-width: 768px) {
   .teamGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .teamGrid {
     grid-template-columns: repeat(4, 1fr);
