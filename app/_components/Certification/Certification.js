@@ -2,7 +2,10 @@ import DividerSection from "@/app/_components/DividerSection/DividerSection";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "./Certification.module.css";
 
-export default function Certification({ h2Color = "#f2dab2" }) {
+export default function Certification({
+  h2Color = "#f2dab2",
+  subtitleColor = "#f2dab2",
+}) {
   return (
     <div className={styles.content}>
       <div className={styles.innerContent}>
@@ -10,7 +13,7 @@ export default function Certification({ h2Color = "#f2dab2" }) {
           title="CERTIFICAÇÃO"
           subtitle="A língua que abraça a sua história, agora certificada."
           h2Color={h2Color}
-          subtitleColor="#f2dab2"
+          subtitleColor={subtitleColor}
         />
         <p className={styles.contentText}>
           Obter uma certificação oficial é mais do que um reconhecimento: é a

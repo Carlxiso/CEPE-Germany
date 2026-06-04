@@ -8,7 +8,7 @@
 .label {
   font-weight: 300;
   font-size: 1.2rem;
-  color: #009fe3;
+  color: var(--color-sky-blue);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin: 0;
