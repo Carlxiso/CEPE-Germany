@@ -5,12 +5,10 @@ import GridItem from "./GridItem";
 import styles from "./GridContainer.module.css";
 import SVGTileSeven from "../SVGTile/SVGTileSeven";
 import SVGTileNine from "../SVGTile/SVGTileNine";
-import SVGTileOne from "../SVGTile/SVGTileOne";
-import SVGTileTwo from "../SVGTile/SVGTileTwo";
-import SVGTileThree from "../SVGTile/SVGTileThree";
+
 export default function GridContainerLeft() {
   return (
-    <Grid>
+    <Grid ariaHidden>
       <GridItem colStart={1} colEnd={7} rowStart={1} rowEnd={2}>
         <div className={styles.bottomGrid}>
           <div className={styles.tile}>
@@ -20,7 +18,6 @@ export default function GridContainerLeft() {
           <div className={styles.tile}>
             <SVGTileSeven />
           </div>
-
           <div className={styles.tile}>
             <SVGTilesFifteen />
           </div>

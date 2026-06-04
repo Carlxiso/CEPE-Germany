@@ -1,7 +1,6 @@
 import Grid from "./Grid";
 import GridItem from "./GridItem";
 import styles from "./GridContainer.module.css";
-
 import SVGTileSixTeen from "../SVGTile/SVGTileSixTeen";
 import SVGTileSevenTeen from "../SVGTile/SVGTileSevenTeen";
 import SVGTileEight from "../SVGTile/SVGTileEight";
@@ -21,7 +20,7 @@ import SVGTileThirty from "../SVGTile/SVGTileThirty";
 
 export default function GridContainerReverse() {
   return (
-    <Grid>
+    <Grid ariaHidden>
       <GridItem colStart={1} colEnd={13} rowStart={2} rowEnd={4}>
         <div className={styles.bottomGrid}>
           <div className={styles.tile}></div>

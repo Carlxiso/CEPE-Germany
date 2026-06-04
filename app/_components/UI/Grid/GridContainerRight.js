@@ -10,7 +10,7 @@ import SVGTileTwo from "../SVGTile/SVGTileTwo";
 import SVGTileThree from "../SVGTile/SVGTileThree";
 export default function GridContainerRight() {
   return (
-    <Grid>
+    <Grid ariaHidden>
       <GridItem colStart={7} colEnd={13} rowStart={1} rowEnd={2}>
         <div className={styles.bottomGrid}>
           <div className={styles.tile}>

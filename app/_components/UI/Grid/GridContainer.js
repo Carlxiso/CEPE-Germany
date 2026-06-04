@@ -1,7 +1,6 @@
 import Grid from "./Grid";
 import GridItem from "./GridItem";
 import styles from "./GridContainer.module.css";
-
 import SVGTileOne from "../SVGTile/SVGTileOne";
 import SVGLetterA from "../SVGLetter/SVGLetterA";
 import SVGTileTwo from "../SVGTile/SVGTileTwo";
@@ -22,14 +21,8 @@ import SVGTilesFifteen from "../SVGTile/SVGTileFifthTeen";
 
 export default function GridContainer() {
   return (
-    <Grid>
-      {/* <GridItem colStart={1} colEnd={7} rowStart={1} rowEnd={2}></GridItem> */}
-
-      {/*<GridItem colStart={7} colEnd={13} rowStart={1} rowEnd={2}>
-        Top Right
-      </GridItem> */}
-
-      <GridItem colStart={1} colEnd={13} rowStart={2} rowEnd={4}>
+    <Grid ariaHidden>
+      <GridItem colStart={1} colEnd={13} rowStart={1} rowEnd={3}>
         <div className={styles.bottomGrid}>
           <div className={styles.tile}>
             <SVGTileOne />

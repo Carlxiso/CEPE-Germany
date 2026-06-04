@@ -1,7 +1,6 @@
 import Grid from "./Grid";
 import GridItem from "./GridItem";
 import styles from "./GridContainer.module.css";
-import stylesLetters from "./GridContainerFull.module.css";
 import SVGLetterE from "../SVGLetter/SVGLetterE";
 import SVGLetterF from "../SVGLetter/SVGLetterF";
 
