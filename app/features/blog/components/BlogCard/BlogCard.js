@@ -1,205 +1,79 @@
 import Image from "next/image";
 import styles from "./BlogCard.module.css";
-import { defaultArticle, defaultAvatar } from "../images";
 import Link from "next/link";
+import {
+  heroArticle,
+  featuredArticles,
+} from "@/app/_lib/data-featuredArticles";
 
-/*********************************/
-/** Estrutura ideal do Post */
-// type BlogPost = {
-//   title: string
-
-//   category: Category
-
-//   audience: Audience[]
-
-//   tags: string[]
-
-//   author: string
-
-//   publishedAt: Date
-
-//   featured: boolean
-// }
-/*********************************/
 export default function BlogCard() {
   return (
-    <section className={styles.heroBlog}>
-      {/** BIG CARD */}
+    <div className={styles.heroBlog}>
+      {/* HERO CARD */}
       <div className={styles.heroContainer}>
-        <Image
-          width={400}
-          height={400}
-          src="/girl-reading.jpg"
-          alt="Hero Image"
-          className={styles.heroImage}
-        />
-
-        <div className={styles.heroOverlay}>
+        <div className={styles.heroImageWrapper}>
+          <Image
+            fill
+            src={heroArticle.image}
+            alt={heroArticle.title}
+            className={styles.heroImage}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
           <div className={styles.category}>
-            <p>Leitura</p>
+            <p>{heroArticle.category}</p>
           </div>
-
-          <h1 className={styles.heroTitle}>Example Article Title</h1>
-          <p className={styles.heroText}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-            suscipit eaque consequuntur nisi consectetur iure officia quibusdam
-            quod nemo.
-          </p>
-
+        </div>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>{heroArticle.title}</h1>
+          <p className={styles.heroText}>{heroArticle.text}</p>
           <div className={styles.authorInfo}>
             <Image
-              width={100}
-              height={100}
+              width={32}
+              height={32}
               className={styles.authorAvatar}
-              src={defaultAvatar}
+              src={heroArticle.author.avatar}
               alt=""
+              sizes="32px"
             />
-
-            <p>25th August, 2026</p>
-            <p>.</p>
-            <p>John Dom</p>
-            <p>.</p>
-            <p>3min Read</p>
+            <span>{heroArticle.publishedAt}</span>
+            <span aria-hidden="true">·</span>
+            <span>{heroArticle.author.name}</span>
+            <span aria-hidden="true">·</span>
+            <span>{heroArticle.readTime}</span>
           </div>
         </div>
       </div>
-      {/** BIG CARD */}
-      {/********************************************/}
-      {/** GROUP CARDS */}
-      {/** CARD1 */}
+
+      {/* ARTICLE GRID */}
       <div className={styles.articlesGrid}>
-        <div>
-          <Link href="/">
+        {featuredArticles.map((article) => (
+          <Link key={article.id} href={`/blog/${article.slug}`}>
             <div className={styles.articleCard}>
-              <Image
-                width={400}
-                height={400}
-                src="/pastel-de-nata.jpg"
-                alt="Article Image"
-                className={styles.articleImage}
-              />
-
-              <div className={styles.articleGradient}></div>
-
-              <div className={styles.articleContent}>
+              <div className={styles.articleImageWrapper}>
+                <Image
+                  fill
+                  src={article.image}
+                  alt={article.title}
+                  className={styles.articleImage}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
                 <div className={styles.articleCategory}>
-                  <p>Turtulias Portuguesas</p>
+                  <p>{article.category}</p>
                 </div>
-
-                <h1 className={styles.articleTitle}>Example Article Title</h1>
-
+              </div>
+              <div className={styles.articleContent}>
+                <h2 className={styles.articleTitle}>{article.title}</h2>
                 <div className={styles.articleMeta}>
-                  <p>By Charles Fix</p>
-                  <p>.</p>
-                  <p>3min Read</p>
+                  <span>By {article.author.name}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{article.readTime}</span>
                 </div>
               </div>
             </div>
           </Link>
-        </div>
-
-        {/** CARD1 */}
-        {/** CARD2 */}
-
-        <div>
-          <Link href="/">
-            <div className={styles.articleCard}>
-              <Image
-                width={400}
-                height={400}
-                src="/boy-writing.jpg"
-                alt="Article Image"
-                className={styles.articleImage}
-              />
-
-              <div className={styles.articleGradient}></div>
-
-              <div className={styles.articleContent}>
-                <div className={styles.articleCategory}>
-                  <p>Vida Escolar</p>
-                </div>
-
-                <h1 className={styles.articleTitle}>Example Article Title</h1>
-
-                <div className={styles.articleMeta}>
-                  <p>By Charles Fix</p>
-                  <p>.</p>
-                  <p>3min Read</p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/** CARD2 */}
-        {/** CARD3 */}
-
-        <div>
-          <Link href="/">
-            <div className={styles.articleCard}>
-              <Image
-                width={400}
-                height={400}
-                src="/classroom.jpg"
-                alt="Article Image"
-                className={styles.articleImage}
-              />
-
-              <div className={styles.articleGradient}></div>
-
-              <div className={styles.articleContent}>
-                <div className={styles.articleCategory}>
-                  <p>Vida Escolar</p>
-                </div>
-
-                <h1 className={styles.articleTitle}>Example Article Title</h1>
-
-                <div className={styles.articleMeta}>
-                  <p>By Charles Fix</p>
-                  <p>.</p>
-                  <p>3min Read</p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/** CARD3 */}
-        {/** CARD4 */}
-
-        <div>
-          <Link href="/">
-            <div className={styles.articleCard}>
-              <Image
-                width={400}
-                height={400}
-                src="/teacher-reading.jpg"
-                alt="Article Image"
-                className={styles.articleImage}
-              />
-
-              <div className={styles.articleGradient}></div>
-
-              <div className={styles.articleContent}>
-                <div className={styles.articleCategory}>
-                  <p>Actividades Pedagógicas</p>
-                </div>
-
-                <h1 className={styles.articleTitle}>Example Article Title</h1>
-
-                <div className={styles.articleMeta}>
-                  <p>By Charles Fix</p>
-                  <p>.</p>
-                  <p>3min Read</p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/** CARD4 */}
+        ))}
       </div>
-      {/** GROUP CARDS */}
-    </section>
+    </div>
   );
 }

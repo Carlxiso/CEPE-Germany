@@ -5,7 +5,7 @@ import BlogHighlights from "@/app/features/blog/components/BlogHighlights/BlogHi
 import Section from "@/app/_components/Layout/Section/Section";
 
 export const metadata = {
-  metadataBase: new URL("https://cepealemanha.de/blog"),
+  metadataBase: new URL("https://cepealemanha.de"),
 
   title: {
     default: "Aprender Português na Alemanha | Blog CEPE",
@@ -79,7 +79,6 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      {/* <Maintenance section="Blog" /> */}
       <Section withContainer={false}>
         <BlogCard />
       </Section>
