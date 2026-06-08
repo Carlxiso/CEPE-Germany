@@ -40,13 +40,11 @@
 }
 
 .mapCard {
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  background: #009fe3;
+  background: var(--color-sand);
   color: #fff;
-  padding: 1.5rem;
-  max-width: 260px;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  /* max-width: 320px; */
+  margin-bottom: 1.5rem;
 }
 
 .mapCardTop {
@@ -65,19 +63,13 @@
     align-items: start;
   }
 
-  .mapWrapper {
+  /* .mapWrapper {
     height: 60vh;
-  }
+  } */
 }
 
 @media (min-width: 1024px) {
   .wrapper {
     padding: 4rem 2rem;
-  }
-
-  .mapCard {
-    padding: 5rem;
-    top: -180px;
-    left: 200px;
   }
 }

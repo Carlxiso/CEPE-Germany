@@ -3,16 +3,14 @@
   padding: 2rem 1.5rem;
 }
 
-/* HEADER */
 .header {
   text-align: left;
   max-width: 900px;
-  /* margin: 0 auto 2rem; */
-  padding: 8rem;
+  padding: clamp(2rem, 6vw, 8rem);
 }
 
 .title {
-  font-size: 4rem;
+  font-size: clamp(3.2rem, 5vw, 4rem);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
   color: #009fe3;
@@ -20,26 +18,10 @@
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
   color: #555;
 }
 
-/* FLOAT BUTTON */
-.floatingBtn {
-  position: absolute;
-  top: 200px;
-  right: 20px;
-  background: #f2dab2;
-  border: none;
-  padding: 0.8rem 0.6rem;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  writing-mode: vertical-rl;
-  cursor: pointer;
-  color: #415364;
-}
-
-/* IMAGE SECTION */
 .imageSection {
   position: relative;
   max-width: 1100px;
@@ -49,37 +31,53 @@
 .image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  display: block;
 }
 
-/* CARD */
 .card {
   background: #e76868;
-  width: 90%;
-  max-width: 350px;
+  width: 100%;
   padding: 2rem 1.5rem;
-  position: absolute;
-  top: -40px;
-  left: 30%;
-  transform: translateX(-50%);
+  margin-top: 1.5rem;
 }
 
 .cardTop {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
+  color: #fff;
 }
 
 .cardTitle {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
   margin: 1.5rem 0;
   color: #fff;
 }
 
 .cardInfo p {
   margin-bottom: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   color: #fff;
 }
 
-.email {
+.email a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 350px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    left: 4rem;
+  }
 }

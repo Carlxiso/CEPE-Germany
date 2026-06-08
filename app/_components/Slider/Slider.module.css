@@ -1,38 +1,18 @@
 .wrapper {
   position: relative;
-  /* padding: 2rem 1rem; */
-  margin: 5rem;
+  margin: clamp(2rem, 5vw, 5rem);
 }
 
-/* CONTROLS */
 .controls {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
-
-  /*jhokjksjldsjdlpajdlskdlçaskdlç*/
-  position: absolute;
-  /* z-index: 10; */
-  background-color: white;
-  top: -10%;
-  left: 80%;
+  margin-bottom: 1.5rem;
 }
 
-/* z-index: 10;
-background-color: #fff;
-justify-content: flex-end;
-align-items: center;
-gap: 1rem;
-margin-bottom: 1rem;
-display: flex;
-position: absolute;
-top: -10%;
-left: 80%; */
-
 .counter {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #8b8c4a;
 }
 
@@ -44,99 +24,52 @@ left: 80%; */
 .buttons button {
   border: 1px solid #e76868;
   background: transparent;
-  padding: 0.6rem 0.8rem;
+  padding: 0.6rem 1rem;
+  font-size: 1.6rem;
   cursor: pointer;
+  color: #e76868;
+  transition: background 0.2s ease;
 }
 
-/* IMAGE */
+.buttons button:hover {
+  background: #e76868;
+  color: #fff;
+}
+
 .imageWrapper {
   position: relative;
-  max-width: 1100px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  display: block;
+  object-fit: cover;
 }
 
-/* PREVIEW (OVERLAP) */
-.preview {
-  position: absolute;
-  right: -80px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 300px;
-}
-
-.preview img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* CARD */
 .card {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 1.5rem;
+  left: 1.5rem;
   background: #e76868;
-  padding: 1.5rem;
-
+  padding: clamp(1.5rem, 3vw, 3rem);
   max-width: 320px;
   z-index: 2;
 }
 
 .cardTop {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
+  color: #fff;
 }
 
 .cardTitle {
   margin-top: 1rem;
-  font-size: 1.4rem;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  color: #fff;
 }
 
-/* PREVIEW */
-/* .preview {
-  margin-top: 1rem;
-}
-
-.preview img {
-  width: 100%;
-} */
-
-/* TABLET */
 @media (min-width: 768px) {
-  .preview {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
   .imageWrapper {
-    max-width: none;
-    position: absolute;
+    aspect-ratio: 16 / 9;
   }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-  .card {
-    padding: 6rem;
-    top: -50px;
-    left: 50px;
-  }
-
-  .cardTitle {
-    font-size: 1.5rem;
-  }
-}
-
-/* PERFORMANCE */
-.image {
-  will-change: transform;
 }

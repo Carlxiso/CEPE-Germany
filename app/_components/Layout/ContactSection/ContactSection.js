@@ -14,6 +14,13 @@ export default function ContactSection() {
 
       {/* RIGHT */}
       <div className={styles.right}>
+        <div className={styles.mapCard}>
+          <span className={styles.mapCardTop}>Google Maps INFO</span>
+          <h3 className={styles.mapCardTitle}>
+            Onde nos pode encontrar. Visite-nos!
+          </h3>
+        </div>
+
         <div className={styles.mapWrapper}>
           <iframe
             title="Localização da CEPE Alemanha no Google Maps — Kurfürstenstraße 57, Berlim"
@@ -23,13 +30,6 @@ export default function ContactSection() {
             referrerPolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Kurfürstenstraße+57,+10785+Berlin&output=embed"
           />
-
-          <div className={styles.mapCard}>
-            <span className={styles.mapCardTop}>Google Maps INFO</span>
-            <h3 className={styles.mapCardTitle}>
-              Onde nos pode encontrar. Visite-nos!
-            </h3>
-          </div>
         </div>
       </div>
     </div>

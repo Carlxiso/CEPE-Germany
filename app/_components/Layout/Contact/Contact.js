@@ -1,6 +1,7 @@
+import Image from "next/image";
 import styles from "./Contact.module.css";
 
-export default function ContactHero() {
+export default function Contact() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -10,13 +11,15 @@ export default function ContactHero() {
         </p>
       </div>
 
-      <button className={styles.floatingBtn}>INFO</button>
-
       <div className={styles.imageSection}>
-        <img
+        <Image
           src="/DSC_2795.jpg"
-          alt="Embaixada Portuguesa em Berlin"
+          alt="Embaixada Portuguesa em Berlim"
+          width={3008}
+          height={1456}
+          sizes="(max-width: 1100px) 100vw, 1100px"
           className={styles.image}
+          priority
         />
 
         <div className={styles.card}>
@@ -26,7 +29,9 @@ export default function ContactHero() {
 
           <div className={styles.cardInfo}>
             <p>+62 (0) 9 321 03 00</p>
-            <p className={styles.email}>INFO@CEPEALEMANHA.DE</p>
+            <p className={styles.email}>
+              <a href="mailto:info@cepealemanha.de">INFO@CEPEALEMANHA.DE</a>
+            </p>
             <p>
               STRASSE QUALQUER 62
               <br />

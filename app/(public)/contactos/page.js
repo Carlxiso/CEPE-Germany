@@ -3,10 +3,9 @@ import ContactSection from "@/app/_components/Layout/ContactSection/ContactSecti
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import Section from "@/app/_components/Layout/Section/Section";
 import Slider from "@/app/_components/Slider/Slider";
-import Form from "../../_components/Layout/Form/Form";
 
 export const metadata = {
-  metadataBase: new URL("https://cepealemanha.de/contactos"),
+  metadataBase: new URL("https://cepealemanha.de"),
 
   title: {
     default: "Contactos",
@@ -77,7 +76,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Section fullscreen>
+      <Section fullscreen container={false}>
         <Contact />
       </Section>
       <Section bgColor="#415364">
