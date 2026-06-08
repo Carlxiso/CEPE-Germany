@@ -5,58 +5,24 @@
   padding: 2rem 1.5rem;
 }
 
-/* LEFT */
 .left {
   max-width: 500px;
 }
 
 .kicker {
-  font-size: 0.7rem;
+  display: inline-block;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   background: #009fe3;
-  padding: 2.2rem 1.4rem;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
 }
 
 .title {
-  font-size: 2rem;
-  margin: 1rem 0 2rem 0;
-  padding-top: 5rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin: 2rem 0;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.input,
-.textarea {
-  width: 100%;
-  padding: 0.9rem;
-  border: 1px solid #ddd;
-  background: #f7f7f7;
-  font-size: 0.95rem;
-  outline: none;
-}
-
-.input:focus,
-.textarea:focus {
-  border-color: #000;
-  background: #fff;
-}
-
-.button {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #009fe3;
-  border: none;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* RIGHT */
 .right {
   width: 100%;
 }
@@ -78,21 +44,21 @@
   top: -20px;
   left: 20px;
   background: #009fe3;
+  color: #fff;
   padding: 1.5rem;
   max-width: 260px;
 }
 
 .mapCardTop {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
 }
 
 .mapCardTitle {
   margin-top: 0.8rem;
-  font-size: 1.2rem;
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
-/* TABLET */
 @media (min-width: 768px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
@@ -100,18 +66,13 @@
   }
 
   .mapWrapper {
-    height: 500px;
+    height: 60vh;
   }
 }
 
-/* DESKTOP */
 @media (min-width: 1024px) {
   .wrapper {
     padding: 4rem 2rem;
-  }
-
-  .title {
-    font-size: 2.5rem;
   }
 
   .mapCard {
@@ -119,9 +80,4 @@
     top: -180px;
     left: 200px;
   }
-}
-
-/* PERFORMANCE */
-.map {
-  will-change: transform;
 }

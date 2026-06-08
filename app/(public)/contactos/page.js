@@ -1,8 +1,9 @@
 import Contact from "@/app/_components/Layout/Contact/Contact";
-import ContactForm from "@/app/_components/Layout/ContactForm.js/ContactForm";
+import ContactSection from "@/app/_components/Layout/ContactSection/ContactSection";
 import Footer from "@/app/_components/Layout/Footer/Footer";
 import Section from "@/app/_components/Layout/Section/Section";
 import Slider from "@/app/_components/Slider/Slider";
+import Form from "../../_components/Layout/Form/Form";
 
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de/contactos"),
@@ -80,7 +81,7 @@ export default function Page() {
         <Contact />
       </Section>
       <Section bgColor="#415364">
-        <ContactForm />
+        <ContactSection />
       </Section>
       <Section>
         <Slider />

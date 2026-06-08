@@ -2,12 +2,12 @@
   width: 100%;
   padding: 1rem 1.2rem;
   border: 1px solid #ccc;
+  color: #415364;
   border-radius: 4px;
   min-height: 120px;
   resize: vertical;
   font-size: 1.6rem;
   font-family: inherit;
-  color: inherit;
   line-height: 2.4rem;
   background-color: #fff;
   transition:

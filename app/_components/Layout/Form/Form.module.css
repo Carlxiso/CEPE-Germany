@@ -4,8 +4,6 @@
   padding: 3rem 2rem;
 }
 
-/* ── coluna informativa ───────────────────────────────────── */
-
 .contactCol {
   max-width: 520px;
 }
@@ -28,8 +26,6 @@
   max-width: 500px;
 }
 
-/* ── formulário ───────────────────────────────────────────── */
-
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -38,13 +34,9 @@
   max-width: 520px;
 }
 
-/* ── honeypot ─────────────────────────────────────────────── */
-
 .hidden {
   display: none;
 }
-
-/* ── feedback de envio ────────────────────────────────────── */
 
 .success {
   color: #8b8c4a;
@@ -61,8 +53,6 @@
   animation: fadeIn 0.4s ease;
 }
 
-/* ── desktop ──────────────────────────────────────────────── */
-
 @media (min-width: 768px) {
   .contact {
     grid-template-columns: 1fr 1fr;
@@ -74,8 +64,6 @@
     padding-right: 4rem;
   }
 }
-
-/* ── animações ────────────────────────────────────────────── */
 
 @keyframes fadeIn {
   from {
