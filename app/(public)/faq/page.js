@@ -4,7 +4,7 @@ import faqImage from "@/public/artboard.png";
 import Filter from "@/app/_components/Filter/Filter";
 
 export const metadata = {
-  metadataBase: new URL("https://cepealemanha.de/faq"),
+  metadataBase: new URL("https://cepealemanha.de"),
 
   title: {
     default: "Perguntas Frequentes sobre Cursos de Português na Alemanha",

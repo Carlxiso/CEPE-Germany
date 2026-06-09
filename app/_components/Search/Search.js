@@ -4,7 +4,8 @@ export default function SearchBar({ query, setQuery }) {
   return (
     <div className={styles.searchWrapper}>
       <input
-        type="text"
+        type="search"
+        aria-label="Pesquisar nas perguntas frequentes"
         placeholder="Pesquisar por tópico ou pergunta..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}

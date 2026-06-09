@@ -8,27 +8,25 @@
   text-align: center;
   margin-bottom: 2rem;
   color: #009fe3;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
 }
+
 .subTitle {
   text-align: center;
   margin-bottom: 4rem;
   color: #415364;
   font-weight: 300;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .noResults {
   text-align: center;
   color: #777;
+  font-size: 1.5rem;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-}
-
-/* Desktop */
 @media (min-width: 1024px) {
   .container {
     padding: 2rem;
