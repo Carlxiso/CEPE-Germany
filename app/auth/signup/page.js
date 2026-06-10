@@ -227,7 +227,11 @@ export default function SignUp() {
               </button>
             </div>
 
-            <Button className={styles.registerButton} disabled={loading}>
+            <Button
+              type="submit"
+              className={styles.registerButton}
+              disabled={loading}
+            >
               {loading ? "A criar conta…" : "Criar conta"}
             </Button>
           </form>

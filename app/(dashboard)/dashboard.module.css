@@ -56,6 +56,18 @@
   transition: all 0.3s;
 }
 
+/* link da página atual — realce permanente */
+.navLinkActive {
+  background: #009fe3;
+  color: #fff;
+  font-weight: 500;
+}
+
+.navLinkActive:hover {
+  background: #008fcc;
+  color: #fff;
+}
+
 /*DASHFOOTER*/
 .sidebarFooter {
   border-top: 1px solid #334155;
