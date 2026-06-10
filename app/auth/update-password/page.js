@@ -7,7 +7,7 @@ import Footer from "@/app/_components/Layout/Footer/Footer";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "@/app/auth/auth.module.css";
 import Header from "@/app/_components/Layout/Header/Header";
-import supabase from "@/app/_lib/supabase";
+import supabase from "@/app/_lib/auth/supabase";
 
 function validate({ password, confirmPassword }) {
   if (password.length < 8)

@@ -6,14 +6,8 @@ import Button from "@/app/_components/UI/Button/Button";
 import styles from "../auth.module.css";
 import Header from "@/app/_components/Layout/Header/Header";
 import { useRouter } from "next/navigation";
-import supabase from "@/app/_lib/supabase";
-
-const ROLE_HOME = {
-  student: "/student",
-  teacher: "/teacher",
-  coordinator: "/coordinator",
-  admin: "/admin",
-};
+import supabase from "@/app/_lib/auth/supabase";
+import { ROLE_HOME } from "@/app/_lib/auth/roles";
 
 const SUPABASE_ERROR_CODES = {
   invalid_credentials: "Email ou palavra-passe incorretos.",

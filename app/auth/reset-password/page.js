@@ -6,7 +6,7 @@ import Button from "@/app/_components/UI/Button/Button";
 import styles from "@/app/auth/auth.module.css";
 import Header from "@/app/_components/Layout/Header/Header";
 import { useState } from "react";
-import supabase from "@/app/_lib/supabase";
+import supabase from "@/app/_lib/auth/supabase";
 
 const REDIRECT_URL =
   typeof window !== "undefined"

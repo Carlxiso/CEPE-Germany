@@ -1,4 +1,3 @@
-import { createClient } from "@supabase/supabase-js";
 import { createBrowserClient } from "@supabase/ssr";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -10,14 +9,6 @@ if (!supabaseUrl || !supabaseAnonKey) {
   );
 }
 
-export const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    // Mantém a sessão guardada e renova o token automaticamente
-    persistSession: true,
-    autoRefreshToken: true,
-    // Chave única para evitar colisões no localStorage
-    storageKey: "cepe-auth",
-  },
-});
+export const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
 
 export default supabase;

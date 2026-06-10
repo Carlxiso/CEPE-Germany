@@ -6,7 +6,7 @@ import Footer from "@/app/_components/Layout/Footer/Footer";
 import Button from "@/app/_components/UI/Button/Button";
 import Header from "@/app/_components/Layout/Header/Header";
 import { useRouter } from "next/navigation";
-import supabase from "@/app/_lib/supabase";
+import supabase from "@/app/_lib/auth/supabase";
 
 // Mapeamento por error_code (campo `code` do AuthError — mais fiável que a mensagem)
 const SUPABASE_ERROR_CODES = {
