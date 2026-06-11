@@ -1,10 +1,9 @@
 import styles from "@/app/(dashboard)/dashboard.module.css";
 
-function DashFooter() {
+function DashFooter({ user }) {
   return (
     <div className={styles.sidebarFooter}>
-      <p className={styles.userName}>USERNAME</p>
-      {/* method="post" → bate certo com a rota app/auth/logout/route.js (POST) */}
+      <p className={styles.userName}>{user?.name ?? "Utilizador"}</p>
       <form action="/auth/logout" method="post">
         <button type="submit" className={styles.logoutBtn}>
           Terminar sessão

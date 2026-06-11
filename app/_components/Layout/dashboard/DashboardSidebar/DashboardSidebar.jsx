@@ -1,13 +1,17 @@
 import styles from "@/app/(dashboard)/dashboard.module.css";
 import Logo from "../../Logo/Logo";
-import DashNavLink from "../DashNavLink/DashNavLink";
+import DashNav from "../DashNav/DashNav";
 import DashFooter from "../DashFooter/DashFooter";
-export default function DashboardSidebar() {
+import { DASHBOARD_NAV } from "@/app/_lib/dashboard-nav";
+
+export default function DashboardSidebar({ role, user }) {
+  const items = DASHBOARD_NAV[role] ?? [];
+
   return (
     <aside className={styles.sidebar}>
       <Logo />
-      <DashNavLink />
-      <DashFooter />
+      <DashNav items={items} />
+      <DashFooter user={user} />
     </aside>
   );
 }
