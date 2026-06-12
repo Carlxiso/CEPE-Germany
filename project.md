@@ -223,3 +223,77 @@ middleware.js (corre em cada request a /admin|/student|/teacher|/coordinator)
 ▼
 DashboardSidebar(role) → escolhe o menu de \_lib/dashboard-nav.js
 Vista admin/page.js ou student/page.js (Server Components)
+
+### CATEGORIAS PRINCIPAIS (editoriais)
+
+# Língua Portuguesa
+
+Conteúdo linguístico:
+
+--- gramática
+--- vocabulário
+--- expressões
+--- curiosidades linguísticas
+
+# Atividades Pedagógicas
+
+--- Conteúdo relacionado com aulas e aprendizagem.
+
+Exemplos:
+projetos escolares
+workshops
+apresentações
+atividades em sala
+
+# Vida Escolar
+
+--- Mais institucional/social.
+
+Exemplos:
+visitas escolares
+intercâmbios
+celebrações
+concursos
+
+# Cultura Lusófona
+
+Exemplos:
+música
+gastronomia
+cinema
+tradições
+países lusófonos
+
+# Literatura & Autores
+
+Exemplos:
+autores portugueses
+lançamentos
+feiras do livro
+entrevistas
+
+# Eventos & Conferências
+
+Eventos internos e externos.
+
+Exemplos:
+palestras
+congressos
+encontros culturais
+
+# Atualidade & Sociedade
+
+Conteúdo:
+
+políticas linguísticas
+educação
+CPLP
+promoção da língua portuguesa
+
+# Comunidade CEPE
+
+Exemplos:
+testemunhos
+histórias de alunos
+entrevistas
+experiências

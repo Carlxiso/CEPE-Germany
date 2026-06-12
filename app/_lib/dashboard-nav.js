@@ -2,7 +2,7 @@ export const DASHBOARD_NAV = {
   admin: [
     { href: "/admin", label: "Painel", icon: "home" },
     { href: "/admin/utilizadores", label: "Utilizadores", icon: "users" },
-    { href: "/admin/artigos", label: "Artigos", icon: "news" },
+    { href: "/admin/blog", label: "Blog", icon: "news" },
     { href: "/admin/comentarios", label: "Comentários", icon: "comments" },
     { href: "/admin/aprovacoes", label: "Aprovações", icon: "check" },
     { href: "/admin/analytics", label: "Analytics", icon: "chart" },
