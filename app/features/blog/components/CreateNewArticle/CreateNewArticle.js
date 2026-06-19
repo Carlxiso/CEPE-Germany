@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./CreateNewArticle.module.css";
 import { useEffect, useState } from "react";
 import { supabase } from "@/app/_lib/auth/supabase";
+import { useSearchParams } from "next/navigation";
 // type BlogPost = {
 //   title: string
 
@@ -20,42 +21,21 @@ import { supabase } from "@/app/_lib/auth/supabase";
 //   featured: boolean
 // }
 
-// type Category =
-//   | 'lingua-portuguesa'
-//   | 'atividades-pedagogicas'
-//   | 'vida-escolar'
-//   | 'cultura-lusofona'
-//   | 'literatura-autores'
-//   | 'eventos-conferencias'
-//   | 'atualidade-sociedade'
-//   | 'comunidade-cepe'
-
 export default function CreateNewArticle() {
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState([]);
+  const [loadingArticle, setLoadingArticle] = useState(false);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [thumbnail, setThumbnail] = useState("");
+  const [user, setUser] = useState(null);
+  const searchParams = useSearchParams();
+  const articleId = searchParams.get("id");
 
-  // const fetchCategories = async () => {
-  //   const { data, error } = await supabase.from("categories").select("*");
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => setUser(data.user));
+  }, []);
 
-  //   if (error) {
-  //     console.log(
-  //       "Error em database. Não foi possivel buscar categories.",
-  //       error,
-  //     );
-  //     return;
-  //   }
-
-  //   const normalizedCategories = data ?? [];
-  //   setCategories(normalizedCategories);
-
-  //   if (normalizedCategories.length > 0 && !category) {
-  //     setCategory(normalizedCategories[0].id);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchCategories();
-  // }, []);
   useEffect(() => {
     let isCancelled = false;
 
@@ -81,6 +61,34 @@ export default function CreateNewArticle() {
       isCancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    const fetchArticle = async () => {
+      if (!articleId || !user) return;
+
+      setLoadingArticle(true);
+
+      const { data, error } = await supabase
+        .from("articles")
+        .select("*")
+        .eq("id", articleId)
+        .eq("profile_id", user.id)
+        .single();
+
+      if (error) {
+        console.log("Failed to Load Article", error);
+      } else {
+        setTitle(data?.title);
+        setContent(data?.content);
+        setThumbnail(data?.thumbnail);
+        setCategory(data?.category_id);
+      }
+
+      setLoadingArticle(false);
+    };
+
+    fetchArticle();
+  }, [articleId, user]);
 
   return (
     <section className={styles.createPostSection}>
