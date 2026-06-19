@@ -90,6 +90,12 @@ export default function CreateNewArticle() {
     fetchArticle();
   }, [articleId, user]);
 
+  const handleThumbnailChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setThumbnail(e.target.files[0]);
+    }
+  };
+
   return (
     <section className={styles.createPostSection}>
       <div className={styles.createPostCard}>
@@ -99,7 +105,13 @@ export default function CreateNewArticle() {
             <Image
               width={500}
               height={500}
-              src="/default/defaultArticle.png"
+              src={
+                typeof thumbnail === "String"
+                  ? thumbnail
+                  : thumbnail
+                    ? URL.createObjectURL(thumbnail)
+                    : "/default/defaultArticle.png"
+              }
               className={styles.thumbnailPreview}
               alt="Thumbnail Preview"
             />
@@ -109,6 +121,7 @@ export default function CreateNewArticle() {
                 type="file"
                 id="article-image"
                 className={styles.fileInput}
+                onChange={handleThumbnailChange}
               />
 
               <label htmlFor="article-image" className={styles.uploadButton}>
