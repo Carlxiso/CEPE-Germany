@@ -3,7 +3,7 @@ import BlogCard from "@/app/features/blog/components/BlogCard/BlogCard";
 import BlogCardPopular from "@/app/features/blog/components/BlogCardPopular/BlogCardPopular";
 import BlogHighlights from "@/app/features/blog/components/BlogHighlights/BlogHighlights";
 import Section from "@/app/_components/Layout/Section/Section";
-
+import { getArticles } from "@/app/_lib/articles";
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de"),
 
@@ -76,17 +76,25 @@ export const metadata = {
     icon: "/icon.png",
   },
 };
-export default function Page() {
+export default async function Page() {
+  // um pedido à base de dados.
+  const articles = await getArticles();
+
+  // Fatias derivadas para cada secção:
+  const populares = [...articles]
+    .sort((a, b) => (b.views ?? 0) - (a.views ?? 0))
+    .slice(0, 4);
+
   return (
     <>
       <Section withContainer={false}>
-        <BlogCard />
+        <BlogCard articles={articles} />
       </Section>
       <Section withContainer={false}>
-        <BlogHighlights />
+        <BlogHighlights articles={articles.slice(0, 4)} />
       </Section>
       <Section withContainer={false}>
-        <BlogCardPopular />
+        <BlogCardPopular articles={populares} />
       </Section>
       <Footer footerLogoWhite={true} />
     </>

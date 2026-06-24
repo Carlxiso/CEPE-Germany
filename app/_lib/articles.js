@@ -1,0 +1,26 @@
+import { createSupabaseServerClient } from "./auth/supabase-server";
+
+/**
+ * Procura todos os artigos uma vez no servidor.
+ */
+export async function getArticles() {
+  const supabase = await createSupabaseServerClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select(
+      `
+      id, title, content, thumbnail, date_created, views, read_time, slug,
+      category:category_id(title),
+      author:profile_id(full_name, avatar_url)
+      `,
+    )
+    .order("date_created", { ascending: false });
+
+  if (error) {
+    console.error("Erro ao buscar artigos:", error);
+    return [];
+  }
+
+  return data ?? [];
+}

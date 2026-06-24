@@ -7,22 +7,6 @@ import { supabase } from "@/app/_lib/auth/supabase";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-// type BlogPost = {
-//   title: string
-
-//   category: Category
-
-//   audience: Audience[]
-
-//   tags: string[]
-
-//   author: string
-
-//   publishedAt: Date
-
-//   featured: boolean
-// }
-
 export default function CreateNewArticle() {
   const [category, setCategory] = useState("");
   const [loading, setLoading] = useState(false);
