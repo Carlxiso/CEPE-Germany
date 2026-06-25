@@ -24,3 +24,17 @@ export async function getArticles() {
 
   return data ?? [];
 }
+
+export async function getArticleBySlug(slug) {
+  const supabase = await createSupabaseServerClient();
+  const { data } = await supabase
+    .from("articles")
+    .select(
+      `id, title, content, thumbnail, views, read_time, date_created,
+             category:category_id(title),
+             author:profile_id(full_name, avatar_url)`,
+    )
+    .eq("slug", slug)
+    .maybeSingle();
+  return data;
+}

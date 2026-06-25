@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { getArticleBySlug } from "@/app/_lib/articles";
+import { notFound } from "next/navigation";
+import { readTimeLabel } from "@/app/_lib/blog-format";
 import stampLettersCepe from "../../../../public/stamp-letters-cepe.jpg";
 import Section from "../../../_components/Layout/Section/Section";
 import { defaultAvatar } from "../../../features/blog/components/images";
@@ -43,7 +46,14 @@ const comments = [
     date: "2026-04-03",
   },
 ];
-export default function page() {
+
+const FALLBACK_IMG = "/default/defaultArticle.png";
+const FALLBACK_AVATAR = "/default/defaultAvatar.png";
+
+export default async function ArticleDetailPage({ params }) {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
+  if (!article) notFound();
   return (
     <>
       <Section>
@@ -59,7 +69,7 @@ export default function page() {
 
             {/* <div className={styles.heroOverlay} /> */}
 
-            <h1 className={styles.heroTitle}>Article Title</h1>
+            <h1 className={styles.heroTitle}>{article.title}</h1>
           </div>
 
           <div className={styles.articleActions}>
@@ -70,6 +80,7 @@ export default function page() {
                 color="black"
                 strokeWidth={1.5}
               />
+              {/* {article.thumbnail || FALLBACK_IMG} */}
             </button>
 
             <button className={styles.iconButton}>
@@ -88,7 +99,7 @@ export default function page() {
                 color="black"
                 strokeWidth={1.5}
               />
-              <p> 0 views</p>
+              <p> {article.views} views</p>
             </div>
 
             <div className={styles.infoBadge}>
@@ -98,152 +109,24 @@ export default function page() {
                 color="black"
                 strokeWidth={1.5}
               />
-              <p> Leitura de 10 minutos</p>
+              <p> Leitura de {readTimeLabel(article.read_time)}minutos</p>
             </div>
           </div>
 
           <div className={styles.articleGrid}>
             <div>
               <div className={styles.articleContent}>
-                <h1 className={styles.articleTitle}>Article Title</h1>
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <h1 className={styles.articleTitle}>Article Title</h1>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <h1 className={styles.articleTitle}>Article Title</h1>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
-
-                <p className={styles.paragraph}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Impedit culpa ea sapiente neque rem earum eius inventore aut
-                  esse dolorum nemo autem omnis aliquid vero dolorem molestiae
-                  sequi, facilis ab laborum, quidem ipsam debitis. Commodi odit
-                  pariatur eum aspernatur. Maxime, modi, mollitia perferendis
-                  obcaecati maiores recusandae necessitatibus aliquam velit sunt
-                  commodi nulla eveniet repellat quas ad adipisci minima cum
-                  dolorum! Nemo ipsum iusto reiciendis odit perspiciatis dolorem
-                  perferendis obcaecati non cupiditate corrupti quas modi nulla,
-                  facilis impedit beatae ut suscipit autem? Animi nulla illo
-                  dolorum, natus delectus ratione provident culpa eius nesciunt!
-                  Officia accusantium natus ea maiores iusto voluptates nemo?
-                </p>
+                <h1 className={styles.articleTitle}>
+                  {article.category?.title}
+                </h1>
+                {article.content
+                  ?.split(/\n+/) // parte onde há quebras de linha
+                  .filter((par) => par.trim()) // descarta linhas vazias
+                  .map((par, i) => (
+                    <p key={i} className={styles.paragraph}>
+                      {par}
+                    </p>
+                  ))}
               </div>
 
               <div className={styles.articleMeta}>
@@ -255,9 +138,11 @@ export default function page() {
                     className={styles.authorAvatar}
                     alt="Avatar"
                   />
-
+                  {/* {article.author?.avatar_url || FALLBACK_AVATAR} */}
                   <div>
-                    <h1 className={styles.authorName}>By Author Last Name</h1>
+                    <h1 className={styles.authorName}>
+                      {article.author?.full_name}
+                    </h1>
 
                     <p>Writer at Cepe</p>
                   </div>
