@@ -4,11 +4,12 @@ import styles from "./WrapperCenter.module.css";
 function WrapperCenter() {
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>Ajuda-nos a aumentar esta Rede.</h2>
+      <h2 className={styles.heading}>
+        A tua língua é a tua raiz Cultural para o Mundo.
+      </h2>
       <p className={styles.subheading}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-        suscipit eaque consequuntur nisi consectetur iure officia quibusdam quod
-        nemo.
+        Falar Português é uma herança preciosa. Inscreve-te nos nossos cursos e
+        mantém essa ligação sempre viva!.
       </p>
       <Button>Formulário Curso</Button>
     </div>

@@ -95,7 +95,7 @@ export default function Map({ data, reverse = false }) {
         {/* LEFT (INFO) */}
         <div className={styles.info}>
           <h2 className={styles.title}>{data.name}</h2>
-          <p>{data.textName}</p>
+          <p>{data.coursesSubtitle}</p>
           <div className={styles.cursosNavigation}>
             <CursosNavigation tabs={tabs} />
           </div>
