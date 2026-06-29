@@ -89,6 +89,13 @@
   flex-shrink: 0;
 }
 
+.heroFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .articlesGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -102,6 +109,9 @@
 }
 
 .articleCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -114,6 +124,11 @@
 
 .articleImage {
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.articleCard:hover .articleImage {
+  transform: scale(1.03);
 }
 
 .articleCategory {
@@ -133,8 +148,19 @@
 }
 
 .articleContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.2rem;
   background: #ffffff;
+}
+
+.articleFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 .articleTitle {
@@ -148,7 +174,30 @@
   color: #415364;
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   font-weight: 300;
+  font-size: 1.3rem;
+  min-width: 0;
+}
+
+.readMoreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #009fe3;
+  color: #009fe3;
   font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.readMoreButton:hover {
+  background: #009fe3;
+  color: #fff;
+  transform: translateY(-2px);
 }
