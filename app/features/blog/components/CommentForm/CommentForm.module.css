@@ -1,0 +1,67 @@
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.formGroup label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #415364;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: #415364;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #009fe3;
+  box-shadow: 0 0 0 3px rgba(0, 159, 227, 0.15);
+}
+
+.submitButton {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  background: #009fe3;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #008fcc;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success {
+  color: #8b8c4a;
+  font-size: 1.4rem;
+}
+
+.error {
+  color: #e76868;
+  font-size: 1.4rem;
+}
