@@ -8,13 +8,14 @@ import {
   WatchBeat1Solid,
   Bookmark1Solid,
   EyeSolid,
-  ThumbsUp3Bulk,
 } from "@lineiconshq/free-icons";
 import BlogCardPopular from "../../../features/blog/components/BlogCardPopular/BlogCardPopular";
 import CommentForm from "../../../features/blog/components/CommentForm/CommentForm";
+import LikeButton from "../../../features/blog/components/LikeButton/LikeButton";
 import Footer from "../../../_components/Layout/Footer/Footer";
 import { getArticleBySlug, getArticles } from "@/app/_lib/articles";
 import { getCommentsByArticle } from "@/app/_lib/comments";
+import { getLikeInfo } from "@/app/_lib/likes";
 import { formatDate, readTimeLabel } from "@/app/_lib/blog-format";
 
 const FALLBACK_AVATAR = "/default/defaultAvatar.png";
@@ -25,6 +26,7 @@ export default async function ArticleDetailPage({ params }) {
   if (!article) notFound();
 
   const comments = await getCommentsByArticle(article.id);
+  const likeInfo = await getLikeInfo(article.id);
 
   const articles = await getArticles();
   const populares = [...articles]
@@ -45,14 +47,11 @@ export default async function ArticleDetailPage({ params }) {
           </div>
 
           <div className={styles.articleActions}>
-            <button className={styles.iconButton}>
-              <Lineicons
-                icon={ThumbsUp3Bulk}
-                size={24}
-                color="black"
-                strokeWidth={1.5}
-              />
-            </button>
+            <LikeButton
+              articleId={article.id}
+              count={likeInfo.count}
+              hasLiked={likeInfo.hasLiked}
+            />
 
             <button className={styles.iconButton}>
               <Lineicons

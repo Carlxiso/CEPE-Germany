@@ -1,0 +1,29 @@
+.likeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 1.5rem;
+  color: #415364;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.likeButton:hover:not(:disabled) {
+  border-color: #009fe3;
+}
+
+.likeButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.liked {
+  border-color: #009fe3;
+  color: #009fe3;
+}
