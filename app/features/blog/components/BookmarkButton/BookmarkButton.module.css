@@ -1,0 +1,28 @@
+.bookmarkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #415364;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.bookmarkButton:hover:not(:disabled) {
+  border-color: #009fe3;
+}
+
+.bookmarkButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bookmarked {
+  border-color: #009fe3;
+  color: #009fe3;
+}

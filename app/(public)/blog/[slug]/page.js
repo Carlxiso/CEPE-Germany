@@ -4,18 +4,16 @@ import stampLettersCepe from "../../../../public/stamp-letters-cepe.jpg";
 import Section from "../../../_components/Layout/Section/Section";
 import styles from "./page.module.css";
 import { Lineicons } from "@lineiconshq/react-lineicons";
-import {
-  WatchBeat1Solid,
-  Bookmark1Solid,
-  EyeSolid,
-} from "@lineiconshq/free-icons";
+import { WatchBeat1Solid, EyeSolid } from "@lineiconshq/free-icons";
 import BlogCardPopular from "../../../features/blog/components/BlogCardPopular/BlogCardPopular";
 import CommentForm from "../../../features/blog/components/CommentForm/CommentForm";
 import LikeButton from "../../../features/blog/components/LikeButton/LikeButton";
+import BookmarkButton from "../../../features/blog/components/BookmarkButton/BookmarkButton";
 import Footer from "../../../_components/Layout/Footer/Footer";
 import { getArticleBySlug, getArticles } from "@/app/_lib/articles";
 import { getCommentsByArticle } from "@/app/_lib/comments";
 import { getLikeInfo } from "@/app/_lib/likes";
+import { getBookmarkInfo } from "@/app/_lib/bookmarks";
 import { formatDate, readTimeLabel } from "@/app/_lib/blog-format";
 
 const FALLBACK_AVATAR = "/default/defaultAvatar.png";
@@ -27,6 +25,7 @@ export default async function ArticleDetailPage({ params }) {
 
   const comments = await getCommentsByArticle(article.id);
   const likeInfo = await getLikeInfo(article.id);
+  const bookmarkInfo = await getBookmarkInfo(article.id);
 
   const articles = await getArticles();
   const populares = [...articles]
@@ -53,14 +52,10 @@ export default async function ArticleDetailPage({ params }) {
               hasLiked={likeInfo.hasLiked}
             />
 
-            <button className={styles.iconButton}>
-              <Lineicons
-                icon={Bookmark1Solid}
-                size={24}
-                color="black"
-                strokeWidth={1.5}
-              />
-            </button>
+            <BookmarkButton
+              articleId={article.id}
+              hasBookmarked={bookmarkInfo.hasBookmarked}
+            />
 
             <div className={styles.infoBadge}>
               <Lineicons
