@@ -24,6 +24,19 @@ export async function getArticles() {
 
   return data ?? [];
 }
+export async function incrementArticleViews(articleId) {
+  const supabase = await createSupabaseServerClient();
+  const { data, error } = await supabase.rpc("increment_article_views", {
+    article_id: articleId,
+  });
+
+  if (error) {
+    console.error("Erro ao incrementar views:", error);
+    return null;
+  }
+
+  return data;
+}
 
 export async function getArticleBySlug(slug) {
   const supabase = await createSupabaseServerClient();

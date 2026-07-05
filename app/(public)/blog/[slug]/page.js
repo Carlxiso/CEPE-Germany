@@ -10,7 +10,11 @@ import CommentForm from "../../../features/blog/components/CommentForm/CommentFo
 import LikeButton from "../../../features/blog/components/LikeButton/LikeButton";
 import BookmarkButton from "../../../features/blog/components/BookmarkButton/BookmarkButton";
 import Footer from "../../../_components/Layout/Footer/Footer";
-import { getArticleBySlug, getArticles } from "@/app/_lib/articles";
+import {
+  getArticleBySlug,
+  getArticles,
+  incrementArticleViews,
+} from "@/app/_lib/articles";
 import { getCommentsByArticle } from "@/app/_lib/comments";
 import { getLikeInfo } from "@/app/_lib/likes";
 import { getBookmarkInfo } from "@/app/_lib/bookmarks";
@@ -22,6 +26,9 @@ export default async function ArticleDetailPage({ params }) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
   if (!article) notFound();
+
+  // Conta esta visita e recebe o total já atualizado.
+  const views = await incrementArticleViews(article.id);
 
   const comments = await getCommentsByArticle(article.id);
   const likeInfo = await getLikeInfo(article.id);
@@ -64,7 +71,7 @@ export default async function ArticleDetailPage({ params }) {
                 color="black"
                 strokeWidth={1.5}
               />
-              <p> {article.views ?? 0} views</p>
+              <p> {views ?? article.views ?? 0} views</p>
             </div>
 
             <div className={styles.infoBadge}>
