@@ -1,0 +1,114 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.count {
+  font-size: 1.4rem;
+  color: #7a8a99;
+}
+
+.markAllBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #009fe3;
+  cursor: pointer;
+}
+
+.markAllBtn:hover {
+  text-decoration: underline;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.unread {
+  border-left: 4px solid #009fe3;
+  background: #f5fbff;
+}
+
+.avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.readBtn {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #009fe3;
+  border-radius: 0.6rem;
+  background: #fff;
+  font-size: 1.3rem;
+  color: #009fe3;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.readBtn:hover {
+  background: #f5fbff;
+}
+
+.text {
+  font-size: 1.5rem;
+  color: #415364;
+  line-height: 1.4;
+}
+
+.link {
+  color: #009fe3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 1.3rem;
+  color: #7a8a99;
+}
+
+.empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #7a8a99;
+  font-size: 1.5rem;
+  border: 1px dashed #cbd5e0;
+  border-radius: 1rem;
+}

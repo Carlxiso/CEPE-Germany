@@ -1,0 +1,17 @@
+.dashboardSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.sectionTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #415364;
+}
+
+.sectionSubtitle {
+  font-size: 1.4rem;
+  color: #7a8a99;
+  margin-top: 0.4rem;
+}
