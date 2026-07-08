@@ -35,7 +35,6 @@
 }
 
 /*DASHNAVLINK*/
-
 .nav {
   display: flex;
   flex-direction: column;
@@ -91,6 +90,25 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.settingsLink {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  color: #009fe3;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.settingsLink:hover {
+  background: #1e293b;
+  color: #e2e8f0;
 }
 
 .logoutBtn {

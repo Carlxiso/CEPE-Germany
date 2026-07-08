@@ -114,7 +114,7 @@ export default async function ArticleDetailPage({ params }) {
                     <h1 className={styles.authorName}>
                       {article.author?.full_name ?? "Autor"}
                     </h1>
-                    <p>Equipa CEPE</p>
+                    <p>{article.author?.bio || "Equipa CEPE"}</p>
                   </div>
                 </div>
 

@@ -48,8 +48,10 @@ export async function middleware(request) {
 
   const role = profile?.role;
 
+  const SHARED = ["profile"];
+
   const segment = pathname.split("/")[1];
-  if (role !== segment) {
+  if (!SHARED.includes(segment) && role !== segment) {
     const homeUrl = request.nextUrl.clone();
     homeUrl.pathname = ROLE_HOME[role] ?? "/auth/login";
     const redirectResponse = NextResponse.redirect(homeUrl);
@@ -68,5 +70,6 @@ export const config = {
     "/student/:path*",
     "/teacher/:path*",
     "/coordinator/:path*",
+    "/profile/:path*",
   ],
 };

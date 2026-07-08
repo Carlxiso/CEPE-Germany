@@ -45,7 +45,7 @@ export async function getArticleBySlug(slug) {
     .select(
       `id, title, content, thumbnail, views, read_time, date_created,
              category:category_id(title),
-             author:profile_id(full_name, avatar_url)`,
+             author:profile_id(full_name, avatar_url, bio)`,
     )
     .eq("slug", slug)
     .maybeSingle();
