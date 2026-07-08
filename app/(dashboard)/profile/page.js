@@ -8,7 +8,6 @@ export const metadata = { title: "O meu perfil | CEPE" };
 export default async function ProfilePage() {
   const profile = await getMyProfile();
 
-  // 2.ª linha de defesa (o middleware/layout já protegem, mas garantimos).
   if (!profile) redirect("/auth/login");
 
   return (
