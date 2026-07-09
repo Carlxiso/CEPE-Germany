@@ -28,6 +28,28 @@
   gap: 2rem;
 }
 
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.6rem 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #415364;
+}
+
+.section .form {
+  margin-top: 1.6rem;
+}
+
 .avatarRow {
   display: flex;
   align-items: center;
