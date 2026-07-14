@@ -13,6 +13,7 @@ import Testimonials from "@/app/_components/Testimonials/Testimonials";
 import StatsSection from "@/app/_components/Layout/StatsSection/StatsSection";
 import Certification from "@/app/_components/Certification/Certification";
 import CirclePattern from "@/app/_components/UI/CirclePattern/CirclePattern";
+
 export const metadata = {
   metadataBase: new URL("https://cepealemanha.de"),
 
