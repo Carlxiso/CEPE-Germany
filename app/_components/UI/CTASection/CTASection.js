@@ -2,23 +2,21 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 import styles from "./CTASection.module.css";
+import HeaderDiagnosticTest from "../../Layout/DiagnosticTest/HeaderDiagnosticTest/HeaderDiagnosticTest";
 
-// Tem de bater certo com a duração das animações no CSS (0.3s).
 const ANIMATION_MS = 300;
 
-export default function CTASection({ headline, text }) {
-  const [isOpen, setIsOpen] = useState(false); // está montado no DOM?
-  const [isClosing, setIsClosing] = useState(false); // a correr a saída?
+export default function CTASection({ headline, text, closeModal }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   function openModal() {
-    setIsClosing(false); // garante a animação de entrada
+    setIsClosing(false);
     setIsOpen(true);
   }
 
   function closeModal() {
-    // 1) dispara a animação de saída...
     setIsClosing(true);
-    // 2) ...e só desmonta quando ela termina.
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
@@ -48,7 +46,8 @@ export default function CTASection({ headline, text }) {
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <button onClick={closeModal}>Close</button>
+            <HeaderDiagnosticTest closeModal={closeModal} />
+            {/* <button onClick={closeModal}>Close</button> */}
           </div>
         </div>
       )}

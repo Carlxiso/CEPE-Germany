@@ -39,6 +39,7 @@
 
 /* Conteúdo do modal */
 .modalContent {
+  position: relative;
   background: white;
   padding: 25px 30px;
   border-radius: 12px;
