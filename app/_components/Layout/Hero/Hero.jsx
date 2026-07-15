@@ -1,9 +1,15 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Button from "@/app/_components/UI/Button/Button";
 import styles from "./Hero.module.css";
 import imageBg from "@/public/DSC_9384-2.jpg";
+import Modal from "@/app/_components/UI/Modal/Modal";
+import HeaderRegistration from "./HeaderRegistration/HeaderRegistration";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className={styles.hero} aria-labelledby="hero-heading">
       <Image
@@ -25,7 +31,16 @@ export default function Hero() {
           </p>
         </div>
         <div className={styles.heroButtons}>
-          <Button type="button">Pré-Inscrição</Button>
+          <Modal
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+            labelledById="Pré-Inscrição"
+          >
+            <HeaderRegistration closeModal={() => setIsOpen(false)} />
+          </Modal>
+          <Button onClick={() => setIsOpen(true)} type="button">
+            Pré-Inscrição
+          </Button>
           <Button type="button" variant="outlineSand">
             Saber +
           </Button>
