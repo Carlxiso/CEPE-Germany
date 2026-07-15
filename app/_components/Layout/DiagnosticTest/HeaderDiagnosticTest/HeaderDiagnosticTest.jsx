@@ -8,7 +8,9 @@ export default function HeaderDiagnosticTest({ closeModal }) {
       <div className={styles.header}>
         <Image src={quinas} alt="Quinas Quiz Logo" />
         <div className={styles.testHeader}>
-          <h1 className={styles.headerH1}>Teste Diagnóstico de Português</h1>
+          <h1 id="diagnostic-test-title" className={styles.headerH1}>
+            Teste Diagnóstico de Português
+          </h1>
           <div className={styles.subHeaderContainer}>
             <div className={styles.subHeaderText}>
               <span>

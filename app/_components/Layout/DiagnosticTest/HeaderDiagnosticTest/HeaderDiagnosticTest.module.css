@@ -2,11 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2.4rem;
   padding: 3rem;
 }
 
 .testHeader {
-  width: 66rem;
+  width: 100%;
+  max-width: 66rem;
 }
 
 .headerH1 {
@@ -59,4 +61,10 @@
 
 .closeBtn:hover {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
 }
