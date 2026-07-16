@@ -1,5 +1,6 @@
 import CTASection from "../../UI/CTASection/CTASection";
 import HeaderDiagnosticTest from "./HeaderDiagnosticTest/HeaderDiagnosticTest";
+import InstructionsDiagnosticTest from "./InstructionsDiagnosticTest/InstructionsDiagnosticTest";
 
 const cta = {
   headline:
@@ -11,6 +12,7 @@ export default function DiagnosticTest() {
   return (
     <CTASection headline={cta.headline} text={cta.text}>
       <HeaderDiagnosticTest />
+      <InstructionsDiagnosticTest />
     </CTASection>
   );
 }

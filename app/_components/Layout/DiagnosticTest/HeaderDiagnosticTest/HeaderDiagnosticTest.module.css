@@ -4,6 +4,8 @@
   justify-content: center;
   gap: 2.4rem;
   padding: 3rem;
+  /* separa o cabeçalho dos blocos seguintes (instruções, etc.) */
+  margin-bottom: 3.2rem;
 }
 
 .testHeader {
@@ -13,8 +15,16 @@
 
 .headerH1 {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .headerH1 {
+    font-size: 3.6rem;
+  }
 }
 
 .subHeaderContainer {

@@ -2,7 +2,7 @@ import styles from "./HeaderRegistration.module.css";
 // import quinas from "../../../../../public/quinas.png";
 // import Image from "next/image";
 
-export default function HeaderRegistration({ closeModal }) {
+export default function HeaderRegistration() {
   return (
     <>
       <div className={styles.header}>
