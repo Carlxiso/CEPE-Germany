@@ -20,13 +20,6 @@ export default function HeaderRegistration({ closeModal }) {
             </div>
           </div>
         </div>
-        <div className={styles.headerCloseBtn}>
-          <button
-            className={styles.closeBtn}
-            onClick={closeModal}
-            aria-label="Fechar modal"
-          ></button>
-        </div>
       </div>
     </>
   );

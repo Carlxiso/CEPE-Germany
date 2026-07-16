@@ -28,6 +28,43 @@
   animation-fill-mode: forwards;
 }
 
+.closeButton {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.6rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.closeButton::before,
+.closeButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.8rem;
+  height: 0.2rem;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.closeButton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .fadeIn {
   animation: fadeIn 0.3s ease;
 }

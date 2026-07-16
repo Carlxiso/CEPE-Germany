@@ -43,6 +43,12 @@ export default function Modal({ isOpen, onClose, children, labelledById }) {
         className={`${styles.content} ${styles.slideUp}`}
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          type="button"
+          className={styles.closeButton}
+          onClick={onClose}
+          aria-label="Fechar"
+        />
         {children}
       </div>
     </div>,

@@ -2,10 +2,9 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
-import HeaderDiagnosticTest from "../../Layout/DiagnosticTest/HeaderDiagnosticTest/HeaderDiagnosticTest";
 import styles from "./CTASection.module.css";
 
-export default function CTASection({ headline, text }) {
+export default function CTASection({ headline, text, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -23,7 +22,7 @@ export default function CTASection({ headline, text }) {
         onClose={() => setIsOpen(false)}
         labelledById="diagnostic-test-title"
       >
-        <HeaderDiagnosticTest closeModal={() => setIsOpen(false)} />
+        {children}
       </Modal>
     </>
   );
