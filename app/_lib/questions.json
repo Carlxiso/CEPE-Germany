@@ -1,0 +1,912 @@
+{
+  "questions": [
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Qual é a saudação correta para cumprimentar alguém de manhã?",
+      "options": ["Boa noite!", "Bom dia!", "Até logo!", "Obrigado"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Qual das palavras é um número",
+      "options": ["verde", "cinco", "alto", "rápido"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Completa: 'Eu __ português'",
+      "options": ["falam", "fala", "falo", "falas"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Qual é o proral de 'gato'?",
+      "options": ["gatos", "gato", "gata", "gaties"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Completa: “Ela ___ portuguesa.",
+      "options": ["sou", "somos", "é", "são"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Lê o texto: “A Maria trabalha num hospital. Ela é enfermeira e gosta muito do seu trabalho.” O que faz a Maria?",
+      "options": ["É médica.", "É enfermeira.", "É professora.", "É dentista."],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Num cartaz: “Proibido fumar.” O que significa?",
+      "options": [
+        "Pode fumar aqui.",
+        "Obrigado por não fumar.",
+        "Não é permitido fumar neste local.",
+        "Área para fumadores."
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Lê: “Segunda-feira está encerrado.” Quando está fechado?",
+      "options": [
+        "Ao domingo",
+        "À segunda-feira",
+        "À quarta-feira",
+        "Ao sábado"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Num email: “Aguardo a vossa resposta com brevidade.” O que se espera?",
+      "options": [
+        "Uma visita",
+        "Uma resposta rápida",
+        "Um pagamento",
+        "Uma encomenda"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "O voo com destino a Lisboa está a embarcar na porta 12.” O que devem fazer os passageiros?",
+      "options": [
+        "Ir para a saída",
+        "Ir para a porta 12",
+        "Aguardar em casa",
+        "Fazer check-in"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Lê: “Apesar das críticas iniciais, o projeto acabou por se revelar um sucesso estrondoso.” O projeto foi:",
+      "options": [
+        "um fracasso total",
+        "moderadamente bem-sucedido",
+        "um grande êxito",
+        "abandonado"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "O arguido foi absolvido por falta de provas.” O que aconteceu ao arguido?",
+      "options": [
+        "Foi condenado",
+        "Foi considerado inocente",
+        "Fugiu à justiça",
+        "Confessou o crime"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A taxa de desemprego desceu para mínimos históricos.” O que significa?",
+      "options": [
+        "Há mais desemprego do que nunca.",
+        "Nunca houve tão poucos desempregados.",
+        "O desemprego manteve-se estável.",
+        "O desemprego subiu ligeiramente."
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "O prazo de candidatura termina improrrogavelmente na próxima sexta-feira.” Pode-se candidatar depois?",
+      "options": [
+        "Sim, se justificar",
+        "Sim, com um pedido especial",
+        "Não, de forma alguma",
+        "Sim, até ao dia seguinte"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "Não obstante as dificuldades, a equipa manteve a coesão.” O que significa ‘não obstante’?",
+      "options": [
+        "Por causa de",
+        "Devido a",
+        "Apesar de",
+        "Em consequência de"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A medida foi tomada a bem da coletividade, não obstante os protestos de alguns setores.” Qual a conclusão correta?",
+      "options": [
+        "A medida foi cancelada por causa dos protestos.",
+        "Os protestos impediram a medida.",
+        "A medida avançou apesar da oposição de alguns grupos.",
+        "Todos apoiaram a medida."
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A obra, conquanto extensa, revela uma coerência interna notável.” O que se diz sobre a obra?",
+      "options": [
+        "A obra é extensa e incoerente.",
+        "Apesar de longa, a obra tem consistência.",
+        "A obra é curta e coerente.",
+        "A obra é difícil de ler."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A proposta foi chumbada em plenário.” O que aconteceu à proposta?",
+      "options": [
+        "Foi aprovada",
+        "Foi adiada",
+        "Foi rejeitada",
+        "Foi modificada"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "O estudo conclui que a correlação não implica causalidade.” O que significa?",
+      "options": [
+        "Dois fenômenos relacionados causam-se mutuamente.",
+        "O facto de dois fenômenos ocorrerem juntos não significa que um cause o outro.",
+        "A causalidade é sempre óbvia.",
+        "O estudo não chegou a conclusões."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A narrativa é pontuada por flashbacks que reconstituem a infância do protagonista.” Qual é a técnica narrativa usada?",
+      "options": [
+        "Narração linear",
+        "Narração no futuro",
+        "Retorno ao passado intercalado na narração",
+        "Narração em segunda pessoa"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A prolixidade do seu estilo não obscurece a acuidade analítica que subjaz à argumentação.” O que se afirma?",
+      "options": [
+        "O estilo longo prejudica a análise.",
+        "Apesar de extenso, o estilo não impede a perceção da argúcia analítica.",
+        "O estilo é conciso e claro.",
+        "A argumentação é fraca, apesar do estilo."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A dicotomia entre o universal e o particular permeia toda a reflexão do autor.” O que isso significa?",
+      "options": [
+        "O autor ignora questões universais.",
+        "A tensão entre o geral e o específico atravessa todo o pensamento do autor.",
+        "O autor prefere o particular ao universal.",
+        "O autor considera os dois conceitos idênticos."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A versão expurgada da obra priva o leitor de passagens fundamentais para a compreensão da sua coerência interna.” O que é uma versão ‘expurgada’?",
+      "options": [
+        "Uma edição aumentada",
+        "Uma edição anotada",
+        "Uma edição com partes suprimidas",
+        "Uma edição comemorativa"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "A crise não é conjuntural, mas estrutural.” O que isso significa?",
+      "options": [
+        "A crise é passageira e contextual.",
+        "A crise tem causas profundas e sistémicas, não é temporária.",
+        "A crise é causada pela conjuntura económica global.",
+        "A crise começou recentemente."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção A - Compreensão Escrita",
+      "question": "O texto constrói uma prosopopeia em que a natureza interpela a humanidade.” O que é uma prosopopeia?",
+      "options": [
+        "Uma comparação direta entre dois elementos",
+        "Uma figura de repetição de sons",
+        "Uma figura em que se atribui fala ou ação a entidades inanimadas ou abstratas",
+        "Uma referência histórica"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual a forma correta de escrever?",
+      "options": ["Chámase", "Chama-se", "Chamas-e", "Chamaçe"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual destas palavras está escrita corretamente?",
+      "options": ["portoguês", "português", "pôrtuguês", "portughês"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual está correta?",
+      "options": ["obrigadu", "obrigado", "obrigaddo", "obrigadou"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Escolhe a palavra com acento correto:",
+      "options": ["avó", "avô", "avo", "àvó"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual é a grafia correta de um dia da semana?",
+      "options": ["Terca-feira", "terça-feira", "Terça-Feira", "terça feira"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Escreve corretamente: o oposto de ‘possível’:",
+      "options": ["impossivel", "inpossível", "impossível", "impôssivel"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Forma correta:",
+      "options": ["excessão", "excepção", "exceção", "exseção"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual é a forma correta?",
+      "options": ["acerca de", "a cerca de", "há cerca de", "a circo de"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Escolha a opção ortograficamente correta:",
+      "options": ["previlegio", "privilégio", "previlégio", "privelegio"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "A forma correta é:",
+      "options": [
+        "infra-estrutura",
+        "infraestrutura",
+        "infra estrutura",
+        "infra-Estrutura"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Forma ortográfica correta:",
+      "options": ["aquiescer", "adquiescer", "aquiesser", "aquiscer"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual das opções está corretamente escrita?",
+      "options": ["ressurgir", "rezurgir", "ressurjir", "ressurgier"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual está correto?",
+      "options": ["subtil", "sutil", "sudtil", "subtill"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual a forma correta?",
+      "options": ["exequível", "exequivel", "execuível", "exequievel"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Escolha a grafia correta:",
+      "options": ["misoginia", "misoginía", "misogínia", "mizoginia"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção B - Ortografia",
+      "question": "Qual é a grafia correta?",
+      "options": ["parenquima", "parênquima", "parenchima", "parênchima"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Como se apresenta alguém formalmente?",
+      "options": [
+        "Olá, tudo bem?",
+        "Apresento-te o João.",
+        "Boa noite!",
+        "Adeus!"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para pedir algo educadamente, usamos:",
+      "options": ["Quero!", "Dá-me!", "Pode dar-me, por favor?", "Eu preciso."],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para pedir direções dizes:",
+      "options": [
+        "Eu não sei onde fica.",
+        "Pode dizer-me como chego ao museu?",
+        "O museu é longe.",
+        "Preciso de um mapa."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para marcar uma consulta médica, dizes:",
+      "options": [
+        "Quero ver o médico hoje.",
+        "Gostaria de marcar uma consulta, por favor.",
+        "O médico está disponível?",
+        "Tenho dores."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Ao telefonar para uma empresa, dizes:",
+      "options": [
+        "Bom dia, falo com a empresa X?",
+        "Estou! Quem é?",
+        "Alô!",
+        "Pode falar mais alto?"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para expressar desagrado educadamente:",
+      "options": [
+        "Não gosto nada disso!",
+        "Preferia algo diferente, se possível.",
+        "Isto é horrível.",
+        "Não quero."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para apresentar um argumento contrário educadamente:",
+      "options": [
+        "Está completamente errado!",
+        "Respeito a sua opinião, porém discordo porque…",
+        "Isso não faz qualquer sentido.",
+        "Não concordo."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para dar uma sugestão formal numa reunião:",
+      "options": [
+        "Devíamos fazer isso!",
+        "Proponho que consideremos a hipótese de…",
+        "Acho que é melhor.",
+        "Façamos isso."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para fazer uma reclamação formal:",
+      "options": [
+        "Isto é uma vergonha!",
+        "Venho por este meio apresentar uma reclamação relativa a…",
+        "Quero reclamar!",
+        "Não estou satisfeito."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para expressar uma condição:",
+      "options": [
+        "Farei isso.",
+        "Se tiver tempo, farei isso.",
+        "Quero fazer isso.",
+        "Posso fazer isso."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para introduzir uma ressalva num texto formal:",
+      "options": [
+        "Mas…",
+        "Todavia, importa sublinhar que…",
+        "No entanto fica claro que…",
+        "Por outro lado diz-se que…"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para citar uma fonte formalmente:",
+      "options": [
+        "Alguém disse que…",
+        "Segundo um estudo de X (2020),…",
+        "Vi algures que…",
+        "Parece que…"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para refutar um argumento formalmente:",
+      "options": [
+        "Isso está completamente errado.",
+        "Ao contrário do que se afirma, os dados mostram…",
+        "Não concordo.",
+        "Essa ideia é absurda."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para nuançar uma afirmação:",
+      "options": [
+        "Sempre…",
+        "Em termos gerais, embora com exceções notáveis,…",
+        "Nunca…",
+        "Todos concordam que…"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para matizar uma afirmação categórica num texto académico:",
+      "options": [
+        "Definitivamente, sempre…",
+        "Salvo raras exceções, e sem pretender generalizar abusivamente,…",
+        "Nunca se pode dizer que…",
+        "Todos os estudos confirmam que…"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para fazer uma concessão argumentativa sofisticada:",
+      "options": [
+        "Mas não concordo.",
+        "Admito que a posição tem méritos, ainda que os seus fundamentos empíricos permaneçam contestáveis.",
+        "Ok, talvez tenha razão.",
+        "Percebo o argumento, mas não."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para problematizar um conceito num registo académico:",
+      "options": [
+        "O conceito é difícil.",
+        "Impõe-se questionar o alcance e a pertinência do conceito de X, na medida em que…",
+        "Não sei bem o que significa.",
+        "O conceito é muito utilizado."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção C - Funções da Linguagem",
+      "question": "Para concluir um ensaio académico com abertura reflexiva:",
+      "options": [
+        "Concluindo, está tudo dito.",
+        "As reflexões aqui apresentadas abrem, naturalmente, novas interrogações que merecem investigação futura.",
+        "Em suma, o problema está resolvido.",
+        "Por fim, já temos todas as respostas."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Qual é o verbo “ser” na 1.ª pessoa do singular (Presente)?",
+      "options": ["és", "é", "sou", "somos"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Completa: “Nós ___ em Lisboa.",
+      "options": ["mora", "moro", "moram", "somos"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Ela não ___ café.” (beber)",
+      "options": ["bebe", "bebes", "bebemos", "bebem"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "___ livros são interessantes.” (artigo correto)",
+      "options": ["O", "Um", "Os", "As"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Eles ___ estudantes. (verbo ser)",
+      "options": ["é", "são", "somos", "sou"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Ontem eu ___ ao cinema. (ir, Pretérito Perfeito)",
+      "options": ["vou", "ia", "fui", "irei"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Quando era pequeno, ___ muito.” (brincar, Imperfeito)",
+      "options": ["brincou", "brincava", "brinca", "vai brincar"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Já ___ o livro que te emprestei? (ler, Pretérito Perfeito)",
+      "options": ["lias", "lês", "leste", "lerás"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Ela ___ cansada depois do trabalho. (estar ou ser?)",
+      "options": ["é sempre", "está sempre", "está", "era"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "___ muito frio hoje. (verbo impessoal)",
+      "options": ["Tem", "Há", "Faz", "É"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Se eu ___ mais tempo, viajaria mais. (ter, Conjuntivo Imperfeito)",
+      "options": ["tiver", "tinha", "tivesse", "tenho"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "O projeto ___ aprovado ontem. (Pretérito Perfeito Passivo)",
+      "options": ["é aprovado", "foi aprovado", "estava aprovado", "aprovava"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "___ muito trabalho ultimamente. (Pretérito Perfeito Composto)",
+      "options": ["Tenho tido", "Tive", "Tinha", "Hei de ter"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Embora ___ cansado, continuou a trabalhar.” (estar, Conjuntivo)",
+      "options": ["está", "esteve", "estivesse", "estava"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Quanto mais estudo, ___ aprendo.” (mais/menos)",
+      "options": ["menos", "mais", "muito", "pouco"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "___ que este problema ___ soluções urgentes. (ser + exigir, Conjuntivo)",
+      "options": [
+        "É claro que exige",
+        "É evidente que exija",
+        "Parece que exige",
+        "É necessário que exija"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Dificilmente ___ outra solução tão elegante.” (encontrar, Futuro)",
+      "options": [
+        "encontraremos",
+        "encontramos",
+        "encontrássemos",
+        "encontraríamos"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Não é que ela não ___ ; é que não quer.” (poder, Conjuntivo)",
+      "options": ["pode", "possa", "podia", "poderia"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Tratava-se ___ questão delicada.” (artigo após preposição de)",
+      "options": ["de uma", "de a", "dum", "de"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "___ sido possível antecipar os acontecimentos, o desfecho teria sido diverso. (Conjuntivo Perfeito ou Mais-que-perfeito)",
+      "options": ["Se fosse", "Se tivesse", "Se tinha", "Se seria"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Não há quem ___ resistir a tal argumento.” (poder, Conjuntivo Presente)",
+      "options": ["pode", "possa", "poderia", "pudera"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "A decisão ___ por razões que permanecem opacas.” (tomar, Passiva com valor resultante)",
+      "options": ["foi tomada", "tomou-se", "toma-se", "era tomada"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "A questão ___ latente durante décadas antes de ser reconhecida.” (permanecer, Mais-que-perfeito)",
+      "options": ["permaneceu", "permanecera", "permanecia", "permanecesse"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção D - Gramática",
+      "question": "Não ___ ele saído, ainda se encontraria aqui.” (Condicional perfeito com inversão)",
+      "options": ["tivesse", "teria", "fosse", "houvesse"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Ouves: “Quantos anos tens?” O que te estão a perguntar?",
+      "options": [
+        "O teu nome",
+        "A tua morada",
+        "A tua idade",
+        "O teu telefone"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Qual dos seguintes sons corresponde à letra ‘ã’ em “maçã”?",
+      "options": [
+        "Som aberto como em ‘pa’",
+        "Som nasal, como em ‘man’",
+        "Som fechado como em ‘mê’",
+        "Som igual ao ‘a’ em ‘mata’"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "No rádio: “Está prevista chuva para o fim de semana.” O que significa?",
+      "options": [
+        "Vai estar sol.",
+        "Pode chover.",
+        "Vai fazer muito calor.",
+        "Há risco de neve."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Ouves: “Vira à esquerda no semáforo e a farmácia é logo ali.” O que deves fazer?",
+      "options": [
+        "Continuar em frente",
+        "Virar à direita",
+        "Virar à esquerda no semáforo",
+        "Parar antes do semáforo"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Num debate, o orador diz: “Isto é, por assim dizer, a pedra de toque desta questão.” O que significa?",
+      "options": [
+        "É um tema secundário.",
+        "É o ponto central e decisivo",
+        "É uma questão irrelevante.",
+        "É uma metáfora poética."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Num podcast: “O projeto foi aprovado por unanimidade.” O que significa?",
+      "options": [
+        "Metade votou a favor.",
+        "Poucos votaram a favor.",
+        "Todos votaram a favor.",
+        "A maioria votou a favor."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Num debate académico: “Esta hipótese carece de sustentação empírica.” O que significa?",
+      "options": [
+        "A hipótese tem muitas provas.",
+        "A hipótese não tem suficiente apoio em dados concretos.",
+        "A hipótese é muito original.",
+        "A hipótese foi já confirmada."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Ouves: “O discurso foi muito aplaudido, mas ficou aquém das expectativas.” O que significa?",
+      "options": [
+        "O discurso superou as expectativas.",
+        "O discurso foi bom, mas não tão bom quanto se esperava.",
+        "O discurso foi um fracasso total.",
+        "O discurso foi cancelado."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Numa entrevista: “A empresa está a atravessar uma fase de reestruturação.” O que isso implica normalmente?",
+      "options": [
+        "A empresa está em expansão rápida.",
+        "A empresa pode estar a reduzir custos ou a reorganizar-se.",
+        "A empresa está a contratar muitos trabalhadores.",
+        "A empresa foi comprada por outra."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Ouves: “O texto é atravessado por uma tensão dialética irredutível.” O que significa?",
+      "options": [
+        "O texto é muito simples e claro.",
+        "Existe no texto uma contradição essencial que não pode ser facilmente resolvida.",
+        "O texto usa muita dialética.",
+        "O texto é escrito em forma de diálogo."
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "text": "Secção E - Compreensão Oral",
+      "question": "Numa entrevista literária: “A obra opera uma desconstrução dos mitos fundadores da identidade nacional.” O que faz a obra?",
+      "options": [
+        "Reforça os mitos nacionais.",
+        "Desafia e desmonta os mitos que estão na base da identidade do país.",
+        "Celebra a identidade nacional.",
+        "Ignora a questão da identidade."
+      ],
+      "correctOption": 1,
+      "points": 10
+    }
+  ]
+}

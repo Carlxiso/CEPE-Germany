@@ -2,7 +2,7 @@ import styles from "./InstructionsDiagnosticTest.module.css";
 
 export default function InstructionsDiagnosticTest() {
   return (
-    <section className={styles.instructions} aria-labelledby="instrucoes-gerais">
+    <div className={styles.instructions} aria-labelledby="instrucoes-gerais">
       <h2 id="instrucoes-gerais" className={styles.title}>
         Instruções gerais
       </h2>
@@ -35,6 +35,6 @@ export default function InstructionsDiagnosticTest() {
           Cada resposta correta vale 1 ponto. Respostas erradas não penalizam.
         </li>
       </ol>
-    </section>
+    </div>
   );
 }
