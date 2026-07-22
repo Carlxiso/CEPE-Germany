@@ -4,6 +4,9 @@ import CTASection from "../../UI/CTASection/CTASection";
 import HeaderDiagnosticTest from "./HeaderDiagnosticTest/HeaderDiagnosticTest";
 import InstructionsDiagnosticTest from "./InstructionsDiagnosticTest/InstructionsDiagnosticTest";
 import Questions from "./Questions/Questions";
+import Loading from "./Loading/Loading";
+import Error from "./Error/Error";
+import StartTest from "./StartTest/StartTest";
 
 const cta = {
   headline:
@@ -35,7 +38,9 @@ function reducer(state, action) {
   }
 }
 export default function DiagnosticTest() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [{ questions, status }, dispatch] = useReducer(reducer, initialState);
+
+  const numQuestions = questions.length;
 
   useEffect(function () {
     fetch("http://localhost:3001/questions")
@@ -47,6 +52,9 @@ export default function DiagnosticTest() {
     <CTASection headline={cta.headline} text={cta.text}>
       <HeaderDiagnosticTest />
       <Questions />
+      {status === "loading" && <Loading />}
+      {status === "error" && <Error />}
+      {status === "ready" && <StartTest numQuestions={numQuestions} />}
       <InstructionsDiagnosticTest />
     </CTASection>
   );
