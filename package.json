@@ -9,7 +9,7 @@
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "server": "json-server --watch app/_lib/questions.js --port 3001"
+    "server": "json-server -w app/_lib/questions.json --port 3001"
   },
   "dependencies": {
     "@lineiconshq/free-icons": "^1.0.6",
