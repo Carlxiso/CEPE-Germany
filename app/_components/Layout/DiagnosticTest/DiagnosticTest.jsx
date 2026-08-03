@@ -7,6 +7,7 @@ import Questions from "./Questions/Questions";
 import Loading from "./Loading/Loading";
 import Error from "./Error/Error";
 import StartTest from "./StartTest/StartTest";
+import Question from "./Question/Question";
 
 const cta = {
   headline:
@@ -33,6 +34,11 @@ function reducer(state, action) {
         ...state,
         status: "error",
       };
+    case "start":
+      return {
+        ...state,
+        status: "active",
+      };
     default:
       throw new Error("Action Unkonwn");
   }
@@ -54,7 +60,10 @@ export default function DiagnosticTest() {
       <Questions />
       {status === "loading" && <Loading />}
       {status === "error" && <Error />}
-      {status === "ready" && <StartTest numQuestions={numQuestions} />}
+      {status === "ready" && (
+        <StartTest numQuestions={numQuestions} dispatch={dispatch} />
+      )}
+      {status === "active" && <Question />}
       <InstructionsDiagnosticTest />
     </CTASection>
   );
