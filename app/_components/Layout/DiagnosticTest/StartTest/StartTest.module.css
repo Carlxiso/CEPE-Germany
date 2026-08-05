@@ -1,0 +1,17 @@
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: 2px solid #556879;
+  background-color: #32404d;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.btnUi {
+  background-color: #009fe3;
+  border-color: #009fe3;
+}
