@@ -21,6 +21,8 @@ const initialState = {
   status: "loading",
   // determina a questão que está a ser exibida
   index: 0,
+  answers: null,
+  points: 0,
 };
 
 function reducer(state, action) {
@@ -41,12 +43,22 @@ function reducer(state, action) {
         ...state,
         status: "active",
       };
+    case "newAnswer":
+      const question = state.questions.at(state.index);
+      return {
+        ...state,
+        answers: action.payload,
+        points:
+          action.payload === question.correctOption
+            ? state.points + question.points
+            : state.points,
+      };
     default:
       throw new Error("Action Unkonwn");
   }
 }
 export default function DiagnosticTest() {
-  const [{ questions, status, index }, dispatch] = useReducer(
+  const [{ questions, status, index, answers }, dispatch] = useReducer(
     reducer,
     initialState,
   );
@@ -68,7 +80,13 @@ export default function DiagnosticTest() {
       {status === "ready" && (
         <StartTest numQuestions={numQuestions} dispatch={dispatch} />
       )}
-      {status === "active" && <Question question={questions[index]} />}
+      {status === "active" && (
+        <Question
+          question={questions[index]}
+          dispatch={dispatch}
+          answers={answers}
+        />
+      )}
       <InstructionsDiagnosticTest />
     </CTASection>
   );
