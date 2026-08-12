@@ -8,6 +8,7 @@ import Loading from "./Loading/Loading";
 import Error from "./Error/Error";
 import StartTest from "./StartTest/StartTest";
 import Question from "./Question/Question";
+import NextQuestionButton from "./NextQuestionButton/NextQuestionButton";
 
 const cta = {
   headline:
@@ -53,6 +54,14 @@ function reducer(state, action) {
             ? state.points + question.points
             : state.points,
       };
+
+    case "nextQuestion":
+      return {
+        ...state,
+        index: state.index + 1,
+        answers: null,
+      };
+
     default:
       throw new Error("Action Unkonwn");
   }
@@ -81,11 +90,19 @@ export default function DiagnosticTest() {
         <StartTest numQuestions={numQuestions} dispatch={dispatch} />
       )}
       {status === "active" && (
-        <Question
-          question={questions[index]}
-          dispatch={dispatch}
-          answers={answers}
-        />
+        <>
+          <Question
+            question={questions[index]}
+            dispatch={dispatch}
+            answers={answers}
+          />
+          <NextQuestionButton
+            dispatch={dispatch}
+            // index={index}
+            // numQuestions={numQuestions}
+            answers={answers}
+          />
+        </>
       )}
       <InstructionsDiagnosticTest />
     </CTASection>
