@@ -9,6 +9,7 @@ import Error from "./Error/Error";
 import StartTest from "./StartTest/StartTest";
 import Question from "./Question/Question";
 import NextQuestionButton from "./NextQuestionButton/NextQuestionButton";
+import Progress from "./Progress/Progress";
 
 const cta = {
   headline:
@@ -67,12 +68,16 @@ function reducer(state, action) {
   }
 }
 export default function DiagnosticTest() {
-  const [{ questions, status, index, answers }, dispatch] = useReducer(
+  const [{ questions, status, index, answers, points }, dispatch] = useReducer(
     reducer,
     initialState,
   );
 
   const numQuestions = questions.length;
+  const maxPossiblePoints = questions.reduce(
+    (prev, current) => prev + current.points,
+    0,
+  );
 
   useEffect(function () {
     fetch("http://localhost:3001/questions")
@@ -91,6 +96,13 @@ export default function DiagnosticTest() {
       )}
       {status === "active" && (
         <>
+          <Progress
+            index={index + 1}
+            numQuestions={numQuestions}
+            points={points}
+            maxPossiblePoints={maxPossiblePoints}
+            answers={answers}
+          />
           <Question
             question={questions[index]}
             dispatch={dispatch}
