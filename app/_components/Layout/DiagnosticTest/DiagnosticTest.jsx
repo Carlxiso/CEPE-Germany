@@ -70,6 +70,15 @@ function reducer(state, action) {
         status: "finished",
       };
 
+    case "restart":
+      return {
+        ...state,
+        status: "ready",
+        index: 0,
+        answers: null,
+        points: 0,
+      };
+
     default:
       throw new Error("Action Unkonwn");
   }
@@ -125,7 +134,11 @@ export default function DiagnosticTest() {
       )}
 
       {status === "finished" && (
-        <FinishedScreen points={points} maxPossiblePoints={maxPossiblePoints} />
+        <FinishedScreen
+          dispatch={dispatch}
+          points={points}
+          maxPossiblePoints={maxPossiblePoints}
+        />
       )}
 
       <InstructionsDiagnosticTest />

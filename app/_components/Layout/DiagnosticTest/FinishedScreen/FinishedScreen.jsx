@@ -1,6 +1,10 @@
 import styles from "./FinishedScreen.module.css";
 
-export default function FinishedScreen({ points, maxPossiblePoints }) {
+export default function FinishedScreen({
+  points,
+  maxPossiblePoints,
+  dispatch,
+}) {
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;
@@ -13,10 +17,18 @@ export default function FinishedScreen({ points, maxPossiblePoints }) {
   if (!emoji) emoji = "--";
 
   return (
-    <div className={styles.result}>
-      Finished Screen<span>{emoji}</span> <strong>{points}</strong> de
-      <strong>{maxPossiblePoints}</strong> pontos ({Math.ceil(percentage)}%) —{" "}
-      {emoji}
-    </div>
+    <>
+      <div className={styles.result}>
+        Finished Screen<span>{emoji}</span> <strong>{points}</strong> de
+        <strong>{maxPossiblePoints}</strong> pontos ({Math.ceil(percentage)}%) —{" "}
+        {emoji}
+      </div>
+      <button
+        className={styles.btn + " " + styles.btn_ui}
+        onClick={() => dispatch({ type: "restart" })}
+      >
+        Refazer Teste
+      </button>
+    </>
   );
 }
