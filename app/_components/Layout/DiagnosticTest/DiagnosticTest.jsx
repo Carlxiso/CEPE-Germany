@@ -10,6 +10,7 @@ import StartTest from "./StartTest/StartTest";
 import Question from "./Question/Question";
 import NextQuestionButton from "./NextQuestionButton/NextQuestionButton";
 import Progress from "./Progress/Progress";
+import FinishedScreen from "./FinishedScreen/FinishedScreen";
 
 const cta = {
   headline:
@@ -63,6 +64,12 @@ function reducer(state, action) {
         answers: null,
       };
 
+    case "finish":
+      return {
+        ...state,
+        status: "finished",
+      };
+
     default:
       throw new Error("Action Unkonwn");
   }
@@ -110,12 +117,17 @@ export default function DiagnosticTest() {
           />
           <NextQuestionButton
             dispatch={dispatch}
-            // index={index}
-            // numQuestions={numQuestions}
+            index={index}
+            numQuestions={numQuestions}
             answers={answers}
           />
         </>
       )}
+
+      {status === "finished" && (
+        <FinishedScreen points={points} maxPossiblePoints={maxPossiblePoints} />
+      )}
+
       <InstructionsDiagnosticTest />
     </CTASection>
   );
