@@ -11,7 +11,9 @@ import Question from "./Question/Question";
 import NextQuestionButton from "./NextQuestionButton/NextQuestionButton";
 import Progress from "./Progress/Progress";
 import FinishedScreen from "./FinishedScreen/FinishedScreen";
-
+import Timer from "./Timer/Timer";
+import FooterTest from "./FooterTest/FooterTest";
+const SECS_PER_QUESTION = 30;
 const cta = {
   headline:
     "Cada palavra conta. Até que ponto o seu conhecimento abarca a língua portuguesa?",
@@ -26,6 +28,7 @@ const initialState = {
   index: 0,
   answers: null,
   points: 0,
+  secondsRemaining: 10,
 };
 
 function reducer(state, action) {
@@ -45,6 +48,7 @@ function reducer(state, action) {
       return {
         ...state,
         status: "active",
+        secondsRemaining: state.questions.length * SECS_PER_QUESTION,
       };
     case "newAnswer":
       const question = state.questions.at(state.index);
@@ -78,16 +82,22 @@ function reducer(state, action) {
         answers: null,
         points: 0,
       };
+    case "timer":
+      return {
+        ...state,
+        secondsRemaining: state.secondsRemaining - 1,
+        status: state.secondsRemaining === 0 ? "finished" : state.status,
+      };
 
     default:
       throw new Error("Action Unkonwn");
   }
 }
 export default function DiagnosticTest() {
-  const [{ questions, status, index, answers, points }, dispatch] = useReducer(
-    reducer,
-    initialState,
-  );
+  const [
+    { questions, status, index, answers, points, secondsRemaining },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   const numQuestions = questions.length;
   const maxPossiblePoints = questions.reduce(
@@ -124,12 +134,15 @@ export default function DiagnosticTest() {
             dispatch={dispatch}
             answers={answers}
           />
-          <NextQuestionButton
-            dispatch={dispatch}
-            index={index}
-            numQuestions={numQuestions}
-            answers={answers}
-          />
+          <FooterTest>
+            <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
+            <NextQuestionButton
+              dispatch={dispatch}
+              index={index}
+              numQuestions={numQuestions}
+              answers={answers}
+            />
+          </FooterTest>
         </>
       )}
 
