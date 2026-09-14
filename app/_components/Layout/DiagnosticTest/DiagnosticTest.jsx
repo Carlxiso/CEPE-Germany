@@ -2,8 +2,7 @@
 import { useEffect, useReducer } from "react";
 import CTASection from "../../UI/CTASection/CTASection";
 import HeaderDiagnosticTest from "./HeaderDiagnosticTest/HeaderDiagnosticTest";
-import InstructionsDiagnosticTest from "./InstructionsDiagnosticTest/InstructionsDiagnosticTest";
-import Questions from "./Questions/Questions";
+import InstructionsOverlay from "./InstructionsOverlay/InstructionsOverlay";
 import Loading from "./Loading/Loading";
 import Error from "./Error/Error";
 import StartTest from "./StartTest/StartTest";
@@ -13,6 +12,7 @@ import Progress from "./Progress/Progress";
 import FinishedScreen from "./FinishedScreen/FinishedScreen";
 import Timer from "./Timer/Timer";
 import FooterTest from "./FooterTest/FooterTest";
+import styles from "./DiagnosticTest.module.css";
 const SECS_PER_QUESTION = 30;
 const cta = {
   headline:
@@ -113,48 +113,58 @@ export default function DiagnosticTest() {
   }, []);
   return (
     <CTASection headline={cta.headline} text={cta.text}>
-      <HeaderDiagnosticTest />
-      <Questions />
-      {status === "loading" && <Loading />}
-      {status === "error" && <Error />}
-      {status === "ready" && (
-        <StartTest numQuestions={numQuestions} dispatch={dispatch} />
-      )}
-      {status === "active" && (
-        <>
-          <Progress
-            index={index + 1}
-            numQuestions={numQuestions}
-            points={points}
-            maxPossiblePoints={maxPossiblePoints}
-            answers={answers}
-          />
-          <Question
-            question={questions[index]}
-            dispatch={dispatch}
-            answers={answers}
-          />
-          <FooterTest>
-            <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
-            <NextQuestionButton
+      <div className={styles.frame}>
+        <div className={styles.header}>
+          <HeaderDiagnosticTest />
+        </div>
+
+        <div className={styles.body}>
+          {status === "loading" && <Loading />}
+          {status === "error" && <Error />}
+          {status === "ready" && (
+            <StartTest numQuestions={numQuestions} dispatch={dispatch} />
+          )}
+          {status === "active" && (
+            <>
+              <Progress
+                index={index + 1}
+                numQuestions={numQuestions}
+                points={points}
+                maxPossiblePoints={maxPossiblePoints}
+                answers={answers}
+              />
+              <Question
+                question={questions[index]}
+                dispatch={dispatch}
+                answers={answers}
+              />
+            </>
+          )}
+          {status === "finished" && (
+            <FinishedScreen
               dispatch={dispatch}
-              index={index}
-              numQuestions={numQuestions}
-              answers={answers}
+              points={points}
+              maxPossiblePoints={maxPossiblePoints}
             />
-          </FooterTest>
-        </>
-      )}
+          )}
+        </div>
 
-      {status === "finished" && (
-        <FinishedScreen
-          dispatch={dispatch}
-          points={points}
-          maxPossiblePoints={maxPossiblePoints}
-        />
-      )}
+        {status === "active" && (
+          <div className={styles.footer}>
+            <FooterTest>
+              <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
+              <NextQuestionButton
+                dispatch={dispatch}
+                index={index}
+                numQuestions={numQuestions}
+                answers={answers}
+              />
+            </FooterTest>
+          </div>
+        )}
+      </div>
 
-      <InstructionsDiagnosticTest />
+      <InstructionsOverlay />
     </CTASection>
   );
 }
