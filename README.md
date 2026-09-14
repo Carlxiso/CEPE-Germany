@@ -30,6 +30,10 @@ The goal is also to create a tool for teachers and students where they can perfo
 - JavaScript (ES6+)
 - HTML5 / CSS3
 
+### Backend
+
+- Supabase
+
 ### Tooling
 
 - Vite
