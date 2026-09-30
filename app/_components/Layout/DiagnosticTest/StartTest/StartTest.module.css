@@ -1,5 +1,4 @@
 .btn {
-  display: block;
   font-family: inherit;
   color: inherit;
   font-size: 2rem;
@@ -14,4 +13,23 @@
 .btnUi {
   background-color: #009fe3;
   border-color: #009fe3;
+  font-size: small;
+}
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  min-height: 100%;
+  padding: 10rem;
+}
+
+.startbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
 }
