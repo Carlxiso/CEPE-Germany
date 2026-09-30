@@ -13,7 +13,8 @@
 .btnUi {
   background-color: #009fe3;
   border-color: #009fe3;
-  font-size: small;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .start {
   display: flex;
