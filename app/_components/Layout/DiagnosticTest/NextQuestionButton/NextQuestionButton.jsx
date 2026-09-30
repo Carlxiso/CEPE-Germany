@@ -10,7 +10,7 @@ export default function NextQuestionButton({
   if (index < numQuestions - 1)
     return (
       <button
-        className={styles.btn + " " + styles.btn_ui}
+        className={styles.btn}
         onClick={() => dispatch({ type: "nextQuestion" })}
       >
         Próxima Questão
@@ -19,7 +19,7 @@ export default function NextQuestionButton({
   if (index === numQuestions - 1)
     return (
       <button
-        className={styles.btn + " " + styles.btn_ui}
+        className={styles.btn}
         onClick={() => dispatch({ type: "finish" })}
       >
         Submeter Teste

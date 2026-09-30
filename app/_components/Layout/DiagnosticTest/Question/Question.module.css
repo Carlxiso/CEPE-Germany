@@ -1,0 +1,16 @@
+.questionbox {
+  padding: 5rem;
+}
+
+.section {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #009fe3;
+  padding-bottom: 0.5rem;
+}
+.question {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 5rem;
+}

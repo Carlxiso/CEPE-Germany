@@ -1,3 +1,5 @@
+import styles from "./FooterTest.module.css";
+
 export default function FooterTest({ children }) {
-  return <footer>{children}</footer>;
+  return <footer className={styles.footer}>{children}</footer>;
 }

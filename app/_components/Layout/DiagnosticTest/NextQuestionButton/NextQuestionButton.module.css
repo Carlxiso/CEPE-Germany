@@ -1,28 +1,15 @@
 .btn {
-  display: block;
   font-family: inherit;
   color: inherit;
   font-size: 1.5rem;
-  border: 0.1rem solid #556879;
+  border: 2px solid #556879;
   background-color: #3e4f60;
   padding: 1.2rem 4.5rem;
-  cursor: pointer;
   border-radius: 100px;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.btn-ui {
-  float: right;
-}
-
-.btn:not([disabled]):hover {
+.btn:hover {
   background-color: #32404d;
-}
-
-.btn-option:not([disabled]):hover {
-  transform: translateX(1.2rem);
-}
-
-.btn[disabled]:hover {
-  cursor: not-allowed;
 }

@@ -4,7 +4,7 @@ export default function StartTest({ numQuestions, dispatch }) {
   return (
     <div className={styles.start}>
       <div className={styles.startbox}>
-        <h2>Bem vindo ao test de Diagnótico de Lingua Portuguêsa</h2>
+        <h2>Bem vindo ao teste de Diagnótico de Lingua Portuguêsa</h2>
         <h3>Este teste de diagnótico é composto por {numQuestions} questões</h3>
       </div>
       <button
