@@ -6,7 +6,7 @@
 }
 
 .header {
-  flex-shrink: 0; /* topo sempre no topo */
+  flex-shrink: 0;
 }
 
 .body {
@@ -15,10 +15,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: top; /* o espaço do body */
+  justify-content: top;
 }
 
 .footer {
-  flex-shrink: 0; /* fundo sempre no fundo */
+  flex-shrink: 0;
   width: 100%;
 }

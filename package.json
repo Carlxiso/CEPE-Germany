@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "server": "json-server -w app/_lib/questions.json --port 3001"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@lineiconshq/free-icons": "^1.0.6",

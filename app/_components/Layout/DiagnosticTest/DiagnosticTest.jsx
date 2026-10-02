@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useReducer } from "react";
+import { supabase } from "@/app/_lib/auth/supabase";
 import CTASection from "../../UI/CTASection/CTASection";
 import HeaderDiagnosticTest from "./HeaderDiagnosticTest/HeaderDiagnosticTest";
 import InstructionsOverlay from "./InstructionsOverlay/InstructionsOverlay";
@@ -13,6 +14,7 @@ import FinishedScreen from "./FinishedScreen/FinishedScreen";
 import Timer from "./Timer/Timer";
 import FooterTest from "./FooterTest/FooterTest";
 import styles from "./DiagnosticTest.module.css";
+
 const SECS_PER_QUESTION = 30;
 const cta = {
   headline:
@@ -24,63 +26,50 @@ const initialState = {
   questions: [],
   // 'loading', 'error', 'ready', 'active', 'finished'
   status: "loading",
-  // determina a questão que está a ser exibida
   index: 0,
   answers: null,
-  points: 0,
+  userAnswers: [],
+  result: null,
   secondsRemaining: 10,
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "dataReceived":
-      return {
-        ...state,
-        questions: action.payload,
-        status: "ready",
-      };
+      return { ...state, questions: action.payload, status: "ready" };
     case "dataFailed":
-      return {
-        ...state,
-        status: "error",
-      };
+      return { ...state, status: "error" };
     case "start":
       return {
         ...state,
         status: "active",
         secondsRemaining: state.questions.length * SECS_PER_QUESTION,
       };
-    case "newAnswer":
+    case "newAnswer": {
       const question = state.questions.at(state.index);
       return {
         ...state,
         answers: action.payload,
-        points:
-          action.payload === question.correctOption
-            ? state.points + question.points
-            : state.points,
+        userAnswers: [
+          ...state.userAnswers.filter((a) => a.question_id !== question.id),
+          { question_id: question.id, chosen_option: action.payload },
+        ],
       };
-
+    }
     case "nextQuestion":
-      return {
-        ...state,
-        index: state.index + 1,
-        answers: null,
-      };
-
+      return { ...state, index: state.index + 1, answers: null };
     case "finish":
-      return {
-        ...state,
-        status: "finished",
-      };
-
+      return { ...state, status: "finished" };
+    case "setResult":
+      return { ...state, result: action.payload };
     case "restart":
       return {
         ...state,
         status: "ready",
         index: 0,
         answers: null,
-        points: 0,
+        userAnswers: [],
+        result: null,
       };
     case "timer":
       return {
@@ -88,14 +77,22 @@ function reducer(state, action) {
         secondsRemaining: state.secondsRemaining - 1,
         status: state.secondsRemaining === 0 ? "finished" : state.status,
       };
-
     default:
-      throw new Error("Action Unkonwn");
+      throw new Error("Ação desconhecida");
   }
 }
+
 export default function DiagnosticTest() {
   const [
-    { questions, status, index, answers, points, secondsRemaining },
+    {
+      questions,
+      status,
+      index,
+      answers,
+      userAnswers,
+      result,
+      secondsRemaining,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
 
@@ -105,12 +102,42 @@ export default function DiagnosticTest() {
     0,
   );
 
-  useEffect(function () {
-    fetch("http://localhost:3001/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
+  // Fetch Questions — SÓ colunas seguras (a resposta certa fica no servidor).
+  useEffect(() => {
+    async function loadQuestions() {
+      const { data, error } = await supabase
+        .from("questions")
+        .select("id, text:section, question, options, points")
+        .order("id");
+
+      if (error) {
+        console.error("Erro ao buscar perguntas:", error);
+        dispatch({ type: "dataFailed" });
+      } else {
+        dispatch({ type: "dataReceived", payload: data });
+      }
+    }
+    loadQuestions();
   }, []);
+
+  useEffect(() => {
+    if (status !== "finished" || result !== null) return;
+
+    async function grade() {
+      const { data, error } = await supabase.rpc("grade_diagnostic", {
+        answers: userAnswers,
+      });
+
+      if (error) {
+        console.error("Erro ao corrigir:", error);
+        dispatch({ type: "setResult", payload: { error: true } });
+      } else {
+        dispatch({ type: "setResult", payload: data });
+      }
+    }
+    grade();
+  }, [status, result, userAnswers]);
+
   return (
     <CTASection headline={cta.headline} text={cta.text}>
       <div className={styles.frame}>
@@ -129,8 +156,6 @@ export default function DiagnosticTest() {
               <Progress
                 index={index + 1}
                 numQuestions={numQuestions}
-                points={points}
-                maxPossiblePoints={maxPossiblePoints}
                 answers={answers}
               />
               <Question
@@ -143,7 +168,7 @@ export default function DiagnosticTest() {
           {status === "finished" && (
             <FinishedScreen
               dispatch={dispatch}
-              points={points}
+              result={result}
               maxPossiblePoints={maxPossiblePoints}
             />
           )}
@@ -163,7 +188,6 @@ export default function DiagnosticTest() {
           </div>
         )}
       </div>
-
       <InstructionsOverlay />
     </CTASection>
   );

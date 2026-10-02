@@ -30,16 +30,8 @@
 }
 
 .answer {
-  transform: translateX(2rem);
-}
-
-.btnOption.correct {
-  background-color: #8b8c4a;
-  border: 2px solid #848533;
-  color: var(--color-light);
-}
-.btnOption.wrong {
-  background-color: #e76868;
-  border: 2px solid #e44b4b;
-  color: var(--color-darkest);
+  transform: translateX(1.2rem);
+  background-color: #009fe3;
+  border-color: #009fe3;
+  color: #fff;
 }

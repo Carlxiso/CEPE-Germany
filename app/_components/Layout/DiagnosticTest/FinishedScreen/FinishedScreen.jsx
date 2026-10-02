@@ -1,30 +1,52 @@
 import styles from "./FinishedScreen.module.css";
 
+function estimateLevel(percentage) {
+  if (percentage >= 85) return "C1";
+  if (percentage >= 70) return "B2";
+  if (percentage >= 55) return "B1";
+  if (percentage >= 35) return "A2";
+  return "A1";
+}
+
 export default function FinishedScreen({
-  points,
+  result,
   maxPossiblePoints,
   dispatch,
 }) {
-  const percentage = (points / maxPossiblePoints) * 100;
+  if (result === null) {
+    return <div className={styles.result}>A calcular o teu resultado…</div>;
+  }
 
-  let emoji;
-  if (percentage === 100) emoji = "C2 🤑";
-  if (percentage >= 80 && percentage < 100) emoji = "C1 😉";
-  if (percentage >= 50 && percentage < 80) emoji = "B2 😉";
-  if (percentage >= 0 && percentage < 50) emoji = "B1 😉";
-  if (percentage === 0) emoji = "A1 🙄";
+  if (result.error) {
+    return (
+      <>
+        <div className={styles.result}>
+          Não foi possível calcular o resultado. Tenta novamente.
+        </div>
+        <button
+          className={styles.btn}
+          onClick={() => dispatch({ type: "restart" })}
+        >
+          Refazer Teste
+        </button>
+      </>
+    );
+  }
 
-  if (!emoji) emoji = "--";
+  const { points } = result;
+  const percentage = maxPossiblePoints
+    ? Math.round((points / maxPossiblePoints) * 100)
+    : 0;
+  const level = estimateLevel(percentage);
 
   return (
     <>
       <div className={styles.result}>
-        Finished Screen<span>{emoji}</span> <strong>{points}</strong> de
-        <strong>{maxPossiblePoints}</strong> pontos ({Math.ceil(percentage)}%) —{" "}
-        {emoji}
+        O teu nível estimado: <strong>{level}</strong> — {points} de{" "}
+        {maxPossiblePoints} pontos ({percentage}%)
       </div>
       <button
-        className={styles.btn + " " + styles.btn_ui}
+        className={styles.btn}
         onClick={() => dispatch({ type: "restart" })}
       >
         Refazer Teste

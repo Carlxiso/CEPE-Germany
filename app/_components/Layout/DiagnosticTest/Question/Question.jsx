@@ -2,7 +2,7 @@ import Options from "../Options/Options";
 import styles from "./Question.module.css";
 
 export default function Question({ question, dispatch, answers }) {
-  // console.log("question", question);
+  if (!question) return null;
   return (
     <div className={styles.questionbox}>
       <h1 className={styles.section}>{question.text}</h1>
