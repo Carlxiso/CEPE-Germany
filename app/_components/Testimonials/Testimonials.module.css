@@ -28,7 +28,7 @@
 }
 
 .text {
-  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-size: clamp(1.6rem, 2.5vw, 1.4rem);
   line-height: 1.75;
   margin-bottom: 2rem;
   color: #333;
