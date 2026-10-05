@@ -6,24 +6,24 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   {
     id: "alunos",
-    value: 55,
+    value: 50,
     prefix: "+",
     suffix: "",
-    label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    label: "Anos de História Ensino Português no Estrangeiro.",
   },
   {
     id: "satisfacao",
-    value: 98,
+    value: 97,
     prefix: "",
     suffix: "%",
-    label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    label: "Taxa de aprovação nos exames de certificação do Camões IP.",
   },
   {
     id: "cursos",
-    value: 150,
+    value: 100,
     prefix: "+",
     suffix: "",
-    label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    label: "Cursos em nove Estados Federados.",
   },
 ];
 
