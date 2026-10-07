@@ -23,7 +23,7 @@
   align-items: center;
   gap: 4rem;
   min-height: 100%;
-  padding: 10rem;
+  padding: clamp(2rem, 6vw, 10rem);
 }
 
 .startbox {

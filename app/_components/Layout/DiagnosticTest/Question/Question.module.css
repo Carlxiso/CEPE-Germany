@@ -1,5 +1,8 @@
 .questionbox {
-  padding: 5rem;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: clamp(1.6rem, 4vw, 5rem);
 }
 
 .section {
@@ -12,5 +15,5 @@
   font-size: 1.6rem;
   font-weight: 500;
   color: white;
-  padding-bottom: 5rem;
+  padding-bottom: clamp(2rem, 4vw, 5rem);
 }
