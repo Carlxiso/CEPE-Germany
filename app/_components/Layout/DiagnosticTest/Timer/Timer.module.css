@@ -1,8 +1,10 @@
 .timer {
   font-size: 1.5rem;
   color: var(--color-medium);
+  background-color: #3f4d58;
   border: 2px solid #556879;
-  /* background-color: #32404d; */
-  padding: 1.2rem 4.5rem;
+  /* padding: 1.2rem clamp(2rem, 4vw, 4.5rem); */
+  padding: 0.2rem clamp(2rem, 4vw, 0.5rem);
   border-radius: 100px;
+  white-space: nowrap;
 }

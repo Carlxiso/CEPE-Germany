@@ -21,8 +21,8 @@
 .btnOption {
   width: 100%;
   text-align: left;
-  font-size: 1.7rem;
-  padding: 1.5rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+  padding: clamp(1.1rem, 2.5vw, 1.5rem);
 }
 
 .btn:not([disabled]):hover {

@@ -1,44 +1,28 @@
 .result {
   background-color: var(--color-sky-blue);
   color: var(--color-light);
-  border-radius: 100px;
+  border-radius: 1.2rem;
   text-align: center;
-  padding: 2rem 0;
-  font-size: 2rem;
+  padding: 2rem clamp(1.6rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 500;
   margin-bottom: 1.6rem;
 }
 
-.result span {
-  font-size: 2.2rem;
-  margin-right: 4px;
-}
-
 .btn {
   display: block;
+  margin: 0 auto;
   font-family: inherit;
   color: inherit;
-  font-size: 1.5rem;
-  border: 0.1rem solid #556879;
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  border: 2px solid #556879;
   background-color: #3e4f60;
-  padding: 1.2rem 4.5rem;
+  padding: 1.2rem clamp(2.5rem, 5vw, 4.5rem);
   cursor: pointer;
   border-radius: 100px;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
-.btn-ui {
-  float: right;
-}
-
-.btn:not([disabled]):hover {
+.btn:hover {
   background-color: #32404d;
-}
-
-.btn-option:not([disabled]):hover {
-  transform: translateX(1.2rem);
-}
-
-.btn[disabled]:hover {
-  cursor: not-allowed;
 }
