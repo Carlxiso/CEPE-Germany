@@ -14,20 +14,14 @@
   font-size: clamp(1.4rem, 2vw, 1.6rem);
 }
 
-.description {
-  color: #666;
-  margin-bottom: 1rem;
-  font-size: clamp(1.4rem, 2vw, 1.6rem);
-}
-
-.text {
-  color: #415364;
-  font-size: clamp(1.5rem, 2vw, 1.8rem);
+.contentText {
+  color: rgb(60, 70, 71);
+  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1.75;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
   max-width: 550px;
 }
-
 @media (min-width: 768px) {
   .left {
     padding: 4px;

@@ -11,13 +11,13 @@ export default function LeftContent({
   return (
     <div className={styles.left}>
       <h2 className={styles.title}>{name}</h2>
-      <p className={styles.description}>{textName}</p>
+      <p className={styles.contentText}>{textName}</p>
 
       <h3 className={styles.subtitle}>{population}</h3>
-      <p className={styles.text}>{textPop}</p>
+      <p className={styles.contentText}>{textPop}</p>
 
       <h3 className={styles.subtitle}>{comunity}</h3>
-      <p className={styles.text}>{textComunity}</p>
+      <p className={styles.contentText}>{textComunity}</p>
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function Split({
         <div className={styles.innerContent}>
           <p className={styles.label}>{title}</p>
           <h2 className={styles.heading}>{subtitle}</h2>
-          <p className={styles.text}>{text}</p>
+          <p className={styles.contentText}>{text}</p>
         </div>
       </div>
     </div>

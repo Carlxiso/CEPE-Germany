@@ -43,14 +43,13 @@
   margin: 1rem 0 2rem;
 }
 
-.text {
+.contentText {
   color: rgb(60, 70, 71);
-  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1.75;
-  margin-bottom: 2rem;
-  max-width: 55rem;
-  text-wrap: pretty;
+  line-height: 2.5rem;
+  padding-bottom: 5rem;
+  max-width: 550px;
 }
 
 .full {
