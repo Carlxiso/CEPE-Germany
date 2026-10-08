@@ -11,7 +11,7 @@ export default function SplitSectionGrid({ fullscreen = false }) {
         <div className={styles.innerContent}>
           <DividerSection
             title="Sobre Nós"
-            subtitle="Descobra um pouco mais de nós"
+            subtitle="A língua que nos une, a missão que nos move"
           />
           <p className={styles.contentText}>
             A Coordenação do Ensino Português no Estrangeiro na Alemanha é uma

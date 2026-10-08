@@ -48,7 +48,7 @@ export default function Testimonials() {
     <>
       <DividerSection
         title="Testemunhos"
-        subtitle="Estas foram as pessoas que fizeram os nossos cursos recomendam-nos a amigos e familiares"
+        subtitle="Histórias de quem aprendeu português connosco"
       />
 
       <div

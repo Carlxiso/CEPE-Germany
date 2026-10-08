@@ -9,21 +9,21 @@ const stats = [
     value: 50,
     prefix: "+",
     suffix: "",
-    label: "Anos de História Ensino Português no Estrangeiro.",
+    label: "Anos de História Ensino Português no Estrangeiro",
   },
   {
     id: "satisfacao",
     value: 97,
     prefix: "",
     suffix: "%",
-    label: "Taxa de aprovação nos exames de certificação do Camões IP.",
+    label: "Taxa de aprovação nos exames de certificação do Camões I.P.",
   },
   {
     id: "cursos",
     value: 100,
     prefix: "+",
     suffix: "",
-    label: "Cursos em nove Estados Federados.",
+    label: "Cursos em nove Estados Federados",
   },
 ];
 

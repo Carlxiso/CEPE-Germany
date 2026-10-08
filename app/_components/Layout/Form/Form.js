@@ -8,7 +8,7 @@ export default function Form() {
     <>
       <DividerSection
         title="Contactos"
-        subtitle="Tentaremos ser o mais breves possivel"
+        subtitle="Diga olá, teremos todo o gosto em responder"
       />
       <div className={styles.contact}>
         {/* LEFT COLUMN */}

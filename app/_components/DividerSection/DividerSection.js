@@ -8,6 +8,7 @@ export default function DividerSection({
   headingColor,
   h2Color,
   subtitleColor,
+  text,
 }) {
   return (
     <div className={`${styles.divider} ${variant ? styles[variant] : ""}`}>
@@ -29,6 +30,7 @@ export default function DividerSection({
       >
         {subtitle}
       </h2>
+      <p className={styles.contentText}>{text}</p>
     </div>
   );
 }

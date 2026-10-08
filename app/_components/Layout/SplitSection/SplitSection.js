@@ -20,7 +20,7 @@ export default function SplitSection({ fullscreen = false }) {
         <div className={styles.innerContent}>
           <DividerSection
             title="CURSOS"
-            subtitle="Descubra cursos que abarcam a Língua Portuguesa"
+            subtitle="Português dos afetos, das raízes e do futuro"
           />
           <p className={styles.contentText}>
             A Coordenação do Ensino Português da Alemanha, em articulação com o
