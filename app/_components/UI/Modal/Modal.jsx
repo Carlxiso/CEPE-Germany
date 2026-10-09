@@ -4,7 +4,13 @@ import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.css";
 
-export default function Modal({ isOpen, onClose, children, labelledById }) {
+export default function Modal({
+  isOpen,
+  onClose,
+  children,
+  labelledById,
+  background,
+}) {
   const overlayRef = useRef(null);
 
   useEffect(() => {
@@ -42,6 +48,7 @@ export default function Modal({ isOpen, onClose, children, labelledById }) {
       <div
         className={`${styles.content} ${styles.slideUp}`}
         onClick={(e) => e.stopPropagation()}
+        style={{ "--modal-bg": background }}
       >
         <button
           type="button"

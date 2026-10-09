@@ -35,6 +35,7 @@ export default function Hero() {
             isOpen={isOpen}
             onClose={() => setIsOpen(false)}
             labelledById="Pré-Inscrição"
+            background={"#fff"}
           >
             <HeaderRegistration closeModal={() => setIsOpen(false)} />
           </Modal>
