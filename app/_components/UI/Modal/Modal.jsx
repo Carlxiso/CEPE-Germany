@@ -10,6 +10,7 @@ export default function Modal({
   children,
   labelledById,
   background,
+  style,
 }) {
   const overlayRef = useRef(null);
 
@@ -48,13 +49,14 @@ export default function Modal({
       <div
         className={`${styles.content} ${styles.slideUp}`}
         onClick={(e) => e.stopPropagation()}
-        style={{ "--modal-bg": background }}
+        style={style}
       >
         <button
           type="button"
           className={styles.closeButton}
           onClick={onClose}
           aria-label="Fechar"
+          style={{ "--modal-bg": "#fff" }}
         />
         {children}
       </div>

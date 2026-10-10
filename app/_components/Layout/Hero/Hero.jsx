@@ -6,6 +6,7 @@ import styles from "./Hero.module.css";
 import imageBg from "@/public/DSC_9384-2.jpg";
 import Modal from "@/app/_components/UI/Modal/Modal";
 import HeaderRegistration from "./HeaderRegistration/HeaderRegistration";
+import Enroll from "../../Enroll/Enroll";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,9 +36,9 @@ export default function Hero() {
             isOpen={isOpen}
             onClose={() => setIsOpen(false)}
             labelledById="Pré-Inscrição"
-            background={"#fff"}
+            style={{ "--modal-bg": "#fff", "--modal-close": "#415364" }}
           >
-            <HeaderRegistration closeModal={() => setIsOpen(false)} />
+            <Enroll closeModal={() => setIsOpen(false)} />
           </Modal>
           <Button onClick={() => setIsOpen(true)} type="button">
             Pré-Inscrição

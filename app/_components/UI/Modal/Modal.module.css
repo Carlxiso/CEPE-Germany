@@ -57,6 +57,7 @@
   height: 0.2rem;
   background: #fff;
   border-radius: 1px;
+  background: var(--modal-close, #fff);
 }
 
 .closeButton::before {
