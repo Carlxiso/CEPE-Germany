@@ -1,22 +1,51 @@
+import { useState } from "react";
 import styles from "./Enroll.module.css";
+import EnrollForm_One from "./EnrollForm_One/EnrollForm_One";
 
-const stepsConfig = ["Step One", "Step Two", "Step Three"];
-export default function Enroll() {
-  const step = 1;
+const stepsConfig = [
+  {
+    id: 1,
+    message: "Informações pessoais",
+    component: <EnrollForm_One />,
+  },
+  {
+    id: 2,
+    message: "Detalhes adicionais",
+    //   component: <Form2 />,
+  },
+  {
+    id: 3,
+    message: "Confirmação final",
+    // component: <Form3 />,
+  },
+];
+
+export default function Steps() {
+  const [step, setStep] = useState(1);
+
+  const currentStep = stepsConfig.find((currStep) => currStep.id === step);
+
+  function handlePrevious() {
+    setStep((prev) => Math.max(prev - 1, 1));
+  }
+
+  function handleNext() {
+    setStep((prev) => Math.min(prev + 1, stepsConfig.length));
+  }
+
   return (
     <>
       <div className={styles.header}>
-        {/* <Image src={quinas} alt="Quinas Quiz Logo" /> */}
         <div className={styles.testHeader}>
-          <h1 id="diagnostic-test-title" className={styles.headerH1}>
+          <h1 id="pre-inscricao" className={styles.headerH1}>
             Pré-Inscrição para os cursos de Português
           </h1>
           <div className={styles.subHeaderContainer}>
             <div className={styles.subHeaderText}>
               <span>
-                Este processo de inscrição, não irá garantir que o seu
-                progenitor garanta uma vaga nos nossos cursos. Os seus dados
-                servirão para determinarmos uma posição no futuro nos nossos
+                Este processo de inscrição, não irá garantir que o seu //
+                progenitor garanta uma vaga nos nossos cursos. Os seus dados //
+                servirão para determinarmos uma posição no futuro nos nossos //
                 cursos.
               </span>
             </div>
@@ -24,15 +53,27 @@ export default function Enroll() {
         </div>
       </div>
       <div className={styles.steps}>
+        <p className={styles.msg}>{currentStep.message}</p>
         <div className={styles.numbers}>
-          <div className={`${step >= 1 ? styles.active : ""}`}>1</div>
-          <div className={`${step >= 2 ? styles.active : ""}`}>2</div>
-          <div className={`${step >= 3 ? styles.active : ""}`}>3</div>
+          {stepsConfig.map((currStep) => (
+            <div
+              key={currStep.id}
+              className={step >= currStep.id ? styles.active : ""}
+            >
+              {currStep.id}
+            </div>
+          ))}
         </div>
-        <p className={styles.msg}>{stepsConfig[step - 1]}</p>
+
+        <div>{currentStep.component}</div>
+
         <div className={styles.btnEnrollForm}>
-          <buttons>Anterior</buttons>
-          <buttons>Próximo</buttons>
+          <button onClick={handlePrevious} disabled={step === 1}>
+            Previous
+          </button>
+          <button onClick={handleNext} disabled={step === stepsConfig.length}>
+            Next
+          </button>
         </div>
       </div>
     </>
