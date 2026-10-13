@@ -53,7 +53,6 @@ export default function Steps() {
         </div>
       </div>
       <div className={styles.steps}>
-        <p className={styles.msg}>{currentStep.message}</p>
         <div className={styles.numbers}>
           {stepsConfig.map((currStep) => (
             <div
@@ -64,6 +63,7 @@ export default function Steps() {
             </div>
           ))}
         </div>
+        <p className={styles.msg}>{currentStep.message}</p>
 
         <div>{currentStep.component}</div>
 

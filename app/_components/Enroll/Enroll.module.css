@@ -94,6 +94,31 @@
   border: hidden;
 }
 
+.label {
+  text-align: left;
+  font-size: 1rem;
+  color: #415364;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.row .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
 /*BUTTONS*/
 
 .btnEnrollForm {
@@ -130,6 +155,114 @@
   flex-direction: column;
   align-items: center;
 }
+
+.formSection {
+  padding-inline: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 2px solid rgba(182, 231, 255, 0.45);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: #009fe3;
+  font-size: 0.95rem;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.input:focus {
+  border-color: #009fe3;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 4px rgba(117, 212, 255, 0.15);
+}
+
+.input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/* .checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: #415364;
+  font-size: 0.95rem;
+  user-select: none;
+} */
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  margin: 0;
+  border: 2px solid rgba(182, 231, 255, 0.9);
+  border-radius: 0.5rem;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkbox::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.9rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.15s ease;
+  margin-bottom: 0.2rem;
+}
+
+.checkbox:hover {
+  border-color: #009fe3;
+}
+
+.checkbox:checked {
+  background: #009fe3;
+  border-color: #009fe3;
+}
+
+.checkbox:checked::before {
+  transform: rotate(45deg) scale(1);
+}
+
+.checkbox:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(117, 212, 255, 0.3);
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
