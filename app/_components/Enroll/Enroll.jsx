@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Enroll.module.css";
 import EnrollForm_One from "./EnrollForm_One/EnrollForm_One";
+import EnrollForm_Two from "./EnrollForm_Two/EnrollForm_Two";
 
 const stepsConfig = [
   {
@@ -11,7 +12,7 @@ const stepsConfig = [
   {
     id: 2,
     message: "Detalhes adicionais",
-    //   component: <Form2 />,
+    component: <EnrollForm_Two />,
   },
   {
     id: 3,
