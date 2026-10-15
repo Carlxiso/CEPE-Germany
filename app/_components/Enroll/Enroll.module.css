@@ -30,39 +30,6 @@
   color: #415364;
 }
 
-/* .headerCloseBtn {
-  top: 2%;
-  position: absolute;
-  right: 3%;
-  transform: translate(-5%, -10%);
-} */
-
-/* .header img {
-  width: 5rem;
-  height: 5rem;
-} */
-
-/* .closeBtn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #415364;
-  color: #2d3439;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
-}
-
-.closeBtn:after {
-  content: "\00d7";
-  font-size: 2.5rem;
-}
-
-.closeBtn:hover {
-  color: #fff;
-} */
 .steps {
   width: 100%;
   /* background-color: #f7f7f7; */
@@ -124,7 +91,7 @@
 
 .btnEnrollForm {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* color: #415364; */
 }
 
@@ -144,6 +111,14 @@
 .btnEnrollForm button span {
   font-size: 16px;
   line-height: 1;
+}
+
+.btnPrev {
+  margin-right: auto;
+}
+
+.btnNext {
+  margin-left: auto;
 }
 
 .msg {
@@ -262,6 +237,14 @@
 .checkbox:focus-visible {
   outline: none;
   box-shadow: 0 0 0 4px rgba(117, 212, 255, 0.3);
+}
+
+.placeholder {
+  color: #94a3b8;
+}
+
+.input.placeholder {
+  color: #94a3b8;
 }
 
 @media (max-width: 768px) {

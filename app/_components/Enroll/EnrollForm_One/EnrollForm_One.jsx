@@ -18,10 +18,8 @@ function EnrollForm_One() {
   const [student, setStudent] = useState("");
   const [birthDate, setBirthDate] = useState(""); // "2015-03-21"
   const [school, setSchool] = useState("");
-  const [schoolYear, setSchoolYear] = useState("active");
+  const [schoolYear, setSchoolYear] = useState("");
   const [attendedEPE, setAttendedEPE] = useState(false);
-
-  const idade = calculateAge(birthDate);
 
   return (
     // <form action="" onSubmit={handleSubmit}>
@@ -38,26 +36,25 @@ function EnrollForm_One() {
           className={styles.input}
         />
         <label htmlFor="birthDate" className={styles.label}>
-          Data de Nascimento:{" "}
+          Data de Nascimento:
         </label>
         <input
           type="date"
           id="birthDate"
           name="birthDate"
-          className={styles.input}
+          className={`${styles.input} ${!birthDate ? styles.placeholder : ""}`}
           value={birthDate}
           onChange={(e) => setBirthDate(e.target.value)}
           //   min="2007-01-01"
           //   max="2021-12-31"
           required
         />
-        {idade !== null && <small>Idade: {idade} anos</small>}
 
         <label htmlFor="" className={styles.label}>
           Ano de Escolaridade
         </label>
         <select
-          className={styles.select}
+          className={`${styles.input} ${!schoolYear ? styles.placeholder : ""}`}
           name="Escolaridade"
           id=""
           value={schoolYear}
