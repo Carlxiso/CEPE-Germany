@@ -8,23 +8,46 @@ const stepsConfig = [
   {
     id: 1,
     message: "Informações pessoais",
-    component: <EnrollForm_One />,
+    Component: EnrollForm_One,
+    // component: <EnrollForm_One />,
   },
   {
     id: 2,
     message: "Detalhes adicionais",
-    component: <EnrollForm_Two />,
+    Component: EnrollForm_Two,
+    // component: <EnrollForm_Two />,
   },
   {
     id: 3,
     message: "Confirmação final",
-    component: <EnrollForm_Three />,
+    Component: EnrollForm_Three,
+    // component: <EnrollForm_Three />,
   },
 ];
 
-export default function Steps() {
+export default function Enroll() {
   const [step, setStep] = useState(1);
   const currentStep = stepsConfig.find((currStep) => currStep.id === step);
+  const StepComponent = currentStep.Component;
+
+  const [formData, setFormData] = useState({
+    // Step 1
+    student: "",
+    birthDate: "",
+    school: "",
+    schoolYear: "",
+    attendedEPE: "",
+    // Step 2
+    guardian: "",
+    email: "",
+    phone: "",
+    city: "",
+    postal: "",
+    // Step 3
+    schoolCity: "",
+    consent: "",
+    marketing: "",
+  });
 
   const isFirstStep = step === 1;
   const isLastStep = step === stepsConfig.length;
@@ -37,8 +60,8 @@ export default function Steps() {
     setStep((prev) => Math.min(prev + 1, stepsConfig.length));
   }
 
-  function handleSubmit() {
-    console.log("submited");
+  function updateFields(fields) {
+    setFormData((prev) => ({ ...prev, ...fields }));
   }
 
   return (
@@ -73,7 +96,10 @@ export default function Steps() {
         </div>
         <p className={styles.msg}>{currentStep.message}</p>
 
-        <div>{currentStep.component}</div>
+        <div>
+          <StepComponent data={formData} updateFields={updateFields} />
+        </div>
+        {/* <div>{currentStep.component}</div> */}
 
         <div className={styles.btnEnrollForm}>
           {/* <button onClick={handlePrevious} disabled={step === 1}>

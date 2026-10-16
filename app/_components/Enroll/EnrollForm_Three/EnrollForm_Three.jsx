@@ -1,11 +1,11 @@
-import { useState } from "react";
 import styles from "../Enroll.module.css";
 import Link from "next/link";
 import Button from "@/app/_components/UI/Button/Button";
-function EnrollForm_Three() {
-  const [schoolCity, setSchoolCity] = useState("");
-  const [consent, setConsent] = useState(false); // obrigatória
-  const [marketing, setMarketing] = useState(false);
+
+function EnrollForm_Three({ data, updateFields }) {
+  // const [schoolCity, setSchoolCity] = useState("");
+  // const [consent, setConsent] = useState(false); // obrigatória
+  // const [marketing, setMarketing] = useState(false);
 
   return (
     // <form action="" onSubmit={handleSubmit}>
@@ -15,11 +15,11 @@ function EnrollForm_Three() {
           Localidade do Curso
         </label>
         <select
-          className={`${styles.input} ${!schoolCity ? styles.placeholder : ""}`}
+          className={`${styles.input} ${!data.schoolCity ? styles.placeholder : ""}`}
           name="State"
           id=""
-          value={schoolCity}
-          onChange={(e) => setSchoolCity(e.target.value)}
+          value={data.schoolCity}
+          onChange={(e) => updateFields({ schoolCity: e.target.value })}
         >
           <option value="">Selecione a Localidade do Curso</option>
           <option value="1">Baden-Württemberg</option>
@@ -42,12 +42,12 @@ function EnrollForm_Three() {
             </Link>
           </span>
           <input
-            value={consent}
+            value={data.consent}
             type="checkbox"
             name="privacidade"
             id=""
             className={styles.checkbox}
-            onChange={(e) => setConsent(e.target.checked)}
+            onChange={(e) => updateFields({ consent: e.target.checked })}
             required
           />
         </label>
@@ -58,17 +58,17 @@ function EnrollForm_Three() {
             novidades.
           </span>
           <input
-            value={marketing}
+            value={data.marketing}
             type="checkbox"
             name="privacidade"
             id=""
             className={styles.checkbox}
-            onChange={(e) => setMarketing(e.target.checked)}
+            onChange={(e) => updateFields({ marketing: e.target.checked })}
             required
           />
         </label>
 
-        <Button type="submit" size="sm" disabled={!consent}>
+        <Button type="submit" size="sm" disabled={!data.consent}>
           Submeter a pré-inscrição
         </Button>
       </form>

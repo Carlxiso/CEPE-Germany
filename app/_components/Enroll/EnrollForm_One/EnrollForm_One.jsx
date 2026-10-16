@@ -1,25 +1,11 @@
-import { useState } from "react";
 import styles from "../Enroll.module.css";
 
-function calculateAge(isoDate) {
-  if (!isoDate) return null;
-  const today = new Date();
-  const birth = new Date(isoDate);
-  let age = today.getFullYear() - birth.getFullYear();
-  const aindaNaoFezAnos =
-    today.getMonth() < birth.getMonth() ||
-    (today.getMonth() === birth.getMonth() &&
-      today.getDate() < birth.getDate());
-  if (aindaNaoFezAnos) age--;
-  return age;
-}
-
-function EnrollForm_One() {
-  const [student, setStudent] = useState("");
-  const [birthDate, setBirthDate] = useState(""); // "2015-03-21"
-  const [school, setSchool] = useState("");
-  const [schoolYear, setSchoolYear] = useState("");
-  const [attendedEPE, setAttendedEPE] = useState(false);
+function EnrollForm_One({ data, updateFields }) {
+  // const [student, setStudent] = useState("");
+  // const [birthDate, setBirthDate] = useState(""); // "2015-03-21"
+  // const [school, setSchool] = useState("");
+  // const [schoolYear, setSchoolYear] = useState("");
+  // const [attendedEPE, setAttendedEPE] = useState(false);
 
   return (
     // <form action="" onSubmit={handleSubmit}>
@@ -31,8 +17,10 @@ function EnrollForm_One() {
         <input
           type="text"
           placeholder="Ex: José Albino Guimarães"
-          value={student}
-          onChange={(e) => setStudent(e.target.value.trim())}
+          value={data.student}
+          // value={student}
+          // onChange={(e) => setStudent(e.target.value.trim())}
+          onChange={(e) => updateFields({ student: e.target.value.trim() })}
           className={styles.input}
         />
         <label htmlFor="birthDate" className={styles.label}>
@@ -42,9 +30,9 @@ function EnrollForm_One() {
           type="date"
           id="birthDate"
           name="birthDate"
-          className={`${styles.input} ${!birthDate ? styles.placeholder : ""}`}
-          value={birthDate}
-          onChange={(e) => setBirthDate(e.target.value)}
+          className={`${styles.input} ${!data.birthDate ? styles.placeholder : ""}`}
+          value={data.birthDate}
+          onChange={(e) => updateFields({ birthDate: e.target.value })}
           //   min="2007-01-01"
           //   max="2021-12-31"
           required
@@ -54,11 +42,11 @@ function EnrollForm_One() {
           Ano de Escolaridade
         </label>
         <select
-          className={`${styles.input} ${!schoolYear ? styles.placeholder : ""}`}
+          className={`${styles.input} ${!data.schoolYear ? styles.placeholder : ""}`}
           name="Escolaridade"
           id=""
-          value={schoolYear}
-          onChange={(e) => setSchoolYear(e.target.value)}
+          value={data.schoolYear}
+          onChange={(e) => updateFields({ schoolYear: e.target.value })}
         >
           <option value="">Selecione o Ano de Escolaridade</option>
           <option value="1">1º Ano de Escolaridade</option>
@@ -81,10 +69,10 @@ function EnrollForm_One() {
             name=""
             id=""
             className={styles.checkbox}
-            onChange={(e) => setAttendedEPE(e.target.checked)}
+            onChange={(e) => updateFields({ attendedEPE: e.target.checked })}
           />
         </label>
-        {attendedEPE && (
+        {data.attendedEPE && (
           <div className={styles.field}>
             <label htmlFor="" className={styles.label}>
               Em que escola frequentou o curso?
@@ -92,8 +80,8 @@ function EnrollForm_One() {
             <input
               type="text"
               placeholder="Ex: Escola Europeia - Berlin"
-              value={school}
-              onChange={(e) => setSchool(e.target.value.trim())}
+              value={data.school}
+              onChange={(e) => setSchool({ school: e.target.value.trim() })}
               className={styles.input}
             />
           </div>
