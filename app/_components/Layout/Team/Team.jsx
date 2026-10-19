@@ -9,7 +9,7 @@ export default function Team() {
     <div>
       <DividerSection
         title="Equipa da Coordenação"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        subtitle="Docentes de Apoio Pedagógico que dão forma ao Português na Alemanha"
         variant="center"
       />
 

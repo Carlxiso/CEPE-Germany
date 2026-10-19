@@ -110,18 +110,18 @@ export default function Page() {
               subtitle="Coordenadora da Coordenação de Ensino do Português Na Alemanha"
             />
             <Message.Text>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              suscipit eaque consequuntur nisi consectetur iure officia
-              quibusdam quod nemo. Ad, eligendi. Quas consectetur dolorum
-              accusantium similique quaerat vitae, iure a, excepturi nihil alias
-              obcaecati iste itaque dolores maiores voluptatem tempora quam.
-              Impedit illo accusamus architecto neque minima, autem quae modi
-              dolor rerum at quo nisi aut ea tempore eligendi obcaecati corrupti
-              esse magnam! Exercitationem, ullam ducimus id sint quod expedita
-              cum ab. Incidunt exercitationem veritatis doloribus libero esse
-              quisquam alias consectetur modi voluptate eligendi illum ipsum,
-              nemo nostrum vero nesciunt, quidem perferendis! Reiciendis
-              consectetur doloribus ipsa, deleniti officiis ducimus et!
+              Caros alunos, pais e encarregados de educação, docentes e
+              parceiros, damos início a um novo ano letivo com um renovado
+              entusiasmo. Ensinar português na Alemanha é valorizar uma língua
+              falada por milhões em todo o mundo e preservar a ligação afetiva
+              às nossas raízes. A língua portuguesa é património, mas é também
+              futuro: abre portas, cria pontes e enriquece quem cresce entre
+              duas culturas. Continuaremos a promovê-la com projetos, atividades
+              culturais e a certificação das aprendizagens. Aos pais e
+              encarregados de educação, agradecemos a confiança e contamos com a
+              vossa presença ativa, pois escola e família caminham juntas. Aos
+              docentes, o nosso muito obrigado pela dedicação diária. Que este
+              seja um ano de partilha e de orgulho em falar português!
             </Message.Text>
             <Message.Signature
               src="/signature.webp"

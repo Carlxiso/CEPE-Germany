@@ -1,26 +1,26 @@
 export const team = [
   {
-    name: "Ana Silva",
-    email: "ana@example.com",
-    location: "Lisboa, Portugal",
+    name: "Ângela Silvério",
+    email: "angelasilverio@camoes.mne.pt",
+    location: "Berlim, Alemanha",
     image: "/girl-avatar.svg",
   },
   {
-    name: "João Costa",
-    email: "joao@example.com",
-    location: "Porto, Portugal",
+    name: "Catarina Grimm",
+    email: "catarina.lourenco@camoes.mne.pt",
+    location: "Düsseldorf, Alemanha",
     image: "/man-avatar.svg",
   },
   {
-    name: "Maria Santos",
-    email: "maria@example.com",
-    location: "Coimbra, Portugal",
+    name: "Eva Pinheiro",
+    email: "eva.pinheiro@camoes.mne.pt",
+    location: "Estugarda, Alemanha",
     image: "/woman-avatar.svg",
   },
   {
-    name: "Pedro Rocha",
-    email: "pedro@example.com",
-    location: "Braga, Portugal",
+    name: "Ana Patrícia Santos",
+    email: "anamoura.santos@camoes.mne.pt",
+    location: "Berlim, Alemanha",
     image: "/boy-avatar.svg",
   },
 ];
