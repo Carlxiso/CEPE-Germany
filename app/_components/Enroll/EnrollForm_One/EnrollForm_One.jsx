@@ -20,7 +20,7 @@ function EnrollForm_One({ data, updateFields }) {
           value={data.student}
           // value={student}
           // onChange={(e) => setStudent(e.target.value.trim())}
-          onChange={(e) => updateFields({ student: e.target.value.trim() })}
+          onChange={(e) => updateFields({ student: e.target.value })}
           className={styles.input}
         />
         <label htmlFor="birthDate" className={styles.label}>
@@ -68,6 +68,7 @@ function EnrollForm_One({ data, updateFields }) {
             type="checkbox"
             name=""
             id=""
+            checked={data.attendedEPE}
             className={styles.checkbox}
             onChange={(e) => updateFields({ attendedEPE: e.target.checked })}
           />
@@ -81,7 +82,7 @@ function EnrollForm_One({ data, updateFields }) {
               type="text"
               placeholder="Ex: Escola Europeia - Berlin"
               value={data.school}
-              onChange={(e) => setSchool({ school: e.target.value.trim() })}
+              onChange={(e) => updateFields({ school: e.target.value })}
               className={styles.input}
             />
           </div>

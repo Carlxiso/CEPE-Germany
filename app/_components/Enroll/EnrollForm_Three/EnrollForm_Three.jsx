@@ -42,7 +42,7 @@ function EnrollForm_Three({ data, updateFields }) {
             </Link>
           </span>
           <input
-            value={data.consent}
+            checked={data.consent}
             type="checkbox"
             name="privacidade"
             id=""
@@ -58,13 +58,12 @@ function EnrollForm_Three({ data, updateFields }) {
             novidades.
           </span>
           <input
-            value={data.marketing}
+            checkbox={data.marketing}
             type="checkbox"
-            name="privacidade"
+            name="marketing"
             id=""
             className={styles.checkbox}
             onChange={(e) => updateFields({ marketing: e.target.checked })}
-            required
           />
         </label>
 

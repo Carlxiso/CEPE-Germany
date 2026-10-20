@@ -36,7 +36,7 @@ export default function Enroll() {
     birthDate: "",
     school: "",
     schoolYear: "",
-    attendedEPE: "",
+    attendedEPE: false,
     // Step 2
     guardian: "",
     email: "",
@@ -45,8 +45,8 @@ export default function Enroll() {
     postal: "",
     // Step 3
     schoolCity: "",
-    consent: "",
-    marketing: "",
+    consent: false,
+    marketing: false,
   });
 
   const isFirstStep = step === 1;
