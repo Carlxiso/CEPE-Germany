@@ -26,6 +26,8 @@ const stepsConfig = [
 ];
 
 export default function Enroll() {
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [errorMsg, setErrorMsg] = useState("");
   const [step, setStep] = useState(1);
   const currentStep = stepsConfig.find((currStep) => currStep.id === step);
   const StepComponent = currentStep.Component;
@@ -64,6 +66,39 @@ export default function Enroll() {
     setFormData((prev) => ({ ...prev, ...fields }));
   }
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setErrorMsg("");
+
+    if (!formData.consent) {
+      console.log("BLOQUEADO: sem consentimento");
+      setErrorMsg("Precisa aceitar a Politica de Privacidade.");
+      return;
+    }
+    console.log("PASSOU o consentimento");
+
+    try {
+      setStatus("loading");
+      const res = await fetch("/api/enroll", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (!result.ok) {
+        setStatus("error");
+        setErrorMsg(result.error ?? "Ocorreu um erro.");
+        return;
+      }
+      setStatus("sucess");
+    } catch {
+      setStatus("error");
+      setErrorMsg("Erro de ligação. Tente Novamente");
+    }
+  }
+
   return (
     <>
       <div className={styles.header}>
@@ -97,18 +132,17 @@ export default function Enroll() {
         <p className={styles.msg}>{currentStep.message}</p>
 
         <div>
-          <StepComponent data={formData} updateFields={updateFields} />
+          <StepComponent
+            data={formData}
+            updateFields={updateFields}
+            onSubmit={handleSubmit}
+            status={status}
+            errorMsg={errorMsg}
+          />
         </div>
         {/* <div>{currentStep.component}</div> */}
 
         <div className={styles.btnEnrollForm}>
-          {/* <button onClick={handlePrevious} disabled={step === 1}>
-            Previous
-          </button>
-          <button onClick={handleNext} disabled={step === stepsConfig.length}>
-            Next
-          </button> */}
-
           {!isFirstStep && (
             <button className={styles.btnPrev} onClick={handlePrevious}>
               Anterior

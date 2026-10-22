@@ -2,15 +2,14 @@ import styles from "../Enroll.module.css";
 import Link from "next/link";
 import Button from "@/app/_components/UI/Button/Button";
 
-function EnrollForm_Three({ data, updateFields }) {
+function EnrollForm_Three({ data, updateFields, onSubmit, status, errorMsg }) {
   // const [schoolCity, setSchoolCity] = useState("");
   // const [consent, setConsent] = useState(false); // obrigatória
   // const [marketing, setMarketing] = useState(false);
 
   return (
-    // <form action="" onSubmit={handleSubmit}>
     <div className={styles.formSection}>
-      <form action="" className={styles.form}>
+      <form action="" className={styles.form} onSubmit={onSubmit}>
         <label htmlFor="" className={styles.label}>
           Localidade do Curso
         </label>
@@ -58,7 +57,7 @@ function EnrollForm_Three({ data, updateFields }) {
             novidades.
           </span>
           <input
-            checkbox={data.marketing}
+            checked={data.marketing}
             type="checkbox"
             name="marketing"
             id=""
@@ -66,10 +65,20 @@ function EnrollForm_Three({ data, updateFields }) {
             onChange={(e) => updateFields({ marketing: e.target.checked })}
           />
         </label>
-
-        <Button type="submit" size="sm" disabled={!data.consent}>
-          Submeter a pré-inscrição
-        </Button>
+        {errorMsg && (
+          <p role="alert" className={styles.error}>
+            {errorMsg}
+          </p>
+        )}
+        {status === "success" ? (
+          <p className={styles.success}>
+            Pré-inscrição enviada! Entraremos em contacto. 🎉
+          </p>
+        ) : (
+          <Button type="submit" size="sm" disabled={!data.consent}>
+            Submeter a pré-inscrição
+          </Button>
+        )}
       </form>
     </div>
   );
