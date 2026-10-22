@@ -2,10 +2,29 @@ import styles from "../Enroll.module.css";
 import Link from "next/link";
 import Button from "@/app/_components/UI/Button/Button";
 
-function EnrollForm_Three({ data, updateFields, onSubmit, status, errorMsg }) {
-  // const [schoolCity, setSchoolCity] = useState("");
-  // const [consent, setConsent] = useState(false); // obrigatória
-  // const [marketing, setMarketing] = useState(false);
+function EnrollForm_Three({
+  data,
+  updateFields,
+  onSubmit,
+  status,
+  errorMsg,
+  onClose,
+}) {
+  if (status === "success") {
+    return (
+      <div className={styles.successScreen}>
+        <div className={styles.successCircle} />
+        <h2 className={styles.successTitle}>Pré-inscrição enviada!</h2>
+        <p className={styles.successText}>
+          Recebemos a sua pré-inscrição com sucesso. A equipa CEPE entrará em
+          contacto consigo em breve.
+        </p>
+        <Button type="button" size="sm" onClick={onClose}>
+          Fechar
+        </Button>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.formSection}>
@@ -70,15 +89,15 @@ function EnrollForm_Three({ data, updateFields, onSubmit, status, errorMsg }) {
             {errorMsg}
           </p>
         )}
-        {status === "success" ? (
+        {/* {status === "success" ? (
           <p className={styles.success}>
-            Pré-inscrição enviada! Entraremos em contacto. 🎉
+            Pré-inscrição enviada! Entraremos em contacto.
           </p>
-        ) : (
-          <Button type="submit" size="sm" disabled={!data.consent}>
-            Submeter a pré-inscrição
-          </Button>
-        )}
+        ) : ( */}
+        <Button type="submit" size="sm" disabled={!data.consent}>
+          Submeter a pré-inscrição
+        </Button>
+        {/* )} */}
       </form>
     </div>
   );

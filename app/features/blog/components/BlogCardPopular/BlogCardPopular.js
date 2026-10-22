@@ -26,6 +26,7 @@ export default function BlogCardPopular({ articles = [] }) {
                 alt={article.title}
                 className={styles.articleImage}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                quality={90}
               />
               {article.category?.title && (
                 <div className={styles.categoryBadge}>

@@ -25,7 +25,7 @@ const stepsConfig = [
   },
 ];
 
-export default function Enroll() {
+export default function Enroll({ closeModal }) {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errorMsg, setErrorMsg] = useState("");
   const [step, setStep] = useState(1);
@@ -51,6 +51,14 @@ export default function Enroll() {
     marketing: false,
   });
 
+  const stepProps = {
+    data: formData,
+    updateFields,
+    onSubmit: handleSubmit,
+    status,
+    errorMsg,
+    onClose: closeModal,
+  };
   const isFirstStep = step === 1;
   const isLastStep = step === stepsConfig.length;
 
@@ -92,13 +100,16 @@ export default function Enroll() {
         setErrorMsg(result.error ?? "Ocorreu um erro.");
         return;
       }
-      setStatus("sucess");
+      setStatus("success");
     } catch {
       setStatus("error");
       setErrorMsg("Erro de ligação. Tente Novamente");
     }
   }
 
+  if (status === "success") {
+    return <StepComponent {...stepProps} />;
+  }
   return (
     <>
       <div className={styles.header}>
@@ -138,6 +149,7 @@ export default function Enroll() {
             onSubmit={handleSubmit}
             status={status}
             errorMsg={errorMsg}
+            onClose={closeModal}
           />
         </div>
         {/* <div>{currentStep.component}</div> */}

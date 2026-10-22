@@ -27,7 +27,8 @@ export default function BlogHighlights({ articles = [] }) {
                   src={article.thumbnail || FALLBACK_IMG}
                   className={styles.articleImage}
                   alt={article.title}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                  quality={90}
                 />
                 {article.category?.title && (
                   <div className={styles.categoryBadge}>

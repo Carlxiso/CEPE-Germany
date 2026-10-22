@@ -24,6 +24,7 @@ export default function BlogCard({ articles = [] }) {
             alt={hero.title}
             className={styles.heroImage}
             sizes="(max-width: 1024px) 100vw, 50vw"
+            quality={90}
             priority
           />
           {hero.category?.title && (
@@ -69,6 +70,7 @@ export default function BlogCard({ articles = [] }) {
                 alt={article.title}
                 className={styles.articleImage}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                quality={90}
               />
               {article.category?.title && (
                 <div className={styles.articleCategory}>
