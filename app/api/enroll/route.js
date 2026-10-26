@@ -1,4 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -66,6 +69,23 @@ export async function POST(request) {
     return Response.json(
       { ok: false, error: "Não foi possível gravar." },
       { status: 500 },
+    );
+  }
+
+  const { error: emailError } = await resend.emails.send({
+    from: "CEPE Alemanha <onboarding@resend.dev>",
+    to: process.env.ENROLL_TEST_EMAIL ?? body.email,
+    subject: "Recebemos a sua pré-inscrição",
+    html: `<p>Olá ${body.guardian},</p>
+           <p>Recebemos a pré-inscrição de <strong>${body.student}</strong> com sucesso.
+           Entraremos em contacto em breve.</p>
+           <p>— Equipa CEPE Alemanha</p>`,
+  });
+
+  if (emailError) {
+    console.error(
+      "Falha ao enviar email (inscrição gravada à mesma):",
+      emailError,
     );
   }
 
