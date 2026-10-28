@@ -1,4 +1,5 @@
-import Collapse from "../Collapse/Collapse";
+import Collapse from "./Collapse/Collapse";
+import FaqTable from "./FaqTable/FaqTable";
 import styles from "./Faq.module.css";
 
 export default function Faq({ topic, items }) {
@@ -10,7 +11,9 @@ export default function Faq({ topic, items }) {
           key={item.question}
           question={item.question}
           answer={item.answer}
-        />
+        >
+          <FaqTable data={item.table} />
+        </Collapse>
       ))}
     </div>
   );

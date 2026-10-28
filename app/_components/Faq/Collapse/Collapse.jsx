@@ -2,7 +2,7 @@
 import { useId, useState } from "react";
 import styles from "./Collapse.module.css";
 
-export default function Collapse({ question, answer }) {
+export default function Collapse({ question, answer, children }) {
   const [open, setOpen] = useState(false);
   const id = useId();
   const panelId = `${id}-panel`;
@@ -31,6 +31,7 @@ export default function Collapse({ question, answer }) {
       >
         <div className={styles.panelInner}>
           <p className={styles.answer}>{answer}</p>
+          {children}
         </div>
       </div>
     </div>

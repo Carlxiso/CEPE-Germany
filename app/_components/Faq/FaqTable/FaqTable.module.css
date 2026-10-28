@@ -1,0 +1,35 @@
+.faqTableWrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.faqTable {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: #415364;
+}
+
+.faqTable th,
+.faqTable td {
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #e2e8f0;
+}
+
+.faqTable thead th {
+  background: #009fe3;
+  color: #fff;
+  font-weight: 600;
+}
+
+.faqTable tbody tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.faqTable tbody td:first-child {
+  font-weight: 600;
+  background: #eef2f6;
+}
