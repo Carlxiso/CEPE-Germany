@@ -30,7 +30,10 @@ export default function Collapse({ question, answer, children }) {
         className={`${styles.panel} ${open ? styles.open : ""}`}
       >
         <div className={styles.panelInner}>
-          <p className={styles.answer}>{answer}</p>
+          <p
+            className={styles.answer}
+            dangerouslySetInnerHTML={{ __html: answer }}
+          />
           {children}
         </div>
       </div>

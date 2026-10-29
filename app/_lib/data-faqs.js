@@ -32,19 +32,51 @@ const faqData = [
           ],
         },
       },
-      {
-        question: "Como posso criar conta?",
-        answer:
-          "Basta clicar em registar e preencher o formulário com os seus dados.",
-      },
+      // {
+      //   question: "Como posso criar conta?",
+      //   answer:
+      //     "Basta clicar em registar e preencher o formulário com os seus dados.",
+      // },
     ],
   },
   {
-    topic: "Pagamentos",
+    topic: "Lecionar através do Camões, I.P.",
     items: [
       {
-        question: "Que métodos de pagamento são aceites?",
-        answer: "Aceitamos cartões de crédito, débito e pagamentos digitais.",
+        question:
+          "Como posso lecionar português na Alemanha através do Camões, I.P.?",
+        answer:
+          "O recrutamento pode ser geral e/ou local. No concurso geral, os candidatos integram uma bolsa de recrutamento e ficam em comissão de serviço. Atualmente a comissão de serviço tem uma duração de 2 anos, renovável. Os concursos locais abrem quando há horários por preencher, por exemplo, por inexistência de candidatos na bolsa. A duração do concurso local é de 1 ano ou tempo definido para substituição.",
+      },
+      {
+        question: "Onde são publicados os concursos?",
+        answer:
+          'Na página de <a href="https://www.instituto-camoes.pt/" target="_blank" rel="noopener noreferrer">Procedimentos Concursais do Camões, I.P.</a> Também divulgamos as ofertas no <a href="https://facebook.com/..." target="_blank" rel="noopener noreferrer">Facebook da Coordenação</a>. Aconselhamos a consultar regularmente estas páginas.',
+      },
+      {
+        question: "Quais são os requisitos de candidatura?",
+        answer:
+          "Os requisitos constam de cada aviso. Consultar avisos atuais e anteriores ajuda a perceber o que é pedido. Normalmente os requisitos são:",
+      },
+      {
+        question: "Que documentos devo preparar?",
+        answer:
+          "Normalmente: certidão de habilitação (com classificação e plano de estudos), certidão de tempo de serviço, certificado de alemão, registo criminal, declaração de robustez física, comprovativo de vacinação e currículo datado e assinado.",
+      },
+      {
+        question: "Como me candidato a um concurso local?",
+        answer:
+          "Por requerimento dirigido ao Coordenador do Ensino Português, enviado para cepe.alemanha@camoes.mne.pt, dentro do prazo do aviso. O prazo é, regra geral, de 5 dias úteis após a publicação.",
+      },
+      {
+        question: "Como são selecionados os candidatos?",
+        answer:
+          "Por avaliação curricular: 70% habilitação académica e profissional e 30% experiência profissional. A lista ordenada é publicada no site do Camões, I.P..",
+      },
+      {
+        question: "Que tipo de contrato é oferecido?",
+        answer:
+          "Nos concursos locais, contrato de trabalho a termo resolutivo. O horário, o local e a remuneração constam de cada aviso.",
       },
     ],
   },

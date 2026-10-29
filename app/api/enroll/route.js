@@ -1,18 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY,
-  { auth: { persistSession: false } },
-);
-
 const PRIVACY_VERSION = "2026-10-v1";
 
 export async function POST(request) {
   const body = await request.json();
+
+  const supabaseAdmin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY,
+    { auth: { persistSession: false } },
+  );
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   if (body.consent !== true) {
     return Response.json(
